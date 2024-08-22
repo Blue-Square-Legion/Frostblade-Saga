@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 currentMovement;
 
     private Rigidbody2D rb;
-    private CircleCollider2D col;
+    private BoxCollider2D col;
     private bool isGrounded;
 
     private float time;
@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         gameManager = GameManager.Instance; //Finds Singleton
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<CircleCollider2D>();
+        col = GetComponent<BoxCollider2D>();
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
@@ -110,8 +110,8 @@ public class PlayerMovement : MonoBehaviour
     private void HandleCollisions()
     {
         //Raycasts
-        bool groundCollision = Physics2D.CircleCast(col.bounds.center, col.radius, Vector2.down, 0.05f, rayCastLayer);
-        bool ceilingCollision = Physics2D.CircleCast(col.bounds.center, col.radius, Vector2.up, 0.05f, rayCastLayer);
+        bool groundCollision = Physics2D.BoxCast(col.bounds.center, col.size, 0, Vector2.down, 0.05f, rayCastLayer);
+        bool ceilingCollision = Physics2D.BoxCast(col.bounds.center, col.size, 0, Vector2.up, 0.05f, rayCastLayer);
 
         //Collided with a ceiling
         if (ceilingCollision) currentMovement.y = Mathf.Min(0, currentMovement.y);

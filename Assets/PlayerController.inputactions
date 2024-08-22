@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Melee Attack",
+                    "type": "Button",
+                    "id": "d3bc8359-cdf0-49b9-8430-dd4345b5a164",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -97,6 +106,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "842faac3-167e-411f-99c9-6f746c695a55",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Melee Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
