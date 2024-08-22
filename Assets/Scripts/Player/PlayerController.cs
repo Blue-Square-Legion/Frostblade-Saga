@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //Player variables
     [Header("Player")]
@@ -49,15 +49,21 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The force applied to keep the player on the ground")]
     [SerializeField] private float groundingForce;
 
+    [Header("Attack Variables")]
+    [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private LayerMask attackLayer;
+
     GameManager gameManager;
     private InputAction sprintAction;
     private InputAction jumpAction;
+    private InputAction meleeAttackAction;
 
     private float horizontalMove;
     private Vector2 currentMovement;
 
     private Rigidbody2D rb;
     private BoxCollider2D col;
+    private SpriteRenderer spriteRenderer;
     private bool isGrounded;
 
     private float time;
@@ -69,9 +75,11 @@ public class PlayerMovement : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
+        meleeAttackAction = playerInput.currentActionMap.FindAction("Melee Attack"); // Connects Melee Attacj Action to Melee Attack Input
 
         // Subscribes actions to methods when start and cancel actions are detected
         playerInput.currentActionMap.FindAction("Move").performed += context => horizontalMove = context.ReadValue<float>();
@@ -79,6 +87,9 @@ public class PlayerMovement : MonoBehaviour
 
         jumpAction.started += Jump_Started;
         jumpAction.canceled += Jump_Canceled;
+
+        meleeAttackAction.started += Melee_Attack_Started;
+        meleeAttackAction.canceled += Melee_Attack_Canceled;
     }
 
     float lastVerticalVelocity = 0;
@@ -88,8 +99,7 @@ public class PlayerMovement : MonoBehaviour
         time += Time.deltaTime;
 
 
-        if (lastVerticalVelocity > 0 && currentMovement.y < 0)
-            print("APEX");
+        //if (lastVerticalVelocity > 0 && currentMovement.y < 0)
             //currentMovement.y += 10;
         lastVerticalVelocity = currentMovement.y;
     }
@@ -209,7 +219,16 @@ public class PlayerMovement : MonoBehaviour
     /**
      * Applies all movement to the rigidbody to move the player
      */
-    private void ApplyMovement() { rb.velocity = currentMovement; }
+    private void ApplyMovement()
+    {
+        rb.velocity = currentMovement;
+
+        //Makes player face the direction they are moving
+        if (rb.velocity.x < 0)
+            spriteRenderer.flipX = true;
+        else
+            spriteRenderer.flipX = false;
+    }
 
     private void Jump_Started(InputAction.CallbackContext obj)
     {
@@ -218,5 +237,32 @@ public class PlayerMovement : MonoBehaviour
     private void Jump_Canceled(InputAction.CallbackContext obj)
     {
 
+    }
+
+    private void Melee_Attack_Started(InputAction.CallbackContext obj)
+    {
+        print("MELEE ATTACK");
+
+    }
+
+    private RaycastHit2D[] hits;
+    private void Melee_Attack_Canceled(InputAction.CallbackContext obj)
+    {
+        if (spriteRenderer.flipX)
+        {
+            hits = Physics2D.CircleCastAll(transform.position, attackRange, Vector2.left, 0f, attackLayer);
+        }
+        else
+        {
+            hits = Physics2D.CircleCastAll(transform.position, attackRange, Vector2.right, 0f, attackLayer);
+        }
+
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+            {
+                //Enemy Takes damage here
+            }
+        }
     }
 }
