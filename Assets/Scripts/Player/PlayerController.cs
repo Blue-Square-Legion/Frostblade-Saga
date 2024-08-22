@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundingForce;
 
     [Header("Attack Variables")]
+    [SerializeField] private Transform attackAreaTransformRight;
+    [SerializeField] private Transform attackAreaTransformLeft;
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private LayerMask attackLayer;
 
@@ -226,7 +228,7 @@ public class PlayerController : MonoBehaviour
         //Makes player face the direction they are moving
         if (rb.velocity.x < 0)
             spriteRenderer.flipX = true;
-        else
+        else if (rb.velocity.x > 0)
             spriteRenderer.flipX = false;
     }
 
@@ -245,24 +247,35 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private RaycastHit2D[] hits;
+    private RaycastHit2D[] enemyHits;
     private void Melee_Attack_Canceled(InputAction.CallbackContext obj)
     {
         if (spriteRenderer.flipX)
         {
-            hits = Physics2D.CircleCastAll(transform.position, attackRange, Vector2.left, 0f, attackLayer);
+            enemyHits = Physics2D.CircleCastAll(attackAreaTransformLeft.position, attackRange, Vector2.left, 0f, attackLayer);
         }
         else
         {
-            hits = Physics2D.CircleCastAll(transform.position, attackRange, Vector2.right, 0f, attackLayer);
+            enemyHits = Physics2D.CircleCastAll(attackAreaTransformRight.position, attackRange, Vector2.right, 0f, attackLayer);
         }
 
-        for (int i = 0; i < hits.Length; i++)
+        for (int i = 0; i < enemyHits.Length; i++)
         {
-            if (hits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+            if (enemyHits[i].collider.gameObject.tag == "Projectile")
             {
+                print("FREEZE PROJECTILE");
+            }
+            if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+            {
+                print("ENEMY HIT");
                 //Enemy Takes damage here
             }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(attackAreaTransformLeft.position, attackRange);
+        Gizmos.DrawWireSphere(attackAreaTransformRight.position, attackRange);
     }
 }
