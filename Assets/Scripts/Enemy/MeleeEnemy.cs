@@ -26,4 +26,14 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
         }
         state.Do();
     }
+
+    private bool PlayerInSight()
+    {
+        return false;
+    }
+
+    private bool PlayerInRange()
+    {
+        return false;
+    }
 }
