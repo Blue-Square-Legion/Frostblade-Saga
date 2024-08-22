@@ -13,12 +13,39 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int expectedFrameRate;
     //Movement Variables
     [Header("Horizontal Movement")]
+    
+    [Tooltip("The maximum horizontal speed of the player")]
     [SerializeField] private float speed;
+    
+    [Tooltip("How many times faster the player is while sprinting (based off speed)")]
     [SerializeField] private float sprintMultiplier;
-    [SerializeField] private float acceleration, groundDeceleration, airDeceleration;
+    
+    [Tooltip("How fast the player speeds up horizontally")]
+    [SerializeField] private float acceleration;
+
+    [Tooltip("How fast the player slows down horizontally on the ground")]
+    [SerializeField] private float groundDeceleration;
+
+    [Tooltip("How fast the player slows down horizontally in the air")]
+    [SerializeField] private float airDeceleration;
+
     [Header("Jump Movement")]
+
+    [Tooltip("How high the player jumps")]
     [SerializeField] private float jumpPower;
-    [SerializeField] private float gravity, maxFallSpeed;
+
+    [Tooltip("How fast the player falls")]
+    [SerializeField] private float gravity;
+
+    [Tooltip("The maximum speed the player can fall (Terminal Velocity)")]
+    [SerializeField] private float maxFallSpeed;
+
+    [Tooltip("The time the player is still able to jump after leaving the ground")]
+    [SerializeField] private float coyoteJumptime;
+
+    [Tooltip("The time the player can input a jump before being able to (and then jumping immediately when able)")]
+    [SerializeField] private float bufferJumpTime;
+
     [Tooltip("The force applied to keep the player on the ground")]
     [SerializeField] private float groundingForce;
 
@@ -49,6 +76,9 @@ public class PlayerMovement : MonoBehaviour
         // Subscribes actions to methods when start and cancel actions are detected
         playerInput.currentActionMap.FindAction("Move").performed += context => horizontalMove = context.ReadValue<float>();
         playerInput.currentActionMap.FindAction("Move").canceled += context => horizontalMove = 0f;
+
+        jumpAction.started += Jump_Started;
+        jumpAction.canceled += Jump_Canceled;
     }
 
     private void Update()
@@ -83,26 +113,44 @@ public class PlayerMovement : MonoBehaviour
         if (!isGrounded && groundCollision)
         {
             isGrounded = true;
+            canCoyoteJump = true;
         }
 
         //Left the ground
         else if (isGrounded && !groundCollision)
         {
             isGrounded = false;
+            timeLeftFromGround = time;
         }
     }
+
+
+    //Initializes jumping variables
+    private float timeLeftFromGround = 0f; // For coyote jump
+    private float timeJumpWasPressed = 0f; // For buffer jump
+    private bool canCoyoteJump;
+    //private bool canBufferJump;
 
     /**
      * Handles the player jumping
      */
     private void HandleJump()
     {
-        //If player is grounded and jump input is triggered, jump
-        if (isGrounded && jumpAction.ReadValue<float>() > 0)
+        //Checks if jump button was pressed
+        if (jumpAction.ReadValue<float>() > 0)
         {
-            currentMovement.y = jumpPower;
-            print("JUMP: " + currentMovement.y);
+            //If player cannot jump and cannot buffer a jump, do nothing
+            //if (!canJump && !HasBufferJump) return;
+            bool HasCoyoteJump = canCoyoteJump && !isGrounded && time < timeLeftFromGround + coyoteJumptime;
+            if (isGrounded || HasCoyoteJump) Jump();
         }
+    }
+
+    private void Jump()
+    {
+        currentMovement.y = jumpPower;
+        canCoyoteJump = false;
+        timeJumpWasPressed = 0;
     }
 
     /**
@@ -152,5 +200,14 @@ public class PlayerMovement : MonoBehaviour
     /**
      * Applies all movement to the rigidbody to move the player
      */
-    private void ApplyMovement() { rb.velocity = currentMovement; print(rb.velocity); }
+    private void ApplyMovement() { rb.velocity = currentMovement; }
+
+    private void Jump_Started(InputAction.CallbackContext obj)
+    {
+        timeJumpWasPressed = time;
+    }
+    private void Jump_Canceled(InputAction.CallbackContext obj)
+    {
+
+    }
 }
