@@ -4,17 +4,36 @@ using UnityEngine;
 
 public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 {
+    public PatrolState patrolState;
+    State state;
+
     void Start()
     {
-        //Placeholder values, TBD later
-        health = 1;
-        walkSpeed = 1;
-        attackDamage = 1;
-        attackRange = 1;
+        SelectState();
     }
 
-    void Update()
+    void SelectState()
     {
-        
+        state = patrolState;
+        state.Enter();
+    }
+
+    private void Update()
+    {
+        if (state.IsComplete)
+        {
+            SelectState();
+        }
+        state.Do();
+    }
+
+    private bool PlayerInSight()
+    {
+        return false;
+    }
+
+    private bool PlayerInRange()
+    {
+        return false;
     }
 }
