@@ -20,7 +20,7 @@ public class PatrolBehavior : MonoBehaviour
     [SerializeField] private float idleDuration;
     private float idleTimer;
 
-    private void Awake()
+    private void Start()
     {
         initScale = enemy.localScale;
     }

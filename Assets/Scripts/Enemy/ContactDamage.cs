@@ -7,7 +7,7 @@ public class ContactDamage : MonoBehaviour
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         //do damage to player upon collision
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
             collision.GetComponent<Health>().TakeDamage(damage);
     }
 }
