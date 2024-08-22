@@ -7,8 +7,8 @@ using UnityEngine;
 public abstract class GenericEnemy : MonoBehaviour
 {
     // Initializes Varibales
-    [SerializeField] protected int health;
-    [SerializeField] protected float walkSpeed;
-    [SerializeField] protected int attackDamage;
-    [SerializeField] protected float attackRange;
+    //[SerializeField] protected int health;
+    //[SerializeField] protected float walkSpeed;
+    //[SerializeField] protected int attackDamage;
+    //[SerializeField] protected float attackRange;
 }
