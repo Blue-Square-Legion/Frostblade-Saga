@@ -1186,13 +1186,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4528926560041454582, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 14e174ba65734a04a9b7edd7a9b54e14, type: 3}
+    - target: {fileID: 5310160692683680514, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310160692683680514, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5310160692683680514, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.05
+      value: -6.73
       objectReference: {fileID: 0}
     - target: {fileID: 5310160692683680514, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 5310160692683680514, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1229,6 +1241,18 @@ PrefabInstance:
     - target: {fileID: 6328222910832351817, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
       propertyPath: m_Name
       value: Player Placeholder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069141871667446112, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
+      propertyPath: m_Radius
+      value: 0.23100194
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069141871667446112, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0134917265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069141871667446112, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.008188009
       objectReference: {fileID: 0}
     - target: {fileID: 8678957887280610100, guid: d0dbaba53f86860469a614fe75ea5fbb, type: 3}
       propertyPath: cam
