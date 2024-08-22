@@ -81,10 +81,17 @@ public class PlayerMovement : MonoBehaviour
         jumpAction.canceled += Jump_Canceled;
     }
 
+    float lastVerticalVelocity = 0;
     private void Update()
     {
         //Will be used for buffering and coyote time
         time += Time.deltaTime;
+
+
+        if (lastVerticalVelocity > 0 && currentMovement.y < 0)
+            print("APEX");
+            //currentMovement.y += 10;
+        lastVerticalVelocity = currentMovement.y;
     }
 
     private void FixedUpdate()
@@ -140,9 +147,11 @@ public class PlayerMovement : MonoBehaviour
         if (jumpAction.ReadValue<float>() > 0)
         {
             //If player cannot jump and cannot buffer a jump, do nothing
-            //if (!canJump && !HasBufferJump) return;
-            bool HasCoyoteJump = canCoyoteJump && !isGrounded && time < timeLeftFromGround + coyoteJumptime;
-            if (isGrounded || HasCoyoteJump) Jump();
+            bool hasBufferJump = false;
+
+
+            bool hasCoyoteJump = canCoyoteJump && !isGrounded && time < timeLeftFromGround + coyoteJumptime;
+            if (isGrounded || hasCoyoteJump) Jump();
         }
     }
 
