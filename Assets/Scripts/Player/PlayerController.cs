@@ -241,14 +241,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void Melee_Attack_Started(InputAction.CallbackContext obj)
-    {
-        print("MELEE ATTACK");
-
-    }
-
     private RaycastHit2D[] enemyHits;
-    private void Melee_Attack_Canceled(InputAction.CallbackContext obj)
+    /**
+     * Called when attack input is detected
+     */
+    private void Melee_Attack_Started(InputAction.CallbackContext obj)
     {
         if (spriteRenderer.flipX)
         {
@@ -271,6 +268,14 @@ public class PlayerController : MonoBehaviour
                 //Enemy Takes damage here
             }
         }
+    }
+
+    /**
+     * Called when attack input is released
+     */
+    private void Melee_Attack_Canceled(InputAction.CallbackContext obj)
+    {
+
     }
 
     private void OnDrawGizmosSelected()

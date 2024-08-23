@@ -214,6 +214,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &53863562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3563489871585868959, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+  m_PrefabInstance: {fileID: 4234550133699934537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &59737530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1266,6 +1271,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: attackAreaTransform
+      value: 
+      objectReference: {fileID: 1123472547}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: attackAreaTransformLeft
+      value: 
+      objectReference: {fileID: 53863562}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: attackAreaTransformRight
       value: 
       objectReference: {fileID: 1123472547}
     - target: {fileID: 981953159880648307, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
