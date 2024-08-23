@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
 {
+    
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private int damage;
@@ -23,9 +24,13 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Health")]
+    [SerializeField] private float rangedHealth;
+
+
     private void Start()
     {
-
+        health = Mathf.RoundToInt(rangedHealth);
     }
 
     void Update()
@@ -49,7 +54,7 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
-        print("seen");
+        
         return hit.collider != null;
     }
 

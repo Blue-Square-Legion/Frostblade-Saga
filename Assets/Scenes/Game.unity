@@ -489,7 +489,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.5, y: 1.71875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -510,9 +510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ea4f33c7cc20947970978234c3b020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 3
+  health: 2
+  attackCooldown: 6
   damage: 5
-  range: 7
+  range: 9
   colliderDistance: 0.5
   boxCollider: {fileID: 715975145}
   firepoint: {fileID: 1762767460}
@@ -527,6 +528,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  rangedHealth: 2
 --- !u!212 &715975147
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -568,8 +570,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.87169814, g: 0.16940545, b: 0.16940545, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 88c047f1ed16abb41b1e5b4f07fd4d7e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -588,8 +590,8 @@ Transform:
   m_GameObject: {fileID: 715975144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.61, y: -1.07, z: -0.037985798}
-  m_LocalScale: {x: -1.5146, y: 2.2094, z: 1}
+  m_LocalPosition: {x: 5.61, y: -1.46, z: -0.037985798}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1762767460}
@@ -1111,7 +1113,7 @@ Transform:
   m_GameObject: {fileID: 1762767459}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.49, y: 0, z: 0}
+  m_LocalPosition: {x: 1.49, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1262,8 +1264,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 39465172}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: jumpPower
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: attackRange
-      value: 0.75
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: attackLayer.m_Bits

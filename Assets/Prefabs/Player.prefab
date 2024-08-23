@@ -135,7 +135,8 @@ MonoBehaviour:
   coyoteJumptime: 0.15
   bufferJumpTime: 0.2
   groundingForce: 1.5
-  attackAreaTransform: {fileID: 0}
+  attackAreaTransformRight: {fileID: 0}
+  attackAreaTransformLeft: {fileID: 0}
   attackRange: 1.5
   attackLayer:
     serializedVersion: 2
@@ -254,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321c793dcaa437c47a3c03fefc14091b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 5
   components:
   - {fileID: 0}
 --- !u!1 &3578961823996288676

@@ -8,24 +8,31 @@ public class EnemyProjectile : ContactDamage
     [SerializeField] private float resetTime;
     private float lifeTime;
     private BoxCollider2D boxCollider;
+    private Rigidbody2D rb; 
 
     private bool hit;
+    private bool isFrozen; 
 
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>(); 
     }
+
     public void ActivateProjectile()
     {
+        
         lifeTime = 0;
         gameObject.SetActive(true);
         hit = false;
-        boxCollider.enabled = true;
+        isFrozen = false;  
+        
     }
 
     private void Update()
     {
-        if (hit) return;
+        if (hit || isFrozen) return;
+
         float movementSpeed = speed * Time.deltaTime;
         transform.Translate(movementSpeed, 0, 0);
 
@@ -42,5 +49,18 @@ public class EnemyProjectile : ContactDamage
         base.OnTriggerEnter2D(collision);
         boxCollider.enabled = false;
         gameObject.SetActive(false);
+
+    }
+
+
+    public void FreezeProjectile()
+    {
+        isFrozen = true;
+        rb.velocity = Vector2.zero; // freeze projectile movement
+        rb.isKinematic = true;
+        boxCollider.enabled = true;
+        gameObject.layer = LayerMask.NameToLayer("Ground");
     }
 }
+
+

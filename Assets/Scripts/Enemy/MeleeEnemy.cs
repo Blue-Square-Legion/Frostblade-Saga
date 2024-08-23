@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 {
+    [SerializeField] private float meleeHealth;
+
+
     public PatrolState patrolState;
     State state;
 
     void Start()
     {
+        health = Mathf.RoundToInt(meleeHealth);
         SelectState();
     }
 

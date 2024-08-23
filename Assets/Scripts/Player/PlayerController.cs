@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
-        meleeAttackAction = playerInput.currentActionMap.FindAction("Melee Attack"); // Connects Melee Attacj Action to Melee Attack Input
+        meleeAttackAction = playerInput.currentActionMap.FindAction("Melee Attack"); // Connects Melee Attack Action to Melee Attack Input
 
         // Subscribes actions to methods when start and cancel actions are detected
         playerInput.currentActionMap.FindAction("Move").performed += context => horizontalMove = context.ReadValue<float>();
@@ -258,14 +258,19 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < enemyHits.Length; i++)
         {
-            if (enemyHits[i].collider.gameObject.tag == "Projectile")
+            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
             {
-                print("FREEZE PROJECTILE");
+                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                if (projectile != null)
+                {
+                    projectile.FreezeProjectile();
+                    print("FREEZE PROJECTILE");
+                }
             }
             if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
             {
+                enemy.TakeDamage(1);
                 print("ENEMY HIT");
-                //Enemy Takes damage here
             }
         }
     }
