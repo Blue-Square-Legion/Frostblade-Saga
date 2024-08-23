@@ -132,6 +132,7 @@ public class PlayerController : MonoBehaviour
         if (!isGrounded && groundCollision)
         {
             isGrounded = true;
+            currentMovement.y = 0;
             canCoyoteJump = true;
         }
 
