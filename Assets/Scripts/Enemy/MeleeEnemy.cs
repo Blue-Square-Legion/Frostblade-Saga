@@ -4,40 +4,82 @@ using UnityEngine;
 
 public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 {
-    [SerializeField] private float meleeHealth;
+    [Header("Attack Parameters")]
+    [SerializeField] private int damage;
+    [SerializeField] private float sightRange;
+    [SerializeField] private float attackRange;
 
+    [Header("Player Layer")]
+    [SerializeField] private LayerMask playerLayer;
 
     public PatrolState patrolState;
+    public ChaseState chaseState;
     State state;
+
+    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] private float colliderDistance;
 
     void Start()
     {
-        health = Mathf.RoundToInt(meleeHealth);
-        SelectState();
+        SelectState(patrolState);
+        boxCollider= GetComponent<BoxCollider2D>();
     }
 
-    void SelectState()
+    void SelectState(State _state)
     {
-        state = patrolState;
+        state = _state;
         state.Enter();
     }
 
     private void Update()
     {
+        if (PlayerInSight())
+        {
+            print("chasing");
+            SelectState(chaseState);
+        }   else
+        {
+            print("patrolling");
+            SelectState(patrolState);
+        }
         if (state.IsComplete)
         {
-            SelectState();
+            //if (PlayerInRange())
+            //{
+            //    SelectState(chaseState);
+            //}
+            if (PlayerInSight())
+            {
+                print("chasing");
+                SelectState(chaseState);
+            }
         }
+    
         state.Do();
     }
 
     private bool PlayerInSight()
     {
-        return false;
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * sightRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * sightRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            0, Vector2.left, 0, playerLayer);
+
+        return hit.collider != null;
     }
 
     private bool PlayerInRange()
     {
-        return false;
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * attackRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * attackRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            0, Vector2.left, 0, playerLayer);
+
+        return hit.collider != null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * sightRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * sightRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 }
