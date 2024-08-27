@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 281665710}
   - component: {fileID: 281665712}
   - component: {fileID: 281665714}
-  - component: {fileID: 281665713}
+  - component: {fileID: 281665715}
   m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1837,7 +1837,34 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!66 &281665713
+--- !u!50 &281665714
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281665708}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &281665715
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1924,33 +1951,6 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 281665708}
---- !u!50 &281665714
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281665708}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &491701471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2515,10 @@ PrefabInstance:
       propertyPath: attackAreaTransformRight
       value: 
       objectReference: {fileID: 1123472547}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: endedJumpEarlyGravityModifier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 981953159880648307, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: m_Name
       value: Player

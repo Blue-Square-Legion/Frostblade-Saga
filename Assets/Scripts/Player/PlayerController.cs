@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("How fast the player falls")]
     [SerializeField] private float gravity;
 
+    [Tooltip("Multiplies gravity if jump was ended early to achieve a lower jump height")]
+    [SerializeField] private float endedJumpEarlyGravityModifier;
+
     [Tooltip("The maximum speed the player can fall (Terminal Velocity)")]
     [SerializeField] private float maxFallSpeed;
 
@@ -67,6 +70,7 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D col;
     private SpriteRenderer spriteRenderer;
     private bool isGrounded;
+    private bool cachedQueryStartInColliders;
 
     private float time;
 
@@ -78,6 +82,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
@@ -116,11 +121,21 @@ public class PlayerController : MonoBehaviour
         ApplyMovement();
     }
 
+    //Initializes jumping variables
+    private float timeLeftFromGround = 0f; // For coyote jump
+    private float timeJumpWasPressed = 0f; // For buffer jump
+    private bool canJump; // If the player can jump or not
+    private bool jumpHeld; // If the jump button was held or not
+    private bool canCoyoteJump; // If the player can perform a coyote jump
+    private bool canBufferJump; // If the player can peform a buffer jump
+    private bool endedJumpEarly; // If the jump ended early
+
     /**
      * Raycasts to check if player hit a ceiling or the ground
      */
     private void HandleCollisions()
     {
+        Physics2D.queriesStartInColliders = false;
         //Raycasts
         bool groundCollision = Physics2D.BoxCast(col.bounds.center, col.size, 0, Vector2.down, 0.05f, rayCastLayer);
         bool ceilingCollision = Physics2D.BoxCast(col.bounds.center, col.size, 0, Vector2.up, 0.05f, rayCastLayer);
@@ -134,6 +149,9 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             currentMovement.y = 0;
             canCoyoteJump = true;
+            canBufferJump = true;
+            endedJumpEarly = false;
+
         }
 
         //Left the ground
@@ -142,37 +160,40 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             timeLeftFromGround = time;
         }
+
+        Physics2D.queriesStartInColliders = cachedQueryStartInColliders;
     }
-
-
-    //Initializes jumping variables
-    private float timeLeftFromGround = 0f; // For coyote jump
-    private float timeJumpWasPressed = 0f; // For buffer jump
-    private bool canCoyoteJump;
-    //private bool canBufferJump;
 
     /**
      * Handles the player jumping
      */
     private void HandleJump()
     {
-        //Checks if jump button was pressed
+        //If the jump button was held
         if (jumpAction.ReadValue<float>() > 0)
-        {
-            //If player cannot jump and cannot buffer a jump, do nothing
-            bool hasBufferJump = false;
+            jumpHeld = true;
+        else
+            jumpHeld = false;
 
+        if (!endedJumpEarly && !isGrounded && !jumpHeld && rb.velocity.y > 0) endedJumpEarly = true;
 
-            bool hasCoyoteJump = canCoyoteJump && !isGrounded && time < timeLeftFromGround + coyoteJumptime;
-            if (isGrounded || hasCoyoteJump) Jump();
-        }
+        //If player cannot jump and cannot buffer a jump, do nothing
+        bool hasBufferJump = canBufferJump && time < timeJumpWasPressed + bufferJumpTime;
+        if (!canJump && !hasBufferJump) return;
+
+        bool hasCoyoteJump = canCoyoteJump && !isGrounded && time < timeLeftFromGround + coyoteJumptime;
+        if (isGrounded || hasCoyoteJump) Jump();
+
+        canJump = false;
     }
 
     private void Jump()
     {
-        currentMovement.y = jumpPower;
+        endedJumpEarly = false;
+        canBufferJump = false;
         canCoyoteJump = false;
         timeJumpWasPressed = 0;
+        currentMovement.y = jumpPower;
     }
 
     /**
@@ -215,7 +236,12 @@ public class PlayerController : MonoBehaviour
         else
         {
             //Accelerates player downwards using gravity until player reaches terminal velocity / maxFallSpeed
-            currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, gravity * Time.fixedDeltaTime * expectedFrameRate);
+            if (endedJumpEarly && currentMovement.y > 0)
+            {
+                currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, gravity * endedJumpEarlyGravityModifier * Time.fixedDeltaTime * expectedFrameRate);
+            }
+            else
+                currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, gravity * Time.fixedDeltaTime * expectedFrameRate);
         }
     }
 
@@ -235,6 +261,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump_Started(InputAction.CallbackContext obj)
     {
+        canJump = true;
         timeJumpWasPressed = time;
     }
     private void Jump_Canceled(InputAction.CallbackContext obj)
