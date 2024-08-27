@@ -124,7 +124,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   playerControls: {fileID: -944628639613478452, guid: f306c3d6cd30f2b4797518ca2aa463ff, type: 3}
   expectedFrameRate: 60
-  speed: 14
+  speed: 10
   sprintMultiplier: 1.5
   acceleration: 2
   groundDeceleration: 1
