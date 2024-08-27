@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Multiplies gravity if jump was ended early to achieve a lower jump height")]
     [SerializeField] private float endedJumpEarlyGravityModifier;
 
+    [Tooltip("Multiplies gravity when falling")]
+    [SerializeField] private float fallGravityModifier;
+
     [Tooltip("The maximum speed the player can fall (Terminal Velocity)")]
     [SerializeField] private float maxFallSpeed;
 
@@ -93,10 +96,8 @@ public class PlayerController : MonoBehaviour
         playerInput.currentActionMap.FindAction("Move").canceled += context => horizontalMove = 0f;
 
         jumpAction.started += Jump_Started;
-        jumpAction.canceled += Jump_Canceled;
 
         meleeAttackAction.started += Melee_Attack_Started;
-        meleeAttackAction.canceled += Melee_Attack_Canceled;
     }
 
     float lastVerticalVelocity = 0;
@@ -135,7 +136,9 @@ public class PlayerController : MonoBehaviour
      */
     private void HandleCollisions()
     {
+        //Updates raycast
         Physics2D.queriesStartInColliders = false;
+
         //Raycasts
         bool groundCollision = Physics2D.BoxCast(col.bounds.center, col.size, 0, Vector2.down, 0.05f, rayCastLayer);
         bool ceilingCollision = Physics2D.BoxCast(col.bounds.center, col.size, 0, Vector2.up, 0.05f, rayCastLayer);
@@ -166,6 +169,7 @@ public class PlayerController : MonoBehaviour
 
     /**
      * Handles the player jumping
+     * If a jump is valid and the jump input is detected, calls the Jump method
      */
     private void HandleJump()
     {
@@ -175,6 +179,7 @@ public class PlayerController : MonoBehaviour
         else
             jumpHeld = false;
 
+        //Checks if the jump was ended early or not
         if (!endedJumpEarly && !isGrounded && !jumpHeld && rb.velocity.y > 0) endedJumpEarly = true;
 
         //If player cannot jump and cannot buffer a jump, do nothing
@@ -187,12 +192,18 @@ public class PlayerController : MonoBehaviour
         canJump = false;
     }
 
+    /**
+     * Executes a jump
+     */
     private void Jump()
     {
+        //Resets variables
         endedJumpEarly = false;
         canBufferJump = false;
         canCoyoteJump = false;
         timeJumpWasPressed = 0;
+
+        //Jumps
         currentMovement.y = jumpPower;
     }
 
@@ -235,13 +246,14 @@ public class PlayerController : MonoBehaviour
         //If player is in the air, apply gravity
         else
         {
+            //Updates gravity based on if the jump was ended early or not
+            float usedGravity = endedJumpEarly && currentMovement.y > 0 ? gravity * endedJumpEarlyGravityModifier : gravity;
+
+            //Increases gravity if player is falling
+            usedGravity = rb.velocity.y < 0 ? usedGravity * fallGravityModifier : usedGravity;
+
             //Accelerates player downwards using gravity until player reaches terminal velocity / maxFallSpeed
-            if (endedJumpEarly && currentMovement.y > 0)
-            {
-                currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, gravity * endedJumpEarlyGravityModifier * Time.fixedDeltaTime * expectedFrameRate);
-            }
-            else
-                currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, gravity * Time.fixedDeltaTime * expectedFrameRate);
+            currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, usedGravity * Time.fixedDeltaTime * expectedFrameRate);
         }
     }
 
@@ -259,17 +271,17 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
     }
 
+    /**
+     * Called when the jump action is detected
+     */
     private void Jump_Started(InputAction.CallbackContext obj)
     {
         canJump = true;
         timeJumpWasPressed = time;
     }
-    private void Jump_Canceled(InputAction.CallbackContext obj)
-    {
-
-    }
 
     private RaycastHit2D[] enemyHits;
+
     /**
      * Called when attack input is detected
      */
@@ -301,14 +313,6 @@ public class PlayerController : MonoBehaviour
                 print("ENEMY HIT");
             }
         }
-    }
-
-    /**
-     * Called when attack input is released
-     */
-    private void Melee_Attack_Canceled(InputAction.CallbackContext obj)
-    {
-
     }
 
     private void OnDrawGizmosSelected()

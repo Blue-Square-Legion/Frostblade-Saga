@@ -2508,6 +2508,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1123472547}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: fallGravityModifier
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: attackAreaTransformLeft
       value: 
       objectReference: {fileID: 53863562}
@@ -2570,6 +2574,18 @@ PrefabInstance:
     - target: {fileID: 7802423608769962475, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498392201833574442, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498392201833574442, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498392201833574442, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
