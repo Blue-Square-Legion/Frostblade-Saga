@@ -129,7 +129,7 @@ MonoBehaviour:
   acceleration: 2
   groundDeceleration: 1
   airDeceleration: 0.5
-  jumpPower: 36
+  jumpPower: 34
   gravity: 1.83
   maxFallSpeed: 40
   coyoteJumptime: 0.15

@@ -14,6 +14,7 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 
     public PatrolState patrolState;
     public ChaseState chaseState;
+    public AttackState attackState;
     State state;
 
     [SerializeField] private BoxCollider2D boxCollider;
@@ -33,25 +34,25 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 
     private void Update()
     {
-        if (PlayerInSight())
+        if (PlayerInRange())
         {
-            print("chasing");
+            SelectState(attackState);
+        }
+        else if (PlayerInSight())
+        {
             SelectState(chaseState);
         }   else
         {
-            print("patrolling");
             SelectState(patrolState);
         }
         if (state.IsComplete)
         {
-            //if (PlayerInRange())
-            //{
-            //    SelectState(chaseState);
-            //}
             if (PlayerInSight())
             {
-                print("chasing");
                 SelectState(chaseState);
+            } else
+            {
+                SelectState(patrolState);
             }
         }
     
@@ -81,5 +82,9 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * sightRange * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * sightRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * attackRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * attackRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 }
