@@ -16612,8 +16612,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2108642116379101909}
-  player: {fileID: 697961106509844774}
+  player: {fileID: 1344223521}
   speed: 3
+  leftEdge: {fileID: 7859385450902755595}
+  rightEdge: {fileID: 7759416112100486185}
 --- !u!114 &6911426058942111810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16904,6 +16906,8 @@ MonoBehaviour:
   enemy: {fileID: 2886876381220328882}
   player: {fileID: 1344223521}
   speed: 3
+  leftEdge: {fileID: 6359502127026439788}
+  rightEdge: {fileID: 6844807084003767118}
 --- !u!114 &7687577769117361263
 MonoBehaviour:
   m_ObjectHideFlags: 0

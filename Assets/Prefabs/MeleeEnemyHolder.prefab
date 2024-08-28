@@ -271,6 +271,8 @@ MonoBehaviour:
   enemy: {fileID: 9157435416615645951}
   player: {fileID: 0}
   speed: 3
+  leftEdge: {fileID: 1100282686950220065}
+  rightEdge: {fileID: 718363708890387459}
 --- !u!1 &9119233641078178218
 GameObject:
   m_ObjectHideFlags: 0

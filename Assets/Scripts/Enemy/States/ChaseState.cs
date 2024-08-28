@@ -10,6 +10,10 @@ public class ChaseState : State
     private Vector3 initScale;
     private bool movingLeft;
 
+    [Header("Stopping points")]
+    [SerializeField] private Transform leftEdge;
+    [SerializeField] private Transform rightEdge;
+
     public override void Enter()
     {
         initScale = enemy.localScale;
@@ -17,6 +21,7 @@ public class ChaseState : State
 
     public override void Do()
     {
+        if (enemy.position.x < leftEdge.position.x || enemy.position.x > rightEdge.position.x) return;
         if (enemy.position.x >= player.position.x)
             MoveInDirection(-1);
         else
