@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -110,6 +111,9 @@ public class PlayerController : MonoBehaviour
         //if (lastVerticalVelocity > 0 && currentMovement.y < 0)
             //currentMovement.y += 10;
         lastVerticalVelocity = currentMovement.y;
+
+        if (Input.GetKeyDown(KeyCode.R))
+            Restart();
     }
 
     private void FixedUpdate()
@@ -319,5 +323,11 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackAreaTransformLeft.position, attackRange);
         Gizmos.DrawWireSphere(attackAreaTransformRight.position, attackRange);
+    }
+
+    private void Restart()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
     }
 }
