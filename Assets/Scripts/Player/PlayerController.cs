@@ -112,8 +112,6 @@ public class PlayerController : MonoBehaviour
             //currentMovement.y += 10;
         lastVerticalVelocity = currentMovement.y;
 
-        if (Input.GetKeyDown(KeyCode.R))
-            Restart();
     }
 
     private void FixedUpdate()
@@ -323,11 +321,5 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackAreaTransformLeft.position, attackRange);
         Gizmos.DrawWireSphere(attackAreaTransformRight.position, attackRange);
-    }
-
-    private void Restart()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
     }
 }
