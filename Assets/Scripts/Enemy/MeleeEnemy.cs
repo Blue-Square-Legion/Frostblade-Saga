@@ -12,6 +12,10 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Health")]
+    [SerializeField] private float meleeHealth;
+
+    [Header("States")]
     public PatrolState patrolState;
     public ChaseState chaseState;
     public AttackState attackState;
@@ -22,8 +26,9 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 
     void Start()
     {
+        health = Mathf.RoundToInt(meleeHealth);
         SelectState(patrolState);
-        boxCollider= GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void SelectState(State _state)

@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7647515458573026219}
   - component: {fileID: 4448581485730977896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PatrolState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8046419439587137244}
   - component: {fileID: 4443438180707894050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6821308386041165419}
   - component: {fileID: 4431733587996732481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ChaseState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,10 +282,9 @@ GameObject:
   - component: {fileID: 9157435416615645951}
   - component: {fileID: 5350619100207637450}
   - component: {fileID: 6808122068324531401}
-  - component: {fileID: 9098458926764183937}
   - component: {fileID: 2975205951985115800}
   - component: {fileID: 1326669246861427635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MeleeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,20 +406,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &9098458926764183937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5625886886569901288, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
-  m_PrefabInstance: {fileID: 7535303110922395046}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9119233641078178218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 321c793dcaa437c47a3c03fefc14091b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 3
-  components: []
 --- !u!114 &2975205951985115800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,13 +431,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631068cba9d6ac48bc3b4bb2becd1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
   damage: 1
   sightRange: 7
   attackRange: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  meleeHealth: 3
   patrolState: {fileID: 4448581485730977896}
   chaseState: {fileID: 4431733587996732481}
   attackState: {fileID: 4443438180707894050}
@@ -523,6 +509,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9045863897643436410}
     m_Modifications:
+    - target: {fileID: 167909792127964256, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325822222894743122, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615767990846264308, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615767990846264308, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
+      propertyPath: meleeHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1624905355184206092, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.6300926
@@ -567,7 +569,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeEnemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5136361891909225863, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183289019905807479, guid: 8969d0992413b2d45b8162a9a958d2bf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -12534,7 +12534,7 @@ GameObject:
   - component: {fileID: 2022925590696454571}
   - component: {fileID: 5412436318279162546}
   - component: {fileID: 8088357787905358745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MeleeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13682,20 +13682,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b14e23853eb63c140801decdeb90d8f2, type: 3}
---- !u!114 &2972859588919719628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2993634355880879847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 321c793dcaa437c47a3c03fefc14091b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 3
-  components: []
 --- !u!1 &2993634355880879847
 GameObject:
   m_ObjectHideFlags: 0
@@ -13707,10 +13693,9 @@ GameObject:
   - component: {fileID: 2886876381220328882}
   - component: {fileID: 2109012297537373319}
   - component: {fileID: 684211554011683716}
-  - component: {fileID: 2972859588919719628}
   - component: {fileID: 9101649740765709781}
   - component: {fileID: 5002591663989908734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MeleeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14920,13 +14905,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631068cba9d6ac48bc3b4bb2becd1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
   damage: 1
   sightRange: 5
   attackRange: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  meleeHealth: 3
   patrolState: {fileID: 7690188219961409317}
   chaseState: {fileID: 7675591770915785484}
   attackState: {fileID: 7687577769117361263}
@@ -17328,13 +17314,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7631068cba9d6ac48bc3b4bb2becd1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
   damage: 1
   sightRange: 3
   attackRange: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  meleeHealth: 3
   patrolState: {fileID: 6911426058942111810}
   chaseState: {fileID: 6905836944445854827}
   attackState: {fileID: 6916573899178130184}
