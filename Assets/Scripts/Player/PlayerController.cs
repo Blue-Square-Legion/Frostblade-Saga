@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalMove;
     private Vector2 currentMovement;
 
+    private Animator animator;
     private Rigidbody2D rb;
     private BoxCollider2D col;
     private SpriteRenderer spriteRenderer;
@@ -86,6 +87,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
@@ -112,8 +114,6 @@ public class PlayerController : MonoBehaviour
             //currentMovement.y += 10;
         lastVerticalVelocity = currentMovement.y;
 
-        if (Input.GetKeyDown(KeyCode.R))
-            Restart();
     }
 
     private void FixedUpdate()
@@ -266,6 +266,10 @@ public class PlayerController : MonoBehaviour
      */
     private void ApplyMovement()
     {
+        if (isGrounded && currentMovement.x != 0)
+            animator.SetBool("Running", true);
+        else
+            animator.SetBool("Running", false);
         rb.velocity = currentMovement;
 
         //Makes player face the direction they are moving
@@ -323,11 +327,5 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackAreaTransformLeft.position, attackRange);
         Gizmos.DrawWireSphere(attackAreaTransformRight.position, attackRange);
-    }
-
-    private void Restart()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
     }
 }

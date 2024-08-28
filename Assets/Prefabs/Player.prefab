@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1142440981438802311}
   - component: {fileID: 207808575219828573}
+  - component: {fileID: 3633052007026965450}
   - component: {fileID: 783938442117891350}
   - component: {fileID: 36393784476097622}
   - component: {fileID: 4721760356557680725}
   - component: {fileID: 8498392201833574442}
   - component: {fileID: 1820398780499437230}
-  - component: {fileID: 3633052007026965450}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -92,6 +92,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3633052007026965450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321c793dcaa437c47a3c03fefc14091b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 5
+  components:
+  - {fileID: 0}
 --- !u!114 &783938442117891350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +146,8 @@ MonoBehaviour:
   airDeceleration: 0.5
   jumpPower: 34
   gravity: 1.83
+  endedJumpEarlyGravityModifier: 0
+  fallGravityModifier: 0
   maxFallSpeed: 40
   coyoteJumptime: 0.15
   bufferJumpTime: 0.2
@@ -243,21 +260,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.41944182, y: 1.2435471}
   m_EdgeRadius: 0
---- !u!114 &3633052007026965450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981953159880648307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 321c793dcaa437c47a3c03fefc14091b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 5
-  components:
-  - {fileID: 0}
 --- !u!1 &3578961823996288676
 GameObject:
   m_ObjectHideFlags: 0

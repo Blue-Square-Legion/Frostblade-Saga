@@ -819,8 +819,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Frostblade Saga
-  metroPackageVersion: 
+  metroPackageName: FrostbladeSaga
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -828,7 +828,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Frostblade Saga
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Frostblade Saga
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
