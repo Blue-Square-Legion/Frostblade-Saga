@@ -467,7 +467,7 @@ public class PlayerController : MonoBehaviour
         else if (weaponStage == WeaponStage.Stage2)
         {
             //Checks if weapon is on cooldown
-            if (time > timeSecondaryAttackWasPressed + secondaryAttackStage2Cooldown || timeSecondaryAttackWasPressed == 0)
+            if (time > timeSecondaryAttackWasPressed + secondaryAttackStage2Cooldown || timeSecondaryAttackWasPressed == 0 || doStage2SecondaryAttack)
             {
                 timeSecondaryAttackWasPressed = time;
                 //Toggles attack
@@ -506,15 +506,29 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(leftAttackTransform.position, stage1AttackRange);
-        Gizmos.DrawWireSphere(rightAttackTransform.position, stage1AttackRange);
+        if (weaponStage == WeaponStage.Stage1)
+        {
+            Gizmos.color = Color.green;
+            if (spriteRenderer.flipX)
+                Gizmos.DrawWireSphere(leftAttackTransform.position, stage1AttackRange);
+            else
+                Gizmos.DrawWireSphere(rightAttackTransform.position, stage1AttackRange);
+        }
+        
+        if (weaponStage == WeaponStage.Stage2)
+        {
+            Gizmos.color = Color.blue;
+            if (spriteRenderer.flipX)
+                Gizmos.DrawWireSphere(leftAttackTransform.position, stage2AttackRange);
+            else
+                Gizmos.DrawWireSphere(rightAttackTransform.position, stage2AttackRange);
+        }
 
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(leftAttackTransform.position, stage2AttackRange);
-        Gizmos.DrawWireSphere(rightAttackTransform.position, stage2AttackRange);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, Mathf.Min( (time - timeSecondaryAttackWasPressed) * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
+        if (doStage2SecondaryAttack)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, Mathf.Min((time - timeSecondaryAttackWasPressed) 
+                * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
+        }
     }
 }
