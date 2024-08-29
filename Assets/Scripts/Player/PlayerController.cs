@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask rayCastLayer;
     [SerializeField] private Camera cam;
     [SerializeField] private InputActionAsset playerControls;
-    [SerializeField] private int expectedFrameRate;
     //Movement Variables
     [Header("Horizontal Movement")]
     
@@ -57,6 +56,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundingForce;
 
     [Header("Attack Variables")]
+
+    [Tooltip("The cooldown for the primary attack in stage 1")]
+    [SerializeField] private float primaryAttackStage1Cooldown;
+
+    [Tooltip("The cooldown for the primary attack in stage 2")]
+    [SerializeField] private float primaryAttackStage2Cooldown;
+
+    [Tooltip("The cooldown for the secondary attack in stage 1")]
+    [SerializeField] private float secondaryAttackStage1Cooldown;
+
+    [Tooltip("The cooldown for the secondary attack in stage 2")]
+    [SerializeField] private float secondaryAttackStage2Cooldown;
+
+    [SerializeField] private PlayerProjectile projectile;
+    [SerializeField] private Transform rightLaunchOffset;
+    [SerializeField] private Transform leftLaunchOffset;
+
     [SerializeField] private Transform attackAreaTransformRight;
     [SerializeField] private Transform attackAreaTransformLeft;
     [SerializeField] private float attackRange = 1.5f;
@@ -65,7 +81,8 @@ public class PlayerController : MonoBehaviour
     GameManager gameManager;
     private InputAction sprintAction;
     private InputAction jumpAction;
-    private InputAction meleeAttackAction;
+    private InputAction primaryAttackAction;
+    private InputAction secondaryAttackAction;
 
     private float horizontalMove;
     private Vector2 currentMovement;
@@ -92,7 +109,8 @@ public class PlayerController : MonoBehaviour
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
-        meleeAttackAction = playerInput.currentActionMap.FindAction("Melee Attack"); // Connects Melee Attack Action to Melee Attack Input
+        primaryAttackAction = playerInput.currentActionMap.FindAction("Primary Attack"); // Connects Primary Attack Action to Primary Attack Input
+        secondaryAttackAction = playerInput.currentActionMap.FindAction("Secondary Attack"); //Connects Secondary Attack Action to Secondary Attack Input
 
         // Subscribes actions to methods when start and cancel actions are detected
         playerInput.currentActionMap.FindAction("Move").performed += context => horizontalMove = context.ReadValue<float>();
@@ -100,7 +118,8 @@ public class PlayerController : MonoBehaviour
 
         jumpAction.started += Jump_Started;
 
-        meleeAttackAction.started += Melee_Attack_Started;
+        primaryAttackAction.started += Primary_Attack_Started;
+        secondaryAttackAction.started += Secondary_Attack_Started;
     }
 
     float lastVerticalVelocity = 0;
@@ -228,12 +247,12 @@ public class PlayerController : MonoBehaviour
         {
             //If ground and air deceleration is different, use the appropiate one.
             float deceleration = isGrounded ? groundDeceleration : airDeceleration;
-            currentMovement.x = Mathf.MoveTowards(currentMovement.x, 0f, deceleration * Time.fixedDeltaTime * expectedFrameRate);
+            currentMovement.x = Mathf.MoveTowards(currentMovement.x, 0f, deceleration * Time.fixedDeltaTime * gameManager.expectedFrameRate);
         }
         //If Accelerating, accelerate to horizontalSpeed
         else
         {
-            currentMovement.x = Mathf.MoveTowards(currentMovement.x, horizontalSpeed, acceleration * Time.fixedDeltaTime * expectedFrameRate);
+            currentMovement.x = Mathf.MoveTowards(currentMovement.x, horizontalSpeed, acceleration * Time.fixedDeltaTime * gameManager.expectedFrameRate);
         }
     }
 
@@ -257,7 +276,7 @@ public class PlayerController : MonoBehaviour
             usedGravity = rb.velocity.y < 0 ? usedGravity * fallGravityModifier : usedGravity;
 
             //Accelerates player downwards using gravity until player reaches terminal velocity / maxFallSpeed
-            currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, usedGravity * Time.fixedDeltaTime * expectedFrameRate);
+            currentMovement.y = Mathf.MoveTowards(currentMovement.y, -maxFallSpeed, usedGravity * Time.fixedDeltaTime * gameManager.expectedFrameRate);
         }
     }
 
@@ -290,36 +309,62 @@ public class PlayerController : MonoBehaviour
 
     private RaycastHit2D[] enemyHits;
 
+    //Cooldown timers
+    private float timePrimaryAttackWasPressed = 0;
+    private float timeSecondaryAttackWasPressed = 0;
+
     /**
      * Called when attack input is detected
      */
-    private void Melee_Attack_Started(InputAction.CallbackContext obj)
+    private void Primary_Attack_Started(InputAction.CallbackContext obj)
     {
-        if (spriteRenderer.flipX)
+        //Checks Attack cooldown
+        if (time > timePrimaryAttackWasPressed + primaryAttackStage1Cooldown || timePrimaryAttackWasPressed == 0)
         {
-            enemyHits = Physics2D.CircleCastAll(attackAreaTransformLeft.position, attackRange, Vector2.left, 0f, attackLayer);
-        }
-        else
-        {
-            enemyHits = Physics2D.CircleCastAll(attackAreaTransformRight.position, attackRange, Vector2.right, 0f, attackLayer);
-        }
+            print("Primary Attack");
+            timePrimaryAttackWasPressed = time;
 
-        for (int i = 0; i < enemyHits.Length; i++)
-        {
-            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+            //Swing dagger
+            if (spriteRenderer.flipX)
+                enemyHits = Physics2D.CircleCastAll(attackAreaTransformLeft.position, attackRange, Vector2.left, 0f, attackLayer);
+            else
+                enemyHits = Physics2D.CircleCastAll(attackAreaTransformRight.position, attackRange, Vector2.right, 0f, attackLayer);
+
+            //Check for everything that was hit by the dagger
+            for (int i = 0; i < enemyHits.Length; i++)
             {
-                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                if (projectile != null)
+                if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
                 {
-                    projectile.FreezeProjectile();
-                    print("FREEZE PROJECTILE");
+                    EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                    if (projectile != null)
+                    {
+                        projectile.FreezeProjectile();
+                        print("FREEZE PROJECTILE");
+                    }
+                }
+                if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                {
+                    enemy.TakeDamage(1);
+                    print("ENEMY HIT");
                 }
             }
-            if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+        }
+    }
+
+    private void Secondary_Attack_Started(InputAction.CallbackContext obj)
+    {
+        if (time > timeSecondaryAttackWasPressed + secondaryAttackStage1Cooldown || timeSecondaryAttackWasPressed == 0)
+        {
+            timeSecondaryAttackWasPressed = time;
+            print("Secondary Attack!");
+
+            //Shoot Projectile
+            if (spriteRenderer.flipX)
             {
-                enemy.TakeDamage(1);
-                print("ENEMY HIT");
+                Instantiate(projectile, leftLaunchOffset.position, new Quaternion(0, 0, -180, 0));
             }
+            else 
+            Instantiate(projectile, rightLaunchOffset.position, transform.rotation);
         }
     }
 

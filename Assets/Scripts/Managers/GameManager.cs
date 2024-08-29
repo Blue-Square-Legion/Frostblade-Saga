@@ -18,16 +18,12 @@ public class GameManager : MonoBehaviour
         {
             instance = value;
         }
-    } 
-    #endregion
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
+    #endregion
 
-    // Update is called once per frame
-    void Update()
+    public int expectedFrameRate;
+
+    void Start()
     {
         
     }
