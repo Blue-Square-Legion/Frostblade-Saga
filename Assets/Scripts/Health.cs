@@ -43,6 +43,10 @@ public class Health : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     public void Heal(float healAmount)
     {
         // Increase current health but don't exceed the starting health
