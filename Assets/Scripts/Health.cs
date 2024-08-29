@@ -43,6 +43,12 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void Heal(float healAmount)
+    {
+        // Increase current health but don't exceed the starting health
+        CurrentHealth = Mathf.Min(CurrentHealth + healAmount, startingHealth);
+    }
+
     private IEnumerator FlashRed()
     {
         //once the player sprite is implemented, Color.white sets it to the original palette rather that pure white.

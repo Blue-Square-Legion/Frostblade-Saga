@@ -8,6 +8,13 @@ public class Chest : MonoBehaviour
     [SerializeField] private float itemSpreadForce = 2f; // Force to spread items out
 
     private bool isOpened = false;
+    private Animator animator;
+
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +26,7 @@ public class Chest : MonoBehaviour
 
     private void OpenChest()
     {
+        animator.SetTrigger("OpenChest");
         isOpened = true;
 
         for (int i = 0; i < numberOfItemsToSpawn; i++)

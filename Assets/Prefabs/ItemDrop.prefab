@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: -4041450275539712690}
   - component: {fileID: -6327112717167296624}
   - component: {fileID: 6880159418211782372}
-  - component: {fileID: -4016621148200844361}
   - component: {fileID: -5797576158263152551}
+  - component: {fileID: -5795130756226248060}
   m_Layer: 0
   m_Name: ItemDrop
   m_TagString: Untagged
@@ -143,18 +143,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4016621148200844361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8631150464521474774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ba0c9bfa8c78846b68ad1433485b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &-5797576158263152551
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -207,3 +195,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5795130756226248060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631150464521474774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac505c177b674a4894a3cfc334593e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 1
