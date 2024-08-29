@@ -69,13 +69,20 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The cooldown for the secondary attack in stage 2")]
     [SerializeField] private float secondaryAttackStage2Cooldown;
 
+    [Tooltip("The radius the enlarging circle starts at")]
+    [SerializeField] private float secondaryAttackStage2StartSize;
+
+    [Tooltip("The max radius the enlarging circle can be")]
+    [SerializeField] private float secondaryAttackStage2MaxSize;
+
     [SerializeField] private PlayerProjectile projectile;
     [SerializeField] private Transform rightLaunchOffset;
     [SerializeField] private Transform leftLaunchOffset;
 
-    [SerializeField] private Transform attackAreaTransformRight;
-    [SerializeField] private Transform attackAreaTransformLeft;
-    [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private Transform rightAttackTransform;
+    [SerializeField] private Transform leftAttackTransform;
+    [SerializeField] private float stage1AttackRange = 0.5f;
+    [SerializeField] private float stage2AttackRange = 1.5f;
     [SerializeField] private LayerMask attackLayer;
 
     GameManager gameManager;
@@ -83,6 +90,10 @@ public class PlayerController : MonoBehaviour
     private InputAction jumpAction;
     private InputAction primaryAttackAction;
     private InputAction secondaryAttackAction;
+    private InputAction stageChangeAction;
+
+    private WeaponStage weaponStage;
+    private bool doStage2SecondaryAttack;
 
     private float horizontalMove;
     private Vector2 currentMovement;
@@ -96,10 +107,18 @@ public class PlayerController : MonoBehaviour
 
     private float time;
 
+    private enum WeaponStage
+    {
+        Stage1,
+        Stage2
+    }
+
     private void Start()
     {
         //Initializes variables
         gameManager = GameManager.Instance; //Finds Singleton
+        weaponStage = WeaponStage.Stage1; // Sets Weapon Stage to stage 1
+        doStage2SecondaryAttack = false;
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
@@ -110,7 +129,8 @@ public class PlayerController : MonoBehaviour
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
         primaryAttackAction = playerInput.currentActionMap.FindAction("Primary Attack"); // Connects Primary Attack Action to Primary Attack Input
-        secondaryAttackAction = playerInput.currentActionMap.FindAction("Secondary Attack"); //Connects Secondary Attack Action to Secondary Attack Input
+        secondaryAttackAction = playerInput.currentActionMap.FindAction("Secondary Attack"); // Connects Secondary Attack Action to Secondary Attack Input
+        stageChangeAction = playerInput.currentActionMap.FindAction("Weapon Stage Change"); // Connects Weapon Stage Change Button to Weapon Stage Change Input
 
         // Subscribes actions to methods when start and cancel actions are detected
         playerInput.currentActionMap.FindAction("Move").performed += context => horizontalMove = context.ReadValue<float>();
@@ -120,6 +140,7 @@ public class PlayerController : MonoBehaviour
 
         primaryAttackAction.started += Primary_Attack_Started;
         secondaryAttackAction.started += Secondary_Attack_Started;
+        stageChangeAction.started += Stage_Change_Started;
     }
 
     float lastVerticalVelocity = 0;
@@ -143,6 +164,25 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleGravity();
         ApplyMovement();
+
+        //Creates enlarging circle around player
+        if (doStage2SecondaryAttack)
+        {
+            //Raycasts circle around player
+            //Subtracts the game time from the time the attack was pressed, up to the max size
+            enemyHits = Physics2D.CircleCastAll(transform.position, Mathf.Min(time - timeSecondaryAttackWasPressed + secondaryAttackStage2StartSize, 
+                secondaryAttackStage2MaxSize), Vector2.zero, 0f, attackLayer);
+
+            for (int i = 0; i < enemyHits.Length; i++)
+            {
+                if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                {
+                    //TODO CHANGE!! OVERPOWERED! (All enemies within range take 60 damage PER SECOND
+                    enemy.TakeDamage(1);
+                    print("ENEMY HIT");
+                }
+            }
+        }
     }
 
     //Initializes jumping variables
@@ -318,59 +358,160 @@ public class PlayerController : MonoBehaviour
      */
     private void Primary_Attack_Started(InputAction.CallbackContext obj)
     {
-        //Checks Attack cooldown
-        if (time > timePrimaryAttackWasPressed + primaryAttackStage1Cooldown || timePrimaryAttackWasPressed == 0)
+        //Stage 1 Primary Attack
+        if (weaponStage == WeaponStage.Stage1)
         {
-            print("Primary Attack");
-            timePrimaryAttackWasPressed = time;
-
-            //Swing dagger
-            if (spriteRenderer.flipX)
-                enemyHits = Physics2D.CircleCastAll(attackAreaTransformLeft.position, attackRange, Vector2.left, 0f, attackLayer);
-            else
-                enemyHits = Physics2D.CircleCastAll(attackAreaTransformRight.position, attackRange, Vector2.right, 0f, attackLayer);
-
-            //Check for everything that was hit by the dagger
-            for (int i = 0; i < enemyHits.Length; i++)
+            //Checks if weapon is on cooldown
+            if (time > timePrimaryAttackWasPressed + primaryAttackStage1Cooldown || timePrimaryAttackWasPressed == 0)
             {
-                if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                print("STAGE 1 -- Primary Attack");
+                timePrimaryAttackWasPressed = time;
+
+                //Turns off stage 2 secondary attack
+                doStage2SecondaryAttack = false;
+
+                //Swing Dagger
+                if (spriteRenderer.flipX)
+                    enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage1AttackRange, Vector2.left, 0f, attackLayer);
+                else
+                    enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage1AttackRange, Vector2.right, 0f, attackLayer);
+
+                //Check for everything that was hit by the dagger
+                for (int i = 0; i < enemyHits.Length; i++)
                 {
-                    EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                    if (projectile != null)
+                    if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
                     {
-                        projectile.FreezeProjectile();
-                        print("FREEZE PROJECTILE");
+                        EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                        if (projectile != null)
+                        {
+                            projectile.FreezeProjectile();
+                            print("FREEZE PROJECTILE");
+                        }
                     }
-                }
-                if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                {
-                    enemy.TakeDamage(1);
-                    print("ENEMY HIT");
+                    if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                    {
+                        enemy.TakeDamage(1);
+                        print("ENEMY HIT");
+                    }
                 }
             }
         }
+        //Stage 2 Primary Attack
+        else if (weaponStage == WeaponStage.Stage2)
+        {
+            //Checks if weapon is on cooldown
+            if (time > timePrimaryAttackWasPressed + primaryAttackStage2Cooldown || timePrimaryAttackWasPressed == 0)
+            {
+                print("STAGE 2 -- Primary Attack");
+                timePrimaryAttackWasPressed = time;
+
+                //Turns off stage 2 secondary attack
+                doStage2SecondaryAttack = false;
+
+                //Swing Sword
+                if (spriteRenderer.flipX)
+                    enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage2AttackRange, Vector2.left, 0f, attackLayer);
+                else
+                    enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage2AttackRange, Vector2.right, 0f, attackLayer);
+
+                //Check for everything that was hit by the dagger
+                for (int i = 0; i < enemyHits.Length; i++)
+                {
+                    if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                    {
+                        EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                        if (projectile != null)
+                        {
+                            projectile.FreezeProjectile();
+                            print("FREEZE PROJECTILE");
+                        }
+                    }
+                    if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                    {
+                        enemy.TakeDamage(3);
+                        print("ENEMY HIT");
+                    }
+                }
+            }
+        }
+        
     }
 
     private void Secondary_Attack_Started(InputAction.CallbackContext obj)
     {
-        if (time > timeSecondaryAttackWasPressed + secondaryAttackStage1Cooldown || timeSecondaryAttackWasPressed == 0)
+        //Stage 1 Secondary Attack
+        if (weaponStage == WeaponStage.Stage1)
         {
-            timeSecondaryAttackWasPressed = time;
-            print("Secondary Attack!");
-
-            //Shoot Projectile
-            if (spriteRenderer.flipX)
+            //Checks if weapon is on cooldown
+            if (time > timeSecondaryAttackWasPressed + secondaryAttackStage1Cooldown || timeSecondaryAttackWasPressed == 0)
             {
-                Instantiate(projectile, leftLaunchOffset.position, new Quaternion(0, 0, -180, 0));
+                timeSecondaryAttackWasPressed = time;
+                print("STAGE 1 -- Secondary Attack");
+
+                //Turns off stage 2 secondary attack
+                doStage2SecondaryAttack = false;
+
+                //Shoot Projectile
+                if (spriteRenderer.flipX)
+                {
+                    Instantiate(projectile, leftLaunchOffset.position, new Quaternion(0, 0, -180, 0));
+                }
+                else
+                    Instantiate(projectile, rightLaunchOffset.position, transform.rotation);
             }
-            else 
-            Instantiate(projectile, rightLaunchOffset.position, transform.rotation);
+        }
+        //Stage 2 Secondary Attack
+        else if (weaponStage == WeaponStage.Stage2)
+        {
+            //Checks if weapon is on cooldown
+            if (time > timeSecondaryAttackWasPressed + secondaryAttackStage2Cooldown || timeSecondaryAttackWasPressed == 0)
+            {
+                timeSecondaryAttackWasPressed = time;
+                //Toggles attack
+                doStage2SecondaryAttack = doStage2SecondaryAttack ? false : true;
+
+                if (doStage2SecondaryAttack)
+                    print("TURNED ON STAGE 2 -- Secondary Attack");
+                else
+                    print("TURNED OFF STAGE 2 -- Secondary Attack");
+            }
+        }
+        
+    }
+
+    /**
+     * Updates the weapon stage change when detected
+     */
+    private void Stage_Change_Started(InputAction.CallbackContext obj)
+    {
+        //If value is less than 1, go to stage 1
+        if (stageChangeAction.ReadValue<float>() < 1)
+        {
+            print("CHANGED TO STAGE 1");
+            weaponStage = WeaponStage.Stage1;
+
+            //Turns off stage 2 secondary attack
+            doStage2SecondaryAttack = false;
+        }
+        //If value is greater than one, go to stage 2
+        else if (stageChangeAction.ReadValue<float>() > 1)
+        {
+            print("CHANGED TO STAGE 2");
+            weaponStage = WeaponStage.Stage2;
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(attackAreaTransformLeft.position, attackRange);
-        Gizmos.DrawWireSphere(attackAreaTransformRight.position, attackRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(leftAttackTransform.position, stage1AttackRange);
+        Gizmos.DrawWireSphere(rightAttackTransform.position, stage1AttackRange);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(leftAttackTransform.position, stage2AttackRange);
+        Gizmos.DrawWireSphere(rightAttackTransform.position, stage2AttackRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, Mathf.Min(time - timeSecondaryAttackWasPressed + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
     }
 }

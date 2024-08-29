@@ -37,7 +37,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2575769647482607608}
   - {fileID: 7802423608769962475}
+  - {fileID: 8117581602393057358}
   - {fileID: 3563489871585868959}
   - {fileID: 7540429820959936966}
   - {fileID: 3638539121566669580}
@@ -159,9 +161,12 @@ MonoBehaviour:
   secondaryAttackStage1Cooldown: 0
   secondaryAttackStage2Cooldown: 0
   projectile: {fileID: 0}
-  launchOffset: {fileID: 0}
-  attackAreaTransformRight: {fileID: 0}
-  attackAreaTransformLeft: {fileID: 0}
+  rightLaunchOffset: {fileID: 0}
+  leftLaunchOffset: {fileID: 0}
+  stage1RightAttackTransform: {fileID: 0}
+  stage2RightAttackTransform: {fileID: 0}
+  stage1LeftAttackTransform: {fileID: 0}
+  stage2LeftAttackTransform: {fileID: 0}
   attackRange: 1.5
   attackLayer:
     serializedVersion: 2
@@ -299,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3563489871585868959}
   m_Layer: 7
-  m_Name: AttackHitboxLeft
+  m_Name: Stage2LeftAttackHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7802423608769962475}
   m_Layer: 7
-  m_Name: AttackHitboxRight
+  m_Name: Stage2RightHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,6 +382,68 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1142440981438802311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5115018512222243250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2575769647482607608}
+  m_Layer: 7
+  m_Name: Stage1RightHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2575769647482607608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5115018512222243250}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1142440981438802311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5378905147488019716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8117581602393057358}
+  m_Layer: 7
+  m_Name: Stage1LeftAttackHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8117581602393057358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5378905147488019716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
