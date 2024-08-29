@@ -75,6 +75,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The max radius the enlarging circle can be")]
     [SerializeField] private float secondaryAttackStage2MaxSize;
 
+    [Tooltip("Rate of how fast the circle expands")]
+    [SerializeField] private float growthModifierSecondaryAttackStage2;
+
     [SerializeField] private PlayerProjectile projectile;
     [SerializeField] private Transform rightLaunchOffset;
     [SerializeField] private Transform leftLaunchOffset;
@@ -170,7 +173,7 @@ public class PlayerController : MonoBehaviour
         {
             //Raycasts circle around player
             //Subtracts the game time from the time the attack was pressed, up to the max size
-            enemyHits = Physics2D.CircleCastAll(transform.position, Mathf.Min(time - timeSecondaryAttackWasPressed + secondaryAttackStage2StartSize, 
+            enemyHits = Physics2D.CircleCastAll(transform.position, Mathf.Min( (time - timeSecondaryAttackWasPressed ) * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, 
                 secondaryAttackStage2MaxSize), Vector2.zero, 0f, attackLayer);
 
             for (int i = 0; i < enemyHits.Length; i++)
@@ -512,6 +515,6 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(rightAttackTransform.position, stage2AttackRange);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, Mathf.Min(time - timeSecondaryAttackWasPressed + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
+        Gizmos.DrawWireSphere(transform.position, Mathf.Min( (time - timeSecondaryAttackWasPressed) * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
     }
 }

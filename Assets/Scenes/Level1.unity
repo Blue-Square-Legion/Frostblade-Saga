@@ -14839,6 +14839,10 @@ PrefabInstance:
       propertyPath: secondaryAttackStage2StartSize
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: growthModifierSecondaryAttackStage2
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 207808575219828573, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: m_Sprite
       value: 
