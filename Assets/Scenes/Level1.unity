@@ -14152,6 +14152,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 39465172}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+<<<<<<< Updated upstream
+=======
+      propertyPath: speed
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: gravity
+      value: 1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: jumpPower
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 3587374374869032969, guid: 556230d7cbf9dc6448f22ce6337fee53, type: 3}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+>>>>>>> Stashed changes
       propertyPath: attackRange
       value: 2
       objectReference: {fileID: 0}
