@@ -38,6 +38,7 @@ public class Health : MonoBehaviour
                     comp.enabled = false;
                 }
                 dead = true;
+                UIManager.Instance.GameOver();
             }
 
         }
