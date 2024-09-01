@@ -216,6 +216,7 @@ public class PlayerController : MonoBehaviour
         if (!isGrounded && groundCollision)
         {
             isGrounded = true;
+            animator.SetBool("Grounded",true);
             currentMovement.y = 0;
             canCoyoteJump = true;
             canBufferJump = true;
@@ -227,6 +228,7 @@ public class PlayerController : MonoBehaviour
         else if (isGrounded && !groundCollision)
         {
             isGrounded = false;
+            animator.SetBool("Grounded", false);
             timeLeftFromGround = time;
         }
 
@@ -270,6 +272,7 @@ public class PlayerController : MonoBehaviour
         timeJumpWasPressed = 0;
 
         //Jumps
+        animator.SetTrigger("Jump");
         currentMovement.y = jumpPower;
     }
 
@@ -367,6 +370,7 @@ public class PlayerController : MonoBehaviour
             //Checks if weapon is on cooldown
             if (time > timePrimaryAttackWasPressed + primaryAttackStage1Cooldown || timePrimaryAttackWasPressed == 0)
             {
+                animator.SetTrigger("Slash");
                 print("STAGE 1 -- Primary Attack");
                 timePrimaryAttackWasPressed = time;
 
@@ -405,6 +409,7 @@ public class PlayerController : MonoBehaviour
             //Checks if weapon is on cooldown
             if (time > timePrimaryAttackWasPressed + primaryAttackStage2Cooldown || timePrimaryAttackWasPressed == 0)
             {
+                animator.SetTrigger("Slash");
                 print("STAGE 2 -- Primary Attack");
                 timePrimaryAttackWasPressed = time;
 
