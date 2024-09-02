@@ -41,6 +41,7 @@ public class Health : MonoBehaviour
                     //disable rather than destroy in case we want to respawn
                     comp.enabled = false;
                 }
+                animator.SetBool("Running", false);
                 dead = true;
                 UIManager.Instance.GameOver();
             }

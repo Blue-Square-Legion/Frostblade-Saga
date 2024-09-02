@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
 
     public void GameOver()
     {
-        healthBar.SetActive(false);
+        //healthBar.SetActive(false);
         gameOverScreen.SetActive(true);
     }
 
@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -84,13 +85,11 @@ public class UIManager : MonoBehaviour
         {
             pauseScreen.SetActive(false);
             Time.timeScale = 1;
-        }
-        
+        }  
     }
 
     public void Play()
     {
-
         SceneManager.LoadScene(1);
     }
     public void Credits()
