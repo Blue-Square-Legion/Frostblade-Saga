@@ -44,6 +44,11 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
+    public void CloseGameOverScreen()
+    {
+        gameOverScreen.SetActive(false);
+    }
+
     public void Restart()
     {
 
