@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player")]
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private LayerMask rayCastLayer;
     [SerializeField] private Camera cam;
     [SerializeField] private InputActionAsset playerControls;
@@ -72,13 +74,15 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The radius the enlarging circle starts at")]
     [SerializeField] private float secondaryAttackStage2StartSize;
 
+    [Tooltip("The max radius the circle can be")]
+    [SerializeField] private float secondaryAttackStage1Size;
+
     [Tooltip("The max radius the enlarging circle can be")]
     [SerializeField] private float secondaryAttackStage2MaxSize;
 
     [Tooltip("Rate of how fast the circle expands")]
     [SerializeField] private float growthModifierSecondaryAttackStage2;
 
-    [SerializeField] private PlayerProjectile projectile;
     [SerializeField] private Transform rightLaunchOffset;
     [SerializeField] private Transform leftLaunchOffset;
 
@@ -87,6 +91,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float stage1AttackRange = 0.5f;
     [SerializeField] private float stage2AttackRange = 1.5f;
     [SerializeField] private LayerMask attackLayer;
+
+    [Header("Mana")]
+
+    [Tooltip("The max amount of mana the player can have")]
+    [SerializeField] private int maxMana;
+
+    [Tooltip("The amount of mana that regenerates per second")]
+    [SerializeField] private int manaRegeneration;
+
+    [Tooltip("The cost of the primary attack stage 1")]
+    [SerializeField] private int primaryAttackStage1Cost;
+
+    [Tooltip("The cost of the primary attack stage 1")]
+    [SerializeField] private int primaryAttackStage2Cost;
+
+    [Tooltip("The cost of the primary attack stage 1")]
+    [SerializeField] private int secondaryAttackStage1Cost;
+
+    [Tooltip("The cost of the primary attack stage 1")]
+    [SerializeField] private int secondaryAttackStage2Cost;
+
+    private int currentMana = 0;
 
     GameManager gameManager;
     private InputAction sprintAction;
@@ -104,7 +130,6 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private BoxCollider2D col;
-    private SpriteRenderer spriteRenderer;
     private bool isGrounded;
     private bool cachedQueryStartInColliders;
 
@@ -125,9 +150,9 @@ public class PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
+        currentMana = maxMana;
 
         sprintAction = playerInput.currentActionMap.FindAction("Sprint"); // Connects Sprint Action to Sprint Input
         jumpAction = playerInput.currentActionMap.FindAction("Jump"); // Connects Jump Action to Jump Input
@@ -144,6 +169,8 @@ public class PlayerController : MonoBehaviour
         primaryAttackAction.started += Primary_Attack_Started;
         secondaryAttackAction.started += Secondary_Attack_Started;
         stageChangeAction.started += Stage_Change_Started;
+
+        StartCoroutine(RegenMana());
     }
 
     float lastVerticalVelocity = 0;
@@ -370,35 +397,40 @@ public class PlayerController : MonoBehaviour
             //Checks if weapon is on cooldown
             if (time > timePrimaryAttackWasPressed + primaryAttackStage1Cooldown || timePrimaryAttackWasPressed == 0)
             {
-                animator.SetTrigger("Slash");
-                print("STAGE 1 -- Primary Attack");
-                timePrimaryAttackWasPressed = time;
-
-                //Turns off stage 2 secondary attack
-                doStage2SecondaryAttack = false;
-
-                //Swing Dagger
-                if (spriteRenderer.flipX)
-                    enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage1AttackRange, Vector2.left, 0f, attackLayer);
-                else
-                    enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage1AttackRange, Vector2.right, 0f, attackLayer);
-
-                //Check for everything that was hit by the dagger
-                for (int i = 0; i < enemyHits.Length; i++)
+                //Checks if player has enough mana
+                if (currentMana >= primaryAttackStage1Cost)
                 {
-                    if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                    currentMana -= primaryAttackStage1Cost;
+                    animator.SetTrigger("Slash");
+                    print("STAGE 1 -- Primary Attack");
+                    timePrimaryAttackWasPressed = time;
+
+                    //Turns off stage 2 secondary attack
+                    doStage2SecondaryAttack = false;
+
+                    //Swing Dagger
+                    if (spriteRenderer.flipX)
+                        enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage1AttackRange, Vector2.left, 0f, attackLayer);
+                    else
+                        enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage1AttackRange, Vector2.right, 0f, attackLayer);
+
+                    //Check for everything that was hit by the dagger
+                    for (int i = 0; i < enemyHits.Length; i++)
                     {
-                        EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                        if (projectile != null)
+                        if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
                         {
-                            projectile.FreezeProjectile();
-                            print("FREEZE PROJECTILE");
+                            EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                            if (projectile != null)
+                            {
+                                projectile.FreezeProjectile();
+                                print("FREEZE PROJECTILE");
+                            }
                         }
-                    }
-                    if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                    {
-                        enemy.TakeDamage(1);
-                        print("ENEMY HIT");
+                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                        {
+                            enemy.TakeDamage(1);
+                            print("ENEMY HIT");
+                        }
                     }
                 }
             }
@@ -409,40 +441,45 @@ public class PlayerController : MonoBehaviour
             //Checks if weapon is on cooldown
             if (time > timePrimaryAttackWasPressed + primaryAttackStage2Cooldown || timePrimaryAttackWasPressed == 0)
             {
-                animator.SetTrigger("Slash");
-                print("STAGE 2 -- Primary Attack");
-                timePrimaryAttackWasPressed = time;
-
-                //Turns off stage 2 secondary attack
-                doStage2SecondaryAttack = false;
-
-                //Swing Sword
-                if (spriteRenderer.flipX)
-                    enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage2AttackRange, Vector2.left, 0f, attackLayer);
-                else
-                    enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage2AttackRange, Vector2.right, 0f, attackLayer);
-
-                //Check for everything that was hit by the dagger
-                for (int i = 0; i < enemyHits.Length; i++)
+                //Checks if player has enough mana
+                if (currentMana >= primaryAttackStage2Cost)
                 {
-                    if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                    currentMana -= primaryAttackStage2Cost;
+
+                    animator.SetTrigger("Slash");
+                    print("STAGE 2 -- Primary Attack");
+                    timePrimaryAttackWasPressed = time;
+
+                    //Turns off stage 2 secondary attack
+                    doStage2SecondaryAttack = false;
+
+                    //Swing Sword
+                    if (spriteRenderer.flipX)
+                        enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage2AttackRange, Vector2.left, 0f, attackLayer);
+                    else
+                        enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage2AttackRange, Vector2.right, 0f, attackLayer);
+
+                    //Check for everything that was hit by the dagger
+                    for (int i = 0; i < enemyHits.Length; i++)
                     {
-                        EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                        if (projectile != null)
+                        if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
                         {
-                            projectile.FreezeProjectile();
-                            print("FREEZE PROJECTILE");
+                            EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                            if (projectile != null)
+                            {
+                                projectile.FreezeProjectile();
+                                print("FREEZE PROJECTILE");
+                            }
                         }
-                    }
-                    if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                    {
-                        enemy.TakeDamage(3);
-                        print("ENEMY HIT");
+                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                        {
+                            enemy.TakeDamage(3);
+                            print("ENEMY HIT");
+                        }
                     }
                 }
             }
         }
-        
     }
 
     private void Secondary_Attack_Started(InputAction.CallbackContext obj)
@@ -453,19 +490,31 @@ public class PlayerController : MonoBehaviour
             //Checks if weapon is on cooldown
             if (time > timeSecondaryAttackWasPressed + secondaryAttackStage1Cooldown || timeSecondaryAttackWasPressed == 0)
             {
-                timeSecondaryAttackWasPressed = time;
-                print("STAGE 1 -- Secondary Attack");
-
-                //Turns off stage 2 secondary attack
-                doStage2SecondaryAttack = false;
-
-                //Shoot Projectile
-                if (spriteRenderer.flipX)
+                //Checks if player has enough mana
+                if (currentMana >= secondaryAttackStage1Cost)
                 {
-                    Instantiate(projectile, leftLaunchOffset.position, new Quaternion(0, 0, -180, 0));
+                    currentMana -= secondaryAttackStage1Cost;
+
+                    timeSecondaryAttackWasPressed = time;
+                    print("STAGE 1 -- Secondary Attack");
+
+                    //Turns off stage 2 secondary attack
+                    doStage2SecondaryAttack = false;
+
+                    //Raycasts circle around player
+                    //Subtracts the game time from the time the attack was pressed, up to the max size
+                    enemyHits = Physics2D.CircleCastAll(transform.position, secondaryAttackStage1Size, Vector2.zero, 0f, attackLayer);
+
+                    for (int i = 0; i < enemyHits.Length; i++)
+                    {
+                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                        {
+                            //TODO CHANGE!! OVERPOWERED! (All enemies within range take 60 damage PER SECOND
+                            enemy.TakeDamage(1);
+                            print("ENEMY HIT");
+                        }
+                    }
                 }
-                else
-                    Instantiate(projectile, rightLaunchOffset.position, transform.rotation);
             }
         }
         //Stage 2 Secondary Attack
@@ -474,17 +523,26 @@ public class PlayerController : MonoBehaviour
             //Checks if weapon is on cooldown
             if (time > timeSecondaryAttackWasPressed + secondaryAttackStage2Cooldown || timeSecondaryAttackWasPressed == 0 || doStage2SecondaryAttack)
             {
-                timeSecondaryAttackWasPressed = time;
-                //Toggles attack
-                doStage2SecondaryAttack = doStage2SecondaryAttack ? false : true;
+                //Checks if player has enough mana
+                if (currentMana >= secondaryAttackStage2Cost)
+                {
+                    timeSecondaryAttackWasPressed = time;
+                    //Toggles attack
+                    doStage2SecondaryAttack = doStage2SecondaryAttack ? false : true;
 
-                if (doStage2SecondaryAttack)
-                    print("TURNED ON STAGE 2 -- Secondary Attack");
-                else
-                    print("TURNED OFF STAGE 2 -- Secondary Attack");
+                    if (doStage2SecondaryAttack)
+                    {
+                        print("TURNED ON STAGE 2 -- Secondary Attack");
+                        StartCoroutine(DrainMana());
+                    }
+                    else
+                        print("TURNED OFF STAGE 2 -- Secondary Attack");
+                } else
+                {
+                    doStage2SecondaryAttack = false;
+                }
             }
         }
-        
     }
 
     /**
@@ -518,6 +576,9 @@ public class PlayerController : MonoBehaviour
                 Gizmos.DrawWireSphere(leftAttackTransform.position, stage1AttackRange);
             else
                 Gizmos.DrawWireSphere(rightAttackTransform.position, stage1AttackRange);
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, secondaryAttackStage1Size);
         }
         
         if (weaponStage == WeaponStage.Stage2)
@@ -534,6 +595,49 @@ public class PlayerController : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, Mathf.Min((time - timeSecondaryAttackWasPressed) 
                 * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
+        }
+    }
+
+    public int GetMana()
+    {
+        return currentMana;
+    }
+
+    IEnumerator RegenMana()
+    {
+        while (true)
+        {
+            while (!doStage2SecondaryAttack)
+            {
+                if (currentMana < maxMana)
+                {
+                    currentMana += manaRegeneration;
+
+                    if (currentMana > maxMana)
+                        currentMana = maxMana;
+                }
+                yield return new WaitForSeconds(1);
+            }
+
+            while (doStage2SecondaryAttack)
+            {
+                yield return new WaitForSeconds(1);
+            }
+        }
+    }
+
+    IEnumerator DrainMana()
+    {
+        while (doStage2SecondaryAttack)
+        {
+            currentMana -= secondaryAttackStage2Cost;
+            if (currentMana < 0)
+            {
+                currentMana = 0;
+                doStage2SecondaryAttack = false;
+                yield return null;
+            }
+            yield return new WaitForSeconds(1);
         }
     }
 }
