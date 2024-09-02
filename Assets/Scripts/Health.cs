@@ -54,4 +54,14 @@ public class Health : MonoBehaviour
         // Increase current health but don't exceed the starting health
         CurrentHealth = Mathf.Min(CurrentHealth + healAmount, startingHealth);
     }
+
+    public void Respawn()
+    {
+        CurrentHealth = startingHealth;
+        foreach (Behaviour comp in components)
+        {
+            comp.enabled = true;
+        }
+        dead = false;
+    }
 }
