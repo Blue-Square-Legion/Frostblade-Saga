@@ -1543,6 +1543,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 935008146}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1508021180}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: leftLaunchOffset
       value: 
       objectReference: {fileID: 1637633426}
@@ -1772,6 +1776,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1154649486}
   m_SourcePrefab: {fileID: 100100000, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+--- !u!212 &1508021180 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 207808575219828573, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+  m_PrefabInstance: {fileID: 1508021179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518828532
 GameObject:
   m_ObjectHideFlags: 0
