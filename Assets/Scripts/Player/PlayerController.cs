@@ -446,7 +446,7 @@ public class PlayerController : MonoBehaviour
                 {
                     currentMana -= primaryAttackStage2Cost;
 
-                    animator.SetTrigger("Slash");
+                    animator.SetTrigger("Slash_2");
                     print("STAGE 2 -- Primary Attack");
                     timePrimaryAttackWasPressed = time;
 
@@ -497,6 +497,7 @@ public class PlayerController : MonoBehaviour
 
                     timeSecondaryAttackWasPressed = time;
                     print("STAGE 1 -- Secondary Attack");
+                    animator.SetTrigger("Secondary");
 
                     //Turns off stage 2 secondary attack
                     doStage2SecondaryAttack = false;
@@ -533,6 +534,7 @@ public class PlayerController : MonoBehaviour
                     if (doStage2SecondaryAttack)
                     {
                         print("TURNED ON STAGE 2 -- Secondary Attack");
+                        animator.SetTrigger("Aura");
                         StartCoroutine(DrainMana());
                     }
                     else
@@ -554,6 +556,7 @@ public class PlayerController : MonoBehaviour
         if (stageChangeAction.ReadValue<float>() < 1)
         {
             print("CHANGED TO STAGE 1");
+            animator.SetTrigger("Stage_1");
             weaponStage = WeaponStage.Stage1;
 
             //Turns off stage 2 secondary attack
@@ -563,6 +566,7 @@ public class PlayerController : MonoBehaviour
         else if (stageChangeAction.ReadValue<float>() > 1)
         {
             print("CHANGED TO STAGE 2");
+            animator.SetTrigger("Stage_2");
             weaponStage = WeaponStage.Stage2;
         }
     }
