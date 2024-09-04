@@ -4,13 +4,15 @@ public class EnemyProjectile : ContactDamage
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
+
     private float lifeTime;
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
     private bool hit;
-    private bool isFrozen; 
+    private bool isFrozen;
+    private bool waiting = false;
 
     private void Start()
     {
@@ -35,7 +37,7 @@ public class EnemyProjectile : ContactDamage
     {
         if (hit) return;
 
-        if (!isFrozen)
+        if (!isFrozen && !waiting)
         {
             float movementSpeed = speed * Time.deltaTime;
             transform.Translate(movementSpeed, 0, 0);
@@ -74,6 +76,10 @@ public class EnemyProjectile : ContactDamage
         rb.bodyType = RigidbodyType2D.Static;
         boxCollider.enabled = true;
         gameObject.layer = LayerMask.NameToLayer("Ground");
+    }
+    public void SetWaiting(bool value)
+    {
+        waiting = value;
     }
 }
 
