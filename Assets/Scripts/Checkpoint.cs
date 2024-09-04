@@ -12,28 +12,33 @@ public class Checkpoint : MonoBehaviour
     {
         playerHealth = GetComponent<Health>();
     }
+
     public void CheckpointRespawn()
     {
         if (currentCheckpoint != null)
         {
             transform.position = currentCheckpoint.position;
             playerHealth.Respawn();
-        } else
+        }
+        else
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Time.timeScale = 1;
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Checkpoint")
+        if (collision.CompareTag("Checkpoint"))
         {
             currentCheckpoint = collision.transform;
             collision.GetComponent<Collider2D>().enabled = false;
-            collision.GetComponent<SpriteRenderer>().color = Color.green;
+
+            Animator flagAnimator = collision.GetComponent<Animator>();
+            if (flagAnimator != null)
+            {
+                flagAnimator.SetTrigger("Checkpoint");
+            }
         }
-            
     }
 }
