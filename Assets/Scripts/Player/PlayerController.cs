@@ -183,7 +183,6 @@ public class PlayerController : MonoBehaviour
         //if (lastVerticalVelocity > 0 && currentMovement.y < 0)
             //currentMovement.y += 10;
         lastVerticalVelocity = currentMovement.y;
-
     }
 
     private void FixedUpdate()
