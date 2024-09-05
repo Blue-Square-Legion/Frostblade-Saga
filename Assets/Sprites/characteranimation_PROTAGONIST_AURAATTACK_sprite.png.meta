@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5971d29d45b8aa44d8a1319bbcb76e6a
+guid: 060d45cabb903414fafc2b4f7a517bda
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,46 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -149,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: protagonist_walk_0
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 122
-        width: 25
-        height: 41
+        x: 0
+        y: 190
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e3c90304420b64bb78ea5a45ad1f59
-      internalID: -1300124095
+      spriteID: 97998786ace3ece4997045a2e1763e91
+      internalID: 513021548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_1
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 120
-        width: 24
-        height: 42
+        x: 112
+        y: 190
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d470d40849e0cf24495faf302e3eace6
-      internalID: 1259104523
+      spriteID: 334bcd385e40e0c4faea6c731c2024dd
+      internalID: 1668226528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_2
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 120
-        width: 23
-        height: 42
+        x: 224
+        y: 190
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 418c4a508fa65bf4aa6b06512a28957c
-      internalID: 705511820
+      spriteID: 5915bf05cd8ba164ca127ce90869dccf
+      internalID: -1251334783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_3
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_3
       rect:
         serializedVersion: 2
-        x: 9
-        y: 65
-        width: 25
-        height: 41
+        x: 0
+        y: 95
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c32f0959330cd24a9d9a1ddabe7b97a
-      internalID: 1198477466
+      spriteID: 205570c554306074ea20d9e19f7f3b09
+      internalID: 364094368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_4
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_4
       rect:
         serializedVersion: 2
-        x: 56
-        y: 63
-        width: 22
-        height: 42
+        x: 112
+        y: 95
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 702da68559f4de149b7ff21f6a1cb6f8
-      internalID: 834698021
+      spriteID: de6ba47d8f9b9b642bccc6af9c08304e
+      internalID: 1293635594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_5
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_5
       rect:
         serializedVersion: 2
-        x: 101
-        y: 63
-        width: 21
-        height: 42
+        x: 224
+        y: 95
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 461044794101b4545bb2939a13e9c6d2
-      internalID: -633638528
+      spriteID: 65651e48835113e4482937054be310a0
+      internalID: 351929110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_6
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_6
       rect:
         serializedVersion: 2
-        x: 12
-        y: 6
-        width: 23
-        height: 43
+        x: 0
+        y: 0
+        width: 112
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +250,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3ded0eb87a85234e954d98efba60ed4
-      internalID: 701097662
+      spriteID: bd44ecfe5c13fdc4983be9368013039d
+      internalID: 2075372247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characteranimation_PROTAGONIST_AURAATTACK_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 112
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c99a63ee25b784eb785db45a1f6e19
+      internalID: -521824900
       vertices: []
       indices: 
       edges: []
@@ -306,13 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      protagonist_walk_0: -1300124095
-      protagonist_walk_1: 1259104523
-      protagonist_walk_2: 705511820
-      protagonist_walk_3: 1198477466
-      protagonist_walk_4: 834698021
-      protagonist_walk_5: -633638528
-      protagonist_walk_6: 701097662
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_0: 513021548
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_1: 1668226528
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_2: -1251334783
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_3: 364094368
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_4: 1293635594
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_5: 351929110
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_6: 2075372247
+      characteranimation_PROTAGONIST_AURAATTACK_sprite_7: -521824900
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

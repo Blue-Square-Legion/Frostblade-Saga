@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5971d29d45b8aa44d8a1319bbcb76e6a
+guid: 3d48c4a6b7ee0a94e8216dc46eec5af5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,46 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -149,55 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: protagonist_walk_0
+      name: 23x23_flagcheckpoint_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 122
-        width: 25
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28e3c90304420b64bb78ea5a45ad1f59
-      internalID: -1300124095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: protagonist_walk_1
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 120
-        width: 24
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d470d40849e0cf24495faf302e3eace6
-      internalID: 1259104523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: protagonist_walk_2
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 120
+        x: 0
+        y: 23
         width: 23
-        height: 42
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,83 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 418c4a508fa65bf4aa6b06512a28957c
-      internalID: 705511820
+      spriteID: 5d7de12a42b4cf045805880b536e2fc0
+      internalID: 830254929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: protagonist_walk_3
+      name: 23x23_flagcheckpoint_1
       rect:
         serializedVersion: 2
-        x: 9
-        y: 65
-        width: 25
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c32f0959330cd24a9d9a1ddabe7b97a
-      internalID: 1198477466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: protagonist_walk_4
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 63
-        width: 22
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 702da68559f4de149b7ff21f6a1cb6f8
-      internalID: 834698021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: protagonist_walk_5
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 63
-        width: 21
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 461044794101b4545bb2939a13e9c6d2
-      internalID: -633638528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: protagonist_walk_6
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 6
+        x: 23
+        y: 23
         width: 23
-        height: 43
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +145,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3ded0eb87a85234e954d98efba60ed4
-      internalID: 701097662
+      spriteID: a0829c009a9d40a4a8a7ae5d05648497
+      internalID: 1812288817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 23x23_flagcheckpoint_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 23
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b13e57bcb9a090408bcf593016816e8
+      internalID: 1666609925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 23x23_flagcheckpoint_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3df7de28fde5fc409489bf439c44b1d
+      internalID: 1583908217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 23x23_flagcheckpoint_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee45708ba7cc834c92e803c60258d57
+      internalID: 835592369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 23x23_flagcheckpoint_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e860b72bedb8b54f868366f24a60661
+      internalID: 592698382
       vertices: []
       indices: 
       edges: []
@@ -306,13 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      protagonist_walk_0: -1300124095
-      protagonist_walk_1: 1259104523
-      protagonist_walk_2: 705511820
-      protagonist_walk_3: 1198477466
-      protagonist_walk_4: 834698021
-      protagonist_walk_5: -633638528
-      protagonist_walk_6: 701097662
+      23x23_flagcheckpoint_0: 830254929
+      23x23_flagcheckpoint_1: 1812288817
+      23x23_flagcheckpoint_2: 1666609925
+      23x23_flagcheckpoint_3: 1583908217
+      23x23_flagcheckpoint_4: 835592369
+      23x23_flagcheckpoint_5: 592698382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
