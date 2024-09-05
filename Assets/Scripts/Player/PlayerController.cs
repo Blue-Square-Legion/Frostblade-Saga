@@ -71,17 +71,11 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The cooldown for the secondary attack in stage 2")]
     [SerializeField] private float secondaryAttackStage2Cooldown;
 
-    [Tooltip("The radius the enlarging circle starts at")]
-    [SerializeField] private float secondaryAttackStage2StartSize;
-
     [Tooltip("The Player's Projectile")]
     [SerializeField] private GameObject playerProjectile;
 
     [Tooltip("The max radius the enlarging circle can be")]
-    [SerializeField] private float secondaryAttackStage2MaxSize;
-
-    [Tooltip("Rate of how fast the circle expands")]
-    [SerializeField] private float growthModifierSecondaryAttackStage2;
+    [SerializeField] private float secondaryAttackStage2Size;
 
     [SerializeField] private Transform rightLaunchOffset;
     [SerializeField] private Transform leftLaunchOffset;
@@ -122,7 +116,6 @@ public class PlayerController : MonoBehaviour
     private InputAction stageChangeAction;
 
     private WeaponStage weaponStage;
-    private bool doStage2SecondaryAttack;
 
     private float horizontalMove;
     private Vector2 currentMovement;
@@ -146,7 +139,6 @@ public class PlayerController : MonoBehaviour
         //Initializes variables
         gameManager = GameManager.Instance; //Finds Singleton
         weaponStage = WeaponStage.Stage1; // Sets Weapon Stage to stage 1
-        doStage2SecondaryAttack = false;
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
@@ -194,25 +186,6 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleGravity();
         ApplyMovement();
-
-        //Creates enlarging circle around player
-        if (doStage2SecondaryAttack)
-        {
-            //Raycasts circle around player
-            //Subtracts the game time from the time the attack was pressed, up to the max size
-            enemyHits = Physics2D.CircleCastAll(transform.position, Mathf.Min( (time - timeSecondaryAttackWasPressed ) * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, 
-                secondaryAttackStage2MaxSize), Vector2.zero, 0f, attackLayer);
-
-            for (int i = 0; i < enemyHits.Length; i++)
-            {
-                if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                {
-                    //TODO CHANGE!! OVERPOWERED! (All enemies within range take 60 damage PER SECOND
-                    enemy.TakeDamage(1);
-                    print("ENEMY HIT");
-                }
-            }
-        }
     }
 
     //Initializes jumping variables
@@ -405,9 +378,6 @@ public class PlayerController : MonoBehaviour
                     print("STAGE 1 -- Primary Attack");
                     timePrimaryAttackWasPressed = time;
 
-                    //Turns off stage 2 secondary attack
-                    doStage2SecondaryAttack = false;
-
                     //Swing Dagger
                     if (spriteRenderer.flipX)
                         enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage1AttackRange, Vector2.left, 0f, attackLayer);
@@ -449,9 +419,6 @@ public class PlayerController : MonoBehaviour
                     animator.SetTrigger("Slash_2");
                     print("STAGE 2 -- Primary Attack");
                     timePrimaryAttackWasPressed = time;
-
-                    //Turns off stage 2 secondary attack
-                    doStage2SecondaryAttack = false;
 
                     //Swing Sword
                     if (spriteRenderer.flipX)
@@ -499,9 +466,6 @@ public class PlayerController : MonoBehaviour
                     print("STAGE 1 -- Secondary Attack");
                     animator.SetTrigger("Secondary");
 
-                    //Turns off stage 2 secondary attack
-                    doStage2SecondaryAttack = false;
-
                     //Fires Projectile
 
                     if (spriteRenderer.flipX)
@@ -515,26 +479,29 @@ public class PlayerController : MonoBehaviour
         else if (weaponStage == WeaponStage.Stage2)
         {
             //Checks if weapon is on cooldown
-            if (time > timeSecondaryAttackWasPressed + secondaryAttackStage2Cooldown || timeSecondaryAttackWasPressed == 0 || doStage2SecondaryAttack)
+            if (time > timeSecondaryAttackWasPressed + secondaryAttackStage2Cooldown || timeSecondaryAttackWasPressed == 0)
             {
                 //Checks if player has enough mana
                 if (currentMana >= secondaryAttackStage2Cost)
                 {
+                    currentMana -= secondaryAttackStage2Cost;
                     timeSecondaryAttackWasPressed = time;
-                    //Toggles attack
-                    doStage2SecondaryAttack = doStage2SecondaryAttack ? false : true;
 
-                    if (doStage2SecondaryAttack)
+                    //Creates enlarging circle around player
+
+                    //Raycasts circle around player
+                    //Subtracts the game time from the time the attack was pressed, up to the max size
+                    enemyHits = Physics2D.CircleCastAll(transform.position, secondaryAttackStage2Size, Vector2.zero, 0f, attackLayer);
+
+                    for (int i = 0; i < enemyHits.Length; i++)
                     {
-                        print("TURNED ON STAGE 2 -- Secondary Attack");
-                        animator.SetTrigger("Aura");
-                        StartCoroutine(DrainMana());
+                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+                        {
+                            enemy.TakeDamage(3);
+                            print("ENEMY HIT");
+                        }
                     }
-                    else
-                        print("TURNED OFF STAGE 2 -- Secondary Attack");
-                } else
-                {
-                    doStage2SecondaryAttack = false;
+                    animator.SetTrigger("Aura");
                 }
             }
         }
@@ -551,9 +518,6 @@ public class PlayerController : MonoBehaviour
             print("CHANGED TO STAGE 1");
             animator.SetTrigger("Stage_1");
             weaponStage = WeaponStage.Stage1;
-
-            //Turns off stage 2 secondary attack
-            doStage2SecondaryAttack = false;
         }
         //If value is greater than one, go to stage 2
         else if (stageChangeAction.ReadValue<float>() > 1)
@@ -582,13 +546,9 @@ public class PlayerController : MonoBehaviour
                 Gizmos.DrawWireSphere(leftAttackTransform.position, stage2AttackRange);
             else
                 Gizmos.DrawWireSphere(rightAttackTransform.position, stage2AttackRange);
-        }
 
-        if (doStage2SecondaryAttack)
-        {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, Mathf.Min((time - timeSecondaryAttackWasPressed) 
-                * growthModifierSecondaryAttackStage2 + secondaryAttackStage2StartSize, secondaryAttackStage2MaxSize));
+            Gizmos.DrawWireSphere(transform.position, secondaryAttackStage2Size);
         }
     }
 
@@ -601,35 +561,11 @@ public class PlayerController : MonoBehaviour
     {
         while (true)
         {
-            while (!doStage2SecondaryAttack)
+            if (currentMana < maxMana)
             {
-                if (currentMana < maxMana)
-                {
-                    currentMana += manaRegeneration;
-
-                    if (currentMana > maxMana)
-                        currentMana = maxMana;
-                }
-                yield return new WaitForSeconds(1);
-            }
-
-            while (doStage2SecondaryAttack)
-            {
-                yield return new WaitForSeconds(1);
-            }
-        }
-    }
-
-    IEnumerator DrainMana()
-    {
-        while (doStage2SecondaryAttack)
-        {
-            currentMana -= secondaryAttackStage2Cost;
-            if (currentMana < 0)
-            {
-                currentMana = 0;
-                doStage2SecondaryAttack = false;
-                yield return null;
+                currentMana += manaRegeneration;
+                if (currentMana > maxMana)
+                    currentMana = maxMana;
             }
             yield return new WaitForSeconds(1);
         }
