@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour
         primaryAttackAction = playerInput.currentActionMap.FindAction("Primary Attack"); // Connects Primary Attack Action to Primary Attack Input
         secondaryAttackAction = playerInput.currentActionMap.FindAction("Secondary Attack"); // Connects Secondary Attack Action to Secondary Attack Input
         stageChangeAction = playerInput.currentActionMap.FindAction("Weapon Stage Change"); // Connects Weapon Stage Change Button to Weapon Stage Change Input
-
+        
         // Subscribes actions to methods when start and cancel actions are detected
         playerInput.currentActionMap.FindAction("Move").performed += context => horizontalMove = context.ReadValue<float>();
         playerInput.currentActionMap.FindAction("Move").canceled += context => horizontalMove = 0f;
@@ -409,29 +409,7 @@ public class PlayerController : MonoBehaviour
                     doStage2SecondaryAttack = false;
 
                     //Swing Dagger
-                    if (spriteRenderer.flipX)
-                        enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage1AttackRange, Vector2.left, 0f, attackLayer);
-                    else
-                        enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage1AttackRange, Vector2.right, 0f, attackLayer);
-
-                    //Check for everything that was hit by the dagger
-                    for (int i = 0; i < enemyHits.Length; i++)
-                    {
-                        if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
-                        {
-                            EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                            if (projectile != null)
-                            {
-                                projectile.FreezeProjectile();
-                                print("FREEZE PROJECTILE");
-                            }
-                        }
-                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                        {
-                            enemy.TakeDamage(1);
-                            print("ENEMY HIT");
-                        }
-                    }
+                    //DoPrimaryAttackDagger(); called in animator
                 }
             }
         }
@@ -454,30 +432,62 @@ public class PlayerController : MonoBehaviour
                     doStage2SecondaryAttack = false;
 
                     //Swing Sword
-                    if (spriteRenderer.flipX)
-                        enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage2AttackRange, Vector2.left, 0f, attackLayer);
-                    else
-                        enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage2AttackRange, Vector2.right, 0f, attackLayer);
-
-                    //Check for everything that was hit by the dagger
-                    for (int i = 0; i < enemyHits.Length; i++)
-                    {
-                        if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
-                        {
-                            EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                            if (projectile != null)
-                            {
-                                projectile.FreezeProjectile();
-                                print("FREEZE PROJECTILE");
-                            }
-                        }
-                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                        {
-                            enemy.TakeDamage(3);
-                            print("ENEMY HIT");
-                        }
-                    }
+                    //DoPrimaryAttackGS(); called in animator
                 }
+            }
+        }
+    }
+
+    public void DoPrimaryAttackDagger()
+    {
+        if (spriteRenderer.flipX)
+            enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage1AttackRange, Vector2.left, 0f, attackLayer);
+        else
+            enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage1AttackRange, Vector2.right, 0f, attackLayer);
+
+        //Check for everything that was hit by the dagger
+        for (int i = 0; i < enemyHits.Length; i++)
+        {
+            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+            {
+                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                if (projectile != null)
+                {
+                    projectile.FreezeProjectile();
+                    print("FREEZE PROJECTILE");
+                }
+            }
+            if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+            {
+                enemy.TakeDamage(1);
+                print("ENEMY HIT");
+            }
+        }
+    }
+    public void DoPrimaryAttackGS()
+    {
+        //Swing Sword
+        if (spriteRenderer.flipX)
+            enemyHits = Physics2D.CircleCastAll(leftAttackTransform.position, stage2AttackRange, Vector2.left, 0f, attackLayer);
+        else
+            enemyHits = Physics2D.CircleCastAll(rightAttackTransform.position, stage2AttackRange, Vector2.right, 0f, attackLayer);
+
+        //Check for everything that was hit by the dagger
+        for (int i = 0; i < enemyHits.Length; i++)
+        {
+            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+            {
+                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                if (projectile != null)
+                {
+                    projectile.FreezeProjectile();
+                    print("FREEZE PROJECTILE");
+                }
+            }
+            if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
+            {
+                enemy.TakeDamage(3);
+                print("ENEMY HIT");
             }
         }
     }
@@ -503,11 +513,7 @@ public class PlayerController : MonoBehaviour
                     doStage2SecondaryAttack = false;
 
                     //Fires Projectile
-
-                    if (spriteRenderer.flipX)
-                        Instantiate(playerProjectile, leftLaunchOffset.position, new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z -180, transform.rotation.w));
-                    else
-                        Instantiate(playerProjectile, rightLaunchOffset.position, transform.rotation);
+                    //FireProjectile(); called in animator
                 }
             }
         }
@@ -538,6 +544,14 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void FireProjectile()
+    {
+        if (spriteRenderer.flipX)
+            Instantiate(playerProjectile, leftLaunchOffset.position, new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z - 180, transform.rotation.w));
+        else
+            Instantiate(playerProjectile, rightLaunchOffset.position, transform.rotation);
     }
 
     /**
@@ -633,5 +647,15 @@ public class PlayerController : MonoBehaviour
             }
             yield return new WaitForSeconds(1);
         }
+    }
+
+    public void DisablePlayerMovement()
+    {
+        playerInput.currentActionMap.Disable();
+    }
+
+    public void EnablePlayerMovement()
+    {
+        playerInput.currentActionMap.Enable();
     }
 }
