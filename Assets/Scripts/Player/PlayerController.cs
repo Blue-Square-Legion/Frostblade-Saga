@@ -74,8 +74,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("The radius the enlarging circle starts at")]
     [SerializeField] private float secondaryAttackStage2StartSize;
 
-    [Tooltip("The max radius the circle can be")]
-    [SerializeField] private float secondaryAttackStage1Size;
+    [Tooltip("The Player's Projectile")]
+    [SerializeField] private GameObject playerProjectile;
 
     [Tooltip("The max radius the enlarging circle can be")]
     [SerializeField] private float secondaryAttackStage2MaxSize;
@@ -502,19 +502,12 @@ public class PlayerController : MonoBehaviour
                     //Turns off stage 2 secondary attack
                     doStage2SecondaryAttack = false;
 
-                    //Raycasts circle around player
-                    //Subtracts the game time from the time the attack was pressed, up to the max size
-                    enemyHits = Physics2D.CircleCastAll(transform.position, secondaryAttackStage1Size, Vector2.zero, 0f, attackLayer);
+                    //Fires Projectile
 
-                    for (int i = 0; i < enemyHits.Length; i++)
-                    {
-                        if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
-                        {
-                            //TODO CHANGE!! OVERPOWERED! (All enemies within range take 60 damage PER SECOND
-                            enemy.TakeDamage(1);
-                            print("ENEMY HIT");
-                        }
-                    }
+                    if (spriteRenderer.flipX)
+                        Instantiate(playerProjectile, leftLaunchOffset.position, new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z -180, transform.rotation.w));
+                    else
+                        Instantiate(playerProjectile, rightLaunchOffset.position, transform.rotation);
                 }
             }
         }
@@ -580,9 +573,6 @@ public class PlayerController : MonoBehaviour
                 Gizmos.DrawWireSphere(leftAttackTransform.position, stage1AttackRange);
             else
                 Gizmos.DrawWireSphere(rightAttackTransform.position, stage1AttackRange);
-
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, secondaryAttackStage1Size);
         }
         
         if (weaponStage == WeaponStage.Stage2)

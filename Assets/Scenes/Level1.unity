@@ -45684,6 +45684,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: playerProjectile
+      value: 
+      objectReference: {fileID: 8432999479794766973, guid: 556230d7cbf9dc6448f22ce6337fee53, type: 3}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: rightLaunchOffset
       value: 
       objectReference: {fileID: 4234550133699934538}
@@ -45725,7 +45729,7 @@ PrefabInstance:
       objectReference: {fileID: 1123472547}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: secondaryAttackStage1Cost
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: secondaryAttackStage1Size
