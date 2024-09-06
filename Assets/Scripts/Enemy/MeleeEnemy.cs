@@ -27,6 +27,7 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
     void Start()
     {
         health = Mathf.RoundToInt(meleeHealth);
+        startingHealth = Mathf.RoundToInt(meleeHealth);
         SelectState(patrolState);
         boxCollider = GetComponent<BoxCollider2D>();
     }

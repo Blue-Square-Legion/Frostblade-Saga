@@ -8,9 +8,8 @@ public abstract class GenericEnemy : MonoBehaviour
 {
     // Initializes Variables
     [SerializeField] protected int health;
-    //[SerializeField] protected float walkSpeed;
-    //[SerializeField] protected int attackDamage;
-    //[SerializeField] protected float attackRange;
+    protected int startingHealth;
+   
 
     public virtual void TakeDamage(int damage)
     {
@@ -24,6 +23,12 @@ public abstract class GenericEnemy : MonoBehaviour
     {
         // extra logics after enemy dies (e.g., play animation, drop items)
         gameObject.SetActive(false);
+    }
+
+    public virtual void Respawn()
+    {
+        health = startingHealth;
+        gameObject.SetActive(true);
     }
 }
 
