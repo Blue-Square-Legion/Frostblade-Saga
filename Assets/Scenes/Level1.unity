@@ -40898,7 +40898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4186768790933324334, guid: 6638e710d1e96a247b985715dd9893a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.74
+      value: -1.6489843
       objectReference: {fileID: 0}
     - target: {fileID: 4186768790933324334, guid: 6638e710d1e96a247b985715dd9893a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47025,7 +47025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: gravity
-      value: 1.72
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: maxMana
@@ -47033,7 +47033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: jumpPower
-      value: 28
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: projectile
@@ -47047,6 +47047,10 @@ PrefabInstance:
       propertyPath: launchOffset
       value: 
       objectReference: {fileID: 4234550133699934538}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: maxFallSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -47068,6 +47072,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4234550133699934538}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: stage1AttackRange
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
+      propertyPath: stage2AttackRange
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: attackLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
@@ -47077,7 +47089,7 @@ PrefabInstance:
       objectReference: {fileID: 1123472547}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: fallGravityModifier
-      value: 1.17
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 36393784476097622, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: leftAttackTransform
