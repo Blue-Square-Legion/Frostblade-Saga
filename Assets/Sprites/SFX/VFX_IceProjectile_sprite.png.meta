@@ -147,7 +147,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 103
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d087f6643cce99b4c8c382586393fa6b
+      internalID: 1665331616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 104
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d0d2f200b771148a7a92bc7cf9715c
+      internalID: -572346075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 102
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98540241ca8652a45a4fa6c0f42c5ba6
+      internalID: -1314625297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 58
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44f3b5c7b38ea94da34c0ac4a34c2f1
+      internalID: -872865589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 59
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb88cc34eb0a0e84bb598728e4a85c10
+      internalID: 172046512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 57
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063f530a07667ed4f90126e48db7e53a
+      internalID: -1043594533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceProjectile_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 13
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343916e4e3149694787524eef7e06db7
+      internalID: 776579429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +305,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_IceProjectile_sprite_0: 1665331616
+      VFX_IceProjectile_sprite_1: -572346075
+      VFX_IceProjectile_sprite_2: -1314625297
+      VFX_IceProjectile_sprite_3: -872865589
+      VFX_IceProjectile_sprite_4: 172046512
+      VFX_IceProjectile_sprite_5: -1043594533
+      VFX_IceProjectile_sprite_6: 776579429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

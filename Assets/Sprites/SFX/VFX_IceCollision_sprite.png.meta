@@ -147,7 +147,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: VFX_IceCollision_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 28
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da35f9d7bf98c1448769dcbc9d8ef05
+      internalID: 12455722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceCollision_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 18
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8f475a466b516419d6614e01438abd
+      internalID: -1739283091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceCollision_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 12
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd6a164de717234c9b204a04a2a14c9
+      internalID: 758631316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_IceCollision_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 10
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0a90118da9f91469ebb8858af5d0f1
+      internalID: 161773129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +242,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX_IceCollision_sprite_0: 12455722
+      VFX_IceCollision_sprite_1: -1739283091
+      VFX_IceCollision_sprite_2: 758631316
+      VFX_IceCollision_sprite_3: 161773129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
