@@ -40,7 +40,6 @@ public class UIManager : MonoBehaviour
 
     public void GameOver()
     {
-        //healthBar.SetActive(false);
         gameOverScreen.SetActive(true);
     }
 

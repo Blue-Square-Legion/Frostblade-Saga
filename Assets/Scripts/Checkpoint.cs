@@ -18,6 +18,7 @@ public class Checkpoint : MonoBehaviour
         if (currentCheckpoint != null)
         {
             transform.position = currentCheckpoint.position + new Vector3(0,1,0);
+            GameManager.Instance.RespawnEnemies();
             playerHealth.Respawn();
         }
         else

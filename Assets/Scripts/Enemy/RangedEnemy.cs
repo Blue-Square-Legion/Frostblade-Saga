@@ -31,6 +31,7 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
     private void Start()
     {
         health = Mathf.RoundToInt(rangedHealth);
+        startingHealth = Mathf.RoundToInt(rangedHealth);
     }
 
     void Update()
