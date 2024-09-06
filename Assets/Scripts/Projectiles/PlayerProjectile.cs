@@ -31,11 +31,14 @@ public class PlayerProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
-        //If projectile hit an enemy
-        if (collision.gameObject.TryGetComponent(out GenericEnemy enemy))
+        if (collision.gameObject.CompareTag("Projectile"))
         {
-            print("ENEMY HIT");
-            enemy.TakeDamage(1);
+            EnemyProjectile projectile = collision.gameObject.GetComponent<EnemyProjectile>();
+            if (projectile != null)
+            {
+                projectile.FreezeProjectile();
+                print("FREEZE PROJECTILE");
+            }
         }
 
         //Destroy self when it collides with anything

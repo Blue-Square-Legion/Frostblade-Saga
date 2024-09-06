@@ -419,8 +419,7 @@ public class PlayerController : MonoBehaviour
                 EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
                 if (projectile != null)
                 {
-                    projectile.FreezeProjectile();
-                    print("FREEZE PROJECTILE");
+                    Destroy(projectile.gameObject);
                 }
             }
             if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
@@ -446,8 +445,7 @@ public class PlayerController : MonoBehaviour
                 EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
                 if (projectile != null)
                 {
-                    projectile.FreezeProjectile();
-                    print("FREEZE PROJECTILE");
+                    Destroy(projectile.gameObject);
                 }
             }
             if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
@@ -502,8 +500,15 @@ public class PlayerController : MonoBehaviour
                     {
                         if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
                         {
-                            enemy.TakeDamage(3);
-                            print("ENEMY HIT");
+                            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                            {
+                                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                                if (projectile != null)
+                                {
+                                    projectile.FreezeProjectile();
+                                    print("FREEZE PROJECTILE");
+                                }
+                            }
                         }
                     }
                     animator.SetTrigger("Aura");
