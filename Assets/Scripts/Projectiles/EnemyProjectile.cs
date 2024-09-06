@@ -11,12 +11,14 @@ public class EnemyProjectile : ContactDamage
 
     private bool hit;
     private bool isFrozen; 
+    private Animator animator;
 
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>(); 
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     public void ActivateProjectile()
@@ -58,7 +60,8 @@ public class EnemyProjectile : ContactDamage
         hit = true;
         base.OnTriggerEnter2D(collision);
         boxCollider.enabled = false;
-        gameObject.SetActive(false);
+        animator.SetTrigger("collide");
+        //Deactivate(), call in animator
         gameObject.layer = LayerMask.NameToLayer("Enemy");
        
     }
@@ -74,6 +77,11 @@ public class EnemyProjectile : ContactDamage
         rb.bodyType = RigidbodyType2D.Static;
         boxCollider.enabled = true;
         gameObject.layer = LayerMask.NameToLayer("Ground");
+    }
+
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }
 
