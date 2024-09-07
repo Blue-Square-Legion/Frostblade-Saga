@@ -9,6 +9,7 @@ public abstract class GenericEnemy : MonoBehaviour
     // Initializes Variables
     [SerializeField] protected int health;
     protected int startingHealth;
+    protected Animator animator;
    
 
     public virtual void TakeDamage(int damage)
@@ -18,6 +19,7 @@ public abstract class GenericEnemy : MonoBehaviour
         {
             Die();
         }
+        animator.SetTrigger("hurt");
     }
     protected virtual void Die()
     {

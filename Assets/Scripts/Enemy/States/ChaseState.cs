@@ -21,7 +21,8 @@ public class ChaseState : State
 
     public override void Do()
     {
-        if (enemy.position.x < leftEdge.position.x || enemy.position.x > rightEdge.position.x) return;
+        //if ((enemy.position.x <= leftEdge.position.x) && (player.position.x < leftEdge.position.x)
+        //    || (enemy.position.x >= rightEdge.position.x) && (player.position.x > rightEdge.position.x)) return;
         if (enemy.position.x >= player.position.x)
             MoveInDirection(-1);
         else
@@ -39,5 +40,11 @@ public class ChaseState : State
         //move enemy
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
             enemy.position.y, enemy.position.z);
+    }
+
+    public bool PlayerInReach()
+    {
+        return !((enemy.position.x <= leftEdge.position.x) && (player.position.x < leftEdge.position.x)
+             || (enemy.position.x >= rightEdge.position.x) && (player.position.x > rightEdge.position.x));
     }
 }
