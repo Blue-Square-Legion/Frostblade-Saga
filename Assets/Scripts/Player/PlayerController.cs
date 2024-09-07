@@ -419,7 +419,7 @@ public class PlayerController : MonoBehaviour
                 EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
                 if (projectile != null)
                 {
-                    Destroy(projectile.gameObject);
+                    projectile.gameObject.SetActive(false);
                 }
             }
             if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
@@ -445,7 +445,7 @@ public class PlayerController : MonoBehaviour
                 EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
                 if (projectile != null)
                 {
-                    Destroy(projectile.gameObject);
+                    projectile.gameObject.SetActive(false);
                 }
             }
             if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
