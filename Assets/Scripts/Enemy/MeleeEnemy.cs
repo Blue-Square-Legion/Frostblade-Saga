@@ -30,6 +30,7 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
         startingHealth = Mathf.RoundToInt(meleeHealth);
         SelectState(patrolState);
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     void SelectState(State _state)
@@ -42,19 +43,23 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
     {
         if (PlayerInRange())
         {
+            animator.SetBool("walking",false);
             SelectState(attackState);
         }
-        else if (PlayerInSight())
+        else if (PlayerInSight() && chaseState.PlayerInReach())
         {
+            animator.SetBool("walking", true);
             SelectState(chaseState);
         }   else
         {
             SelectState(patrolState);
         }
+
         if (state.IsComplete)
         {
             if (PlayerInSight())
             {
+                animator.SetBool("walking", true);
                 SelectState(chaseState);
             } else
             {
@@ -63,6 +68,11 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
         }
     
         state.Do();
+    }
+
+    public void JumpForward()
+    {
+        transform.Translate(Mathf.Sign(transform.localScale.x) * Time.deltaTime * Vector2.left);
     }
 
     private bool PlayerInSight()
@@ -81,6 +91,16 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
             0, Vector2.left, 0, playerLayer);
 
         return hit.collider != null;
+    }
+
+    public void DoAttackDamage()
+    {
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * attackRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * attackRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            0, Vector2.left, 0, playerLayer);
+
+        if (hit.collider.gameObject.TryGetComponent(out Health playerHealth))
+            playerHealth.TakeDamage(1);
     }
 
     private void OnDrawGizmos()
