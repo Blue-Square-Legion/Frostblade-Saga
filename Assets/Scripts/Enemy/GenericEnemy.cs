@@ -18,8 +18,10 @@ public abstract class GenericEnemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+        } else
+        {
+            animator.SetTrigger("hurt");
         }
-        animator.SetTrigger("hurt");
     }
     protected virtual void Die()
     {
