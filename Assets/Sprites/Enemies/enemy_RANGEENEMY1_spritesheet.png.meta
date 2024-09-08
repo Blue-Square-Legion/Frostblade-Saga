@@ -152,12 +152,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 114
-        width: 45
-        height: 46
+        x: 0
+        y: 110
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 114
-        width: 46
-        height: 46
+        x: 64
+        y: 110
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 133
-        y: 113
-        width: 50
-        height: 48
+        x: 128
+        y: 110
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 195
-        y: 114
-        width: 56
-        height: 49
+        x: 0
+        y: 55
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 2
-        y: 59
-        width: 59
-        height: 50
+        x: 64
+        y: 55
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 59
-        width: 51
-        height: 48
+        x: 128
+        y: 55
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 134
-        y: 59
-        width: 48
-        height: 46
+        x: 192
+        y: 55
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_8
       rect:
         serializedVersion: 2
-        x: 200
-        y: 59
-        width: 39
-        height: 46
+        x: 0
+        y: 0
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 9
-        y: 4
-        width: 36
-        height: 42
+        x: 64
+        y: 0
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,12 +341,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_10
       rect:
         serializedVersion: 2
-        x: 70
-        y: 4
-        width: 51
-        height: 49
+        x: 128
+        y: 0
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,12 +362,12 @@ TextureImporter:
       name: enemy_RANGEENEMY1_spritesheet_11
       rect:
         serializedVersion: 2
-        x: 132
-        y: 4
-        width: 56
-        height: 44
+        x: 192
+        y: 0
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,22 +380,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_RANGEENEMY1_spritesheet_12
+      name: enemy_RANGEENEMY1_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 194
-        y: 4
-        width: 59
-        height: 41
+        x: 192
+        y: 110
+        width: 64
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f4c2623adf28ec41884ce826e0d9d76
-      internalID: 1743344225
+      spriteID: af0de0ae09b2c794dbceae300b7ff965
+      internalID: 1784640752
       vertices: []
       indices: 
       edges: []
@@ -415,10 +415,6 @@ TextureImporter:
       enemy_RANGEENEMY1_spritesheet_1: -1974413274
       enemy_RANGEENEMY1_spritesheet_10: 831652689
       enemy_RANGEENEMY1_spritesheet_11: 1464262065
-      enemy_RANGEENEMY1_spritesheet_12: 1743344225
-      enemy_RANGEENEMY1_spritesheet_13: -782295762
-      enemy_RANGEENEMY1_spritesheet_14: 416232039
-      enemy_RANGEENEMY1_spritesheet_15: 1774790960
       enemy_RANGEENEMY1_spritesheet_2: -1742429716
       enemy_RANGEENEMY1_spritesheet_3: 1784640752
       enemy_RANGEENEMY1_spritesheet_4: -1026725741

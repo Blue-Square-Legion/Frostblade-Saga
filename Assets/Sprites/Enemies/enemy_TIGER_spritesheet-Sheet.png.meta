@@ -152,10 +152,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 152
-        width: 79
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_1
       rect:
         serializedVersion: 2
-        x: 95
+        x: 89
         y: 152
-        width: 79
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_2
       rect:
         serializedVersion: 2
-        x: 184
+        x: 178
         y: 152
-        width: 79
-        height: 37
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_3
       rect:
         serializedVersion: 2
-        x: 273
+        x: 267
         y: 152
-        width: 79
-        height: 37
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_4
       rect:
         serializedVersion: 2
-        x: 362
+        x: 356
         y: 152
-        width: 76
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_5
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 114
-        width: 78
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_6
       rect:
         serializedVersion: 2
-        x: 95
+        x: 89
         y: 114
-        width: 78
-        height: 35
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_7
       rect:
         serializedVersion: 2
-        x: 183
+        x: 178
         y: 114
-        width: 83
-        height: 37
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +320,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_8
       rect:
         serializedVersion: 2
-        x: 272
+        x: 267
         y: 114
-        width: 84
-        height: 35
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_9
       rect:
         serializedVersion: 2
-        x: 361
+        x: 356
         y: 114
-        width: 83
-        height: 35
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +362,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_10
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 76
-        width: 83
-        height: 35
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_11
       rect:
         serializedVersion: 2
-        x: 93
+        x: 89
         y: 76
-        width: 82
-        height: 34
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,10 +404,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_12
       rect:
         serializedVersion: 2
-        x: 181
+        x: 178
         y: 76
-        width: 85
-        height: 34
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_13
       rect:
         serializedVersion: 2
-        x: 269
-        y: 78
-        width: 86
-        height: 33
+        x: 267
+        y: 76
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,10 +446,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_14
       rect:
         serializedVersion: 2
-        x: 363
+        x: 356
         y: 76
-        width: 73
-        height: 37
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_15
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 38
-        width: 72
-        height: 37
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,10 +488,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_16
       rect:
         serializedVersion: 2
-        x: 91
+        x: 89
         y: 38
-        width: 78
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,10 +509,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_17
       rect:
         serializedVersion: 2
-        x: 179
+        x: 178
         y: 38
-        width: 85
-        height: 37
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,8 +532,8 @@ TextureImporter:
         serializedVersion: 2
         x: 267
         y: 38
-        width: 86
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,8 +553,8 @@ TextureImporter:
         serializedVersion: 2
         x: 356
         y: 38
-        width: 86
-        height: 33
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,10 +572,10 @@ TextureImporter:
       name: enemy_TIGER_spritesheet-Sheet_20
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 79
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -595,8 +595,8 @@ TextureImporter:
         serializedVersion: 2
         x: 89
         y: 0
-        width: 86
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,8 +616,8 @@ TextureImporter:
         serializedVersion: 2
         x: 178
         y: 0
-        width: 86
-        height: 36
+        width: 89
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
