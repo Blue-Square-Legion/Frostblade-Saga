@@ -49,7 +49,7 @@ public class EnemyProjectile : ContactDamage
             //reset to default fireball
             gameObject.SetActive(false);
             gameObject.layer = LayerMask.NameToLayer("Enemy");
-            spriteRenderer.color = new Color(0.8566037f, 0.5466086f, 0.2181914f, 1);
+            spriteRenderer.color = Color.white;
             rb.bodyType = RigidbodyType2D.Dynamic;
             boxCollider.isTrigger = true;
         }
@@ -57,13 +57,18 @@ public class EnemyProjectile : ContactDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
-        base.OnTriggerEnter2D(collision);
-        boxCollider.enabled = false;
-        animator.SetTrigger("collide");
-        //Deactivate(), call in animator
-        gameObject.layer = LayerMask.NameToLayer("Enemy");
-       
+        if (collision.gameObject.CompareTag("PlayerProjectile"))
+            FreezeProjectile();
+        else
+        {
+            hit = true;
+            base.OnTriggerEnter2D(collision);
+            boxCollider.enabled = false;
+            animator.SetTrigger("collide");
+            spriteRenderer.color = Color.white;
+            //Deactivate(), call in animator
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
+        }
     }
 
 
