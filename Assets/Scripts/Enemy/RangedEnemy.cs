@@ -32,6 +32,7 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
     {
         health = Mathf.RoundToInt(rangedHealth);
         startingHealth = Mathf.RoundToInt(rangedHealth);
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -43,7 +44,8 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
-                RangedAttack();
+                StartRangedAttack();
+                //RangedAttack(); called in animator
             }
 
         }
@@ -66,7 +68,12 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
-    private void RangedAttack()
+    private void StartRangedAttack()
+    {
+        animator.SetTrigger("shoot");
+    }
+
+    public void RangedAttack()
     {
         cooldownTimer = 0;
         //shoot
