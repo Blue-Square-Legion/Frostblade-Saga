@@ -181,4 +181,8 @@ public class Boss : GenericEnemy
         }
         
     }
+    public void BossRespawn()
+    {
+        health = startingHealth;
+    }
 }

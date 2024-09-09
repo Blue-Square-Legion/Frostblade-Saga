@@ -7,7 +7,7 @@ public class Checkpoint : MonoBehaviour
 {
     private Transform currentCheckpoint;
     private Health playerHealth;
-    [SerializeField] BossTrigger BossTrigger;
+    [SerializeField] GameObject BossTrigger;
 
     private void Start()
     {
@@ -19,8 +19,9 @@ public class Checkpoint : MonoBehaviour
         if (currentCheckpoint != null)
         {
             transform.position = currentCheckpoint.position + new Vector3(0,1,0);
-            GameManager.Instance.RespawnEnemies();
-            BossTrigger.ResetBoss();
+            if (!BossTrigger.activeInHierarchy )
+                BossTrigger.GetComponent<BossTrigger>().ResetBoss();
+            GameManager.Instance.RespawnEnemies(); 
             playerHealth.Respawn();
         }
         else
