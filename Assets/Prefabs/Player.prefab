@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 36393784476097622}
   - component: {fileID: 4721760356557680725}
   - component: {fileID: 8498392201833574442}
-  - component: {fileID: 1820398780499437230}
-  - component: {fileID: 2763183081721596853}
+  - component: {fileID: 8564655250073116889}
+  - component: {fileID: 1420422713572911299}
+  - component: {fileID: 89885251037836030}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -37,9 +38,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2575769647482607608}
   - {fileID: 7802423608769962475}
-  - {fileID: 8117581602393057358}
   - {fileID: 3563489871585868959}
   - {fileID: 7540429820959936966}
   - {fileID: 3638539121566669580}
@@ -83,10 +82,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2138806429
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 14e174ba65734a04a9b7edd7a9b54e14, type: 3}
+  m_Sprite: {fileID: -8588917, guid: ea6cb8b3211a1ad41a55ddb0946612c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 5
   components:
-  - {fileID: 0}
+  - {fileID: 36393784476097622}
+  - {fileID: 3633052007026965450}
+  - {fileID: 4721760356557680725}
 --- !u!114 &783938442117891350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,39 +139,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 981953159880648307}
   playerInput: {fileID: 4721760356557680725}
+  spriteRenderer: {fileID: 207808575219828573}
   rayCastLayer:
     serializedVersion: 2
     m_Bits: 64
   cam: {fileID: 0}
   playerControls: {fileID: -944628639613478452, guid: f306c3d6cd30f2b4797518ca2aa463ff, type: 3}
-  speed: 10
+  speed: 6.25
   sprintMultiplier: 1.5
   acceleration: 2
   groundDeceleration: 1
   airDeceleration: 0.5
-  jumpPower: 34
-  gravity: 1.83
-  endedJumpEarlyGravityModifier: 0
-  fallGravityModifier: 0
-  maxFallSpeed: 40
+  jumpPower: 24
+  gravity: 1.3
+  endedJumpEarlyGravityModifier: 3
+  fallGravityModifier: 1
+  maxFallSpeed: 30
   coyoteJumptime: 0.15
   bufferJumpTime: 0.2
   groundingForce: 1.5
-  primaryAttackStage1Cooldown: 0
-  primaryAttackStage2Cooldown: 0
-  secondaryAttackStage1Cooldown: 0
-  secondaryAttackStage2Cooldown: 0
-  projectile: {fileID: 0}
-  rightLaunchOffset: {fileID: 0}
-  leftLaunchOffset: {fileID: 0}
-  stage1RightAttackTransform: {fileID: 0}
-  stage2RightAttackTransform: {fileID: 0}
-  stage1LeftAttackTransform: {fileID: 0}
-  stage2LeftAttackTransform: {fileID: 0}
-  attackRange: 1.5
+  primaryAttackStage1Cooldown: 1
+  primaryAttackStage2Cooldown: 3
+  secondaryAttackStage1Cooldown: 1
+  secondaryAttackStage2Cooldown: 2
+  playerProjectile: {fileID: 8432999479794766973, guid: 556230d7cbf9dc6448f22ce6337fee53, type: 3}
+  secondaryAttackStage2Size: 3
+  rightLaunchOffset: {fileID: 7540429820959936966}
+  leftLaunchOffset: {fileID: 3638539121566669580}
+  rightAttackTransform: {fileID: 7802423608769962475}
+  leftAttackTransform: {fileID: 3563489871585868959}
+  stage1AttackRange: 1.1
+  stage2AttackRange: 1.75
   attackLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
+  maxMana: 100
+  manaRegeneration: 5
+  primaryAttackStage1Cost: 10
+  primaryAttackStage2Cost: 30
+  secondaryAttackStage1Cost: 20
+  secondaryAttackStage2Cost: 50
 --- !u!114 &4721760356557680725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,11 +232,44 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &1820398780499437230
+--- !u!95 &8564655250073116889
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d05f61c0d900f174488dc70e0a99ffae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1420422713572911299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a536d9e2ebd3643b1889b1f34e37c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &89885251037836030
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,40 +301,19 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0027810931, y: -0.09108919}
+  m_Offset: {x: -0.15055633, y: -0.677503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.78125}
+    oldSize: {x: 3.5, y: 2.96875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41944182, y: 1.2435471}
+  m_Size: {x: 0.73523855, y: 1.2578824}
   m_EdgeRadius: 0
---- !u!95 &2763183081721596853
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981953159880648307}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d05f61c0d900f174488dc70e0a99ffae, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3578961823996288676
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3563489871585868959}
   m_Layer: 7
-  m_Name: Stage2LeftAttackHitbox
+  m_Name: Left Primary Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 3578961823996288676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0, z: 0}
+  m_LocalPosition: {x: -0.6, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -335,7 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7802423608769962475}
   m_Layer: 7
-  m_Name: Stage2RightHitbox
+  m_Name: Right Primary Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 3847230568948025619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -381,69 +401,7 @@ Transform:
   m_GameObject: {fileID: 4863399321639715107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1142440981438802311}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5115018512222243250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2575769647482607608}
-  m_Layer: 7
-  m_Name: Stage1RightHitbox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2575769647482607608
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5115018512222243250}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1142440981438802311}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5378905147488019716
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8117581602393057358}
-  m_Layer: 7
-  m_Name: Stage1LeftAttackHitbox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8117581602393057358
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5378905147488019716}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -474,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 6934952350760114781}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

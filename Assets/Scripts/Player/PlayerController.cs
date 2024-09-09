@@ -498,17 +498,18 @@ public class PlayerController : MonoBehaviour
 
                     for (int i = 0; i < enemyHits.Length; i++)
                     {
+                        if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                        {
+                            EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                            if (projectile != null)
+                            {
+                                projectile.FreezeProjectile();
+                            }
+                        }
                         if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
                         {
-                            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
-                            {
-                                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                                if (projectile != null)
-                                {
-                                    projectile.FreezeProjectile();
-                                    print("FREEZE PROJECTILE");
-                                }
-                            }
+                            enemy.TakeDamage(2);
+                            print("ENEMY HIT");
                         }
                     }
                     animator.SetTrigger("Aura");
