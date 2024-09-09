@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -26,5 +27,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void RespawnEnemies()
+    {
+        var enemies = Resources.FindObjectsOfTypeAll(typeof(GenericEnemy));
+
+        foreach (var enemy in enemies)
+        {
+            enemy.GetComponent<GenericEnemy>().Respawn();
+        }
     }
 }

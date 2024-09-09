@@ -7,14 +7,18 @@ public class PlayerProjectile : MonoBehaviour
 
     private GameManager gameManager;
     private float time = 0;
+    private Animator animator;
+    private bool hit;
 
     private void Start()
     {
         gameManager = GameManager.Instance;
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
+        if (hit) return;
         //Move the direction the projectile is facing
         transform.position += transform.right * Time.deltaTime * projectileSpeed;
 
@@ -26,14 +30,24 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //If projectile hit an enemy
-        if (collision.gameObject.TryGetComponent(out GenericEnemy enemy))
+        hit = true;
+        if (collision.gameObject.CompareTag("Projectile"))
         {
-            print("ENEMY HIT");
-            enemy.TakeDamage(1);
+            EnemyProjectile projectile = collision.gameObject.GetComponent<EnemyProjectile>();
+            if (projectile != null)
+            {
+                projectile.FreezeProjectile();
+                print("FREEZE PROJECTILE");
+            }
         }
 
         //Destroy self when it collides with anything
+        animator.SetTrigger("collision");
+        //Deactivate(), call in animator
+    }
+
+    public void Deactivate()
+    {
         Destroy(gameObject);
     }
 }

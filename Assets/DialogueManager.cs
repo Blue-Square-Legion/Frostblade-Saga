@@ -8,9 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance;
-
     
+    public MonoBehaviour scriptToDisable;
+    public GameObject[] hiddenWalls;
+
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
 
@@ -24,14 +25,16 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-
+       
         lines = new Queue<DialogueLine>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
+        if (scriptToDisable != null)
+        {
+            scriptToDisable.enabled = false;
+        }
         isDialogueActive = true;
 
         animator.Play("PopUpText");
@@ -48,6 +51,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextDialogueLine()
     {
+        Debug.Log("Lines remaining: " + lines.Count);
         if (lines.Count == 0)
         {
             EndDialogue();
@@ -55,14 +59,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueLine currentLine = lines.Dequeue();
+        Debug.Log("Displaying line: " + currentLine.line);
 
-        
         characterName.text = currentLine.character.name;
-
         StopAllCoroutines();
-
         StartCoroutine(TypeSentence(currentLine));
     }
+
 
     IEnumerator TypeSentence(DialogueLine dialogueLine)
     {
@@ -76,9 +79,21 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        if (scriptToDisable != null)
+        {
+            scriptToDisable.enabled = true;
+        }
         isDialogueActive = false;
         animator.Play("Hide");
         EventSystem.current.SetSelectedGameObject(null);
-        SceneManager.LoadScene(2);
+
+        foreach (GameObject obj in hiddenWalls)
+        {
+            if (obj.TryGetComponent<BoxCollider2D>(out var objCollider))
+            {
+                objCollider.enabled = false;
+            }
+        }
+        
     }
 }

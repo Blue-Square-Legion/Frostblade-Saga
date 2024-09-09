@@ -19,6 +19,7 @@ public class PatrolState : State
 
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
+    [SerializeField] Animator animator;
 
 
     public override void Enter() 
@@ -56,6 +57,7 @@ public class PatrolState : State
     // Idle for a while then turn around and move in opposite direction
     private void DirectionChange()
     {
+        animator.SetBool("walking", false);
         idleTimer += Time.deltaTime;
 
         if (idleTimer > idleDuration)
@@ -64,6 +66,7 @@ public class PatrolState : State
 
     private void MoveInDirection(int _direction)
     {
+        animator.SetBool("walking", true);
         idleTimer = 0;
         //flip enemy sprite to face the correct direction
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
