@@ -1,15 +1,14 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class Boss : MonoBehaviour
+public class Boss : GenericEnemy
 {
     [SerializeField] float speed = 10;
+    [SerializeField] int bossHealth = 50;
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float chargeCooldown;
-    [SerializeField] private int damage;
-    [SerializeField] private float range;
+    [SerializeField] private int clawDamage = 1;
+    [SerializeField] private float clawRange;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -19,110 +18,110 @@ public class Boss : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
 
     private float cooldownTimer = Mathf.Infinity;
-    private float chargeTimer = 0;
 
     [SerializeField] private GameObject[] fireballs;
-    private Vector3[] firepoints = new Vector3[5];
 
-    private bool attacking = false;
-    private bool charging = true;
+    [SerializeField] Transform player;
+    [SerializeField] Transform firepoint;
+    [SerializeField] GameObject fireball;
+
+    private Vector3 initScale;
+
+    private bool charging = false;
 
     private void Start()
     {
-        //populate firepoint array
-        for (int i = 0; i < fireballs.Length; i++)
-        {
-            firepoints[i] = fireballs[i].transform.position;
-        }
+        animator = GetComponent<Animator>();
+        initScale = transform.localScale;
+        health = Mathf.RoundToInt(bossHealth);
+        startingHealth = Mathf.RoundToInt(bossHealth);
     }
 
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
 
-        if (attacking) return;
-
         if (charging)
         {
-            Charge();
+            transform.position += speed * Time.deltaTime * transform.right * Mathf.Sign(transform.localScale.x);
         }
-        else if (PlayerInClawRange())
-        {
-            if (cooldownTimer >= attackCooldown)
-            {
-                StartClawAttack();
-            }
-        }
-        else if (chargeTimer >= chargeCooldown)
+
+        if (cooldownTimer < attackCooldown) return;
+
+        //look in player direction
+        if (player.position.x > transform.position.x)
+            transform.localScale = new Vector3(Mathf.Abs(initScale.x) * 1, initScale.y, initScale.z);
+        else
+            transform.localScale = new Vector3(Mathf.Abs(initScale.x) * -1, initScale.y, initScale.z);
+
+        if (UnityEngine.Random.Range(0f, 1f) > 0.7f &&
+            Mathf.Abs(player.position.x - transform.position.x) > 8)
         {
             StartChargeAttack();
         }
+        else if (PlayerInClawRange())
+        {
+            StartClawAttack();
+        }
         else
         {
-            if (!hasActiveFireball() && cooldownTimer >= attackCooldown)
+            if (!hasActiveFireball())
             {
                 StartWaveAttack();
-            }
-        }
+    }
+}
     }
 
     void StartClawAttack()
     {
-        attacking = true;
         //set animation trigger
-        
-        DoClawDamage();
-        //^move to animation event once we have animation
+        animator.SetTrigger("claw");
+        //DoClawDamage(); called in animator
     }
 
     void DoClawDamage()
     {
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center +
-            transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            transform.right * clawRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * clawRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
         if (hit.collider.gameObject.TryGetComponent(out Health player))
         {
-            player.TakeDamage(1);
+            player.TakeDamage(clawDamage);
             //player hit
         }
 
         //reset cooldown
         cooldownTimer = 0;
-        attacking = false;
+        animator.ResetTrigger("claw");
     }
 
     void StartChargeAttack()
     {
-        charging = true;
         //trigger animation
+        animator.SetTrigger("run");
+        //Charge(); called in animator
     }
 
     void Charge()
     {
-        transform.position += speed * Time.deltaTime * transform.right * Mathf.Sign(transform.localScale.x);
+        charging = true;
     }
 
     void StartWaveAttack()
     {
         //set animation trigger
-        //spawn fireballs
-        attacking = true;
-        StartCoroutine(SpawnFireballs());
-
-        //shoot fireballs
-        //reset cooldown
-        cooldownTimer = 0;
-        attacking = false;
+        animator.SetTrigger("ranged");
+        //SpawnFireballs(); called in animator
     }
 
     private bool PlayerInClawRange()
     {
 
         RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + 
-            transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+            transform.right * clawRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * clawRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
         return hit.collider != null;
@@ -131,25 +130,20 @@ public class Boss : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * clawRange * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * clawRange, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
-    IEnumerator SpawnFireballs()
+    void SpawnFireballs()
     {
         for (int i = 0; i < fireballs.Length; i++)
-        {
-            GameObject temp = fireballs[i];
-            temp.transform.position = firepoints[i];
-            temp.GetComponent<EnemyProjectile>().ActivateProjectile();
-            temp.GetComponent<EnemyProjectile>().SetWaiting(true);
-            yield return new WaitForSeconds(.5f);
-        }
-
-        for (int i = 0; i < fireballs.Length; i++)
-        {
-            fireballs[i].GetComponent<EnemyProjectile>().SetWaiting(false);
-        }
+            {
+                GameObject temp = fireballs[i];
+                temp.transform.position = firepoint.position;
+                temp.GetComponent<EnemyProjectile>().ActivateProjectile();
+            }
+        cooldownTimer = 0;
+        animator.ResetTrigger("ranged");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -158,17 +152,10 @@ public class Boss : MonoBehaviour
         if (charging)
         {
             charging = false;
+            cooldownTimer = 0;
+            transform.position -= transform.right * Mathf.Sign(transform.localScale.x);
+            animator.SetTrigger("stopRun");
         }
+        
     }
-
-    private bool hasActiveFireball()
-    {
-        for (int i = 0; i < fireballs.Length; i++)
-        {
-            if (fireballs[i].activeInHierarchy)
-                return true;
-        }
-        return false;
-    }
-
 }

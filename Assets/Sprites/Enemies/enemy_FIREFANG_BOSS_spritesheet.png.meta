@@ -1,0 +1,980 @@
+fileFormatVersion: 2
+guid: d531382ccbbda72418a91d4d8b3b9ddd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db3ceb0d1440b44d99eb79fad04c66e
+      internalID: 458124392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c333d2a223c896244aedd6c80c03b21b
+      internalID: -1176467622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e51ee6b359b61d43b574b4d1d735cbe
+      internalID: 1148400959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f5cf5d1feae76438f6124553e4272e
+      internalID: -113478729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b076fe2fd491a9342909844fb380ce0b
+      internalID: 1498659091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102491afd0fdd244ba6a22fe56f3f850
+      internalID: -801812022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 535
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d59af8e053d644c8913f0ada19a658
+      internalID: 1726504154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f22d0e09d95bd458a3ca500343f969
+      internalID: 1368526368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e53b9c3fb25b1e44a60b58fe2b73d66
+      internalID: 371312404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66c53e10d455c84594f71082f6384fb
+      internalID: -1046629348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e70ebfed0309ce42bc7a372a524f1c7
+      internalID: -1599156827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d515a8b0958daf644ac4d60fe5148e3e
+      internalID: 1131896618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f321b4004df4f98449f93a8da9e57d6b
+      internalID: 1224505977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 428
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969d2e3c717ea684c854c2da2d70db18
+      internalID: 2130222476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ffc0ab564b5ba49aab1bfed864a525
+      internalID: -452185241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8317290ed5dfc439e94fd917da64fe
+      internalID: 1922753376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b01701fccd912f43834c236ad10adda
+      internalID: -541896935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af97daa8169fba4eb19308b7274ab3a
+      internalID: 1540407052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3a4c3ee2f43a8418d416a9dbb10948
+      internalID: 1733223419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff49ccbed3807e499969a1bcdad4d50
+      internalID: 1900789742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 321
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5fd0831b190954d97bd2f76b2f5509
+      internalID: -620211872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31de6010603daa343bf59e6547289936
+      internalID: 439635266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35bbe96790ec8440bb5fab5b48e0c4b
+      internalID: 2083748435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c97b3266a760043935a771fe28b69c
+      internalID: 1166037216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb3bd649c0291849b5376cc447657e8
+      internalID: -211293423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b7f316b3cf6ef4e9258acce00e84c2
+      internalID: -1961267818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d849bd18b15fe8c42939819811a11904
+      internalID: 1816224169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 214
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce06621969ff5f4da1a031572bb1219
+      internalID: -1012636729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e1cd718b3708345b5bdb4ad052b605
+      internalID: -860446115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ff00dcd2e9cef4da3be2eb7fe06839
+      internalID: 857168520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8e53e93210d584a8c6963e2b146310
+      internalID: 204710622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002d13a2327a4f14392c7af619bb8a95
+      internalID: -699565483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ae1a6406235a5438f32f5c5e45d180
+      internalID: 1981837201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfeaa710db5893a4aba93351506b4ce0
+      internalID: -882634402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 107
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf1fffcb21613249bf99060ed18d7c8
+      internalID: 501753581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4d80fbefcc07147964a4f94322637a
+      internalID: 1561064176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_FIREFANG_BOSS_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b984459fd927ff4d89a43dedb828492
+      internalID: -909233315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      enemy_FIREFANG_BOSS_spritesheet_0: 458124392
+      enemy_FIREFANG_BOSS_spritesheet_1: -1176467622
+      enemy_FIREFANG_BOSS_spritesheet_10: -1599156827
+      enemy_FIREFANG_BOSS_spritesheet_11: 1131896618
+      enemy_FIREFANG_BOSS_spritesheet_12: 1224505977
+      enemy_FIREFANG_BOSS_spritesheet_13: 2130222476
+      enemy_FIREFANG_BOSS_spritesheet_14: -452185241
+      enemy_FIREFANG_BOSS_spritesheet_15: 1922753376
+      enemy_FIREFANG_BOSS_spritesheet_16: -541896935
+      enemy_FIREFANG_BOSS_spritesheet_17: 1540407052
+      enemy_FIREFANG_BOSS_spritesheet_18: 1733223419
+      enemy_FIREFANG_BOSS_spritesheet_19: 1900789742
+      enemy_FIREFANG_BOSS_spritesheet_2: 1148400959
+      enemy_FIREFANG_BOSS_spritesheet_20: -620211872
+      enemy_FIREFANG_BOSS_spritesheet_21: 439635266
+      enemy_FIREFANG_BOSS_spritesheet_22: 2083748435
+      enemy_FIREFANG_BOSS_spritesheet_23: 1166037216
+      enemy_FIREFANG_BOSS_spritesheet_24: -211293423
+      enemy_FIREFANG_BOSS_spritesheet_25: -1961267818
+      enemy_FIREFANG_BOSS_spritesheet_26: 1816224169
+      enemy_FIREFANG_BOSS_spritesheet_27: -1012636729
+      enemy_FIREFANG_BOSS_spritesheet_28: -860446115
+      enemy_FIREFANG_BOSS_spritesheet_29: 857168520
+      enemy_FIREFANG_BOSS_spritesheet_3: -113478729
+      enemy_FIREFANG_BOSS_spritesheet_30: 204710622
+      enemy_FIREFANG_BOSS_spritesheet_31: -699565483
+      enemy_FIREFANG_BOSS_spritesheet_32: 1981837201
+      enemy_FIREFANG_BOSS_spritesheet_33: -882634402
+      enemy_FIREFANG_BOSS_spritesheet_34: 501753581
+      enemy_FIREFANG_BOSS_spritesheet_35: 1561064176
+      enemy_FIREFANG_BOSS_spritesheet_36: -909233315
+      enemy_FIREFANG_BOSS_spritesheet_4: 1498659091
+      enemy_FIREFANG_BOSS_spritesheet_5: -801812022
+      enemy_FIREFANG_BOSS_spritesheet_6: 1726504154
+      enemy_FIREFANG_BOSS_spritesheet_7: 1368526368
+      enemy_FIREFANG_BOSS_spritesheet_8: 371312404
+      enemy_FIREFANG_BOSS_spritesheet_9: -1046629348
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

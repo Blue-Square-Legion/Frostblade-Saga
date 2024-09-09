@@ -12,7 +12,6 @@ public class EnemyProjectile : ContactDamage
 
     private bool hit;
     private bool isFrozen;
-    private bool waiting = false;
     private Animator animator;
 
     private void Start()
@@ -25,7 +24,15 @@ public class EnemyProjectile : ContactDamage
 
     public void ActivateProjectile()
     {
-        
+        //reset to default fireball
+        if (isFrozen)
+        {
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
+            spriteRenderer.color = Color.white;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            boxCollider.isTrigger = true;
+        }
+
         lifeTime = 0;
         gameObject.SetActive(true);
         if(boxCollider != null )
@@ -39,7 +46,7 @@ public class EnemyProjectile : ContactDamage
     {
         if (hit) return;
 
-        if (!isFrozen && !waiting)
+        if (!isFrozen)
         {
             float movementSpeed = speed * Time.deltaTime;
             transform.Translate(movementSpeed, 0, 0);
@@ -59,6 +66,7 @@ public class EnemyProjectile : ContactDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Projectile") && (!isFrozen && !collision.GetComponent<EnemyProjectile>().isFrozen)) return;
         if (collision.gameObject.CompareTag("PlayerProjectile"))
             FreezeProjectile();
         else
@@ -85,10 +93,6 @@ public class EnemyProjectile : ContactDamage
         boxCollider.enabled = true;
         gameObject.layer = LayerMask.NameToLayer("Ground");
     }
-    public void SetWaiting(bool value)
-    {
-        waiting = value;
-
     public void Deactivate()
     {
         gameObject.SetActive(false);
