@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2D3D25DD-D479-F680-3FE4-964670602F75}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="348963605" Name="Reverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="1021618141" Name="MusicState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1560169506" Name="Boss"/>
+						<State Id="2764240573" Name="Combat"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1071758680" Name="CombatState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="851884604" Name="BossPhase1"/>
+						<State Id="851884607" Name="BossPhase2"/>
+						<State Id="2764240573" Name="Combat"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="214305155" Name="PlayerLanding">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1516247569" Name="GameplaySwitch">
+					<Switches>
+						<Switch Id="1560169506" Name="Boss"/>
+						<Switch Id="2764240573" Name="Combat"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3542290436" Name="PlayerFootstep">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+			<AcousticTextures>
+				<AcousticTexture Id="504532776" Name="Brick">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="18"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="23"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="513139656" Name="Mountain">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="841620460" Name="Concrete">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="6"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="14"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1755085759" Name="Wood_Deep">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="1"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="8"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1873957695" Name="Anechoic">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="1970351858" Name="Fabric">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="3"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="13"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="48"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="72"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2058049674" Name="Wood">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="20"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="35"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2412606308" Name="Carpet">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="46"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="45"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="76"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2637588553" Name="Tile">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="67"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="41"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="12"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="0"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="2928161104" Name="Curtains">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="7"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="60"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="0"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="84"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3195498748" Name="Cork_Tiles">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="14"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="30"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="73"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="3670307564" Name="Drywall">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="2"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="2"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4168643977" Name="Acoustic_Banner">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="37"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="100"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="100"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+				<AcousticTexture Id="4262522749" Name="Wood_Bright">
+					<Properties>
+						<Property Name="AbsorptionLow" Type="Real32" Value="32"/>
+						<Property Name="AbsorptionMidLow" Type="Real32" Value="25"/>
+						<Property Name="AbsorptionMidHigh" Type="Real32" Value="10"/>
+						<Property Name="AbsorptionHigh" Type="Real32" Value="9"/>
+						<Property Name="Scattering" Type="Real32" Value="0"/>
+					</Properties>
+				</AcousticTexture>
+			</AcousticTextures>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2B6321BD-66AF-EBBC-B860-96F4125E81BA}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="8421383" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Choir.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Choir_56CEF360.wem</CachePath>
+				</File>
+				<File Id="23606703" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAuraFreeze\IceAuraFreeze4.wav</ShortName>
+					<CachePath>SFX/IceAuraFreeze/IceAuraFreeze4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="28355198" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 4.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="31955929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Landing Stone\Player Landing Stone 3.wav</ShortName>
+					<CachePath>SFX/Player Landing Stone/Player Landing Stone 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="32730288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 10.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 10_818F3B66.wem</CachePath>
+				</File>
+				<File Id="33099968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Choir 2.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Choir 2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="33950063" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Hit\Small Sword Hit 3.wav</ShortName>
+					<CachePath>SFX/Small Sword Hit/Small Sword Hit 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="36183097" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Pluck String.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Pluck String_56CEF360.wem</CachePath>
+				</File>
+				<File Id="45434428" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 6.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="50690553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage2 Freeze 4.wav</ShortName>
+					<CachePath>SFX/Stage2 Freeze 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="53341151" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Treasure Chest Open 3.wav</ShortName>
+					<CachePath>SFX/Treasure Chest Open 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="54151302" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss A 108 BPM D Min Drums.wav</ShortName>
+					<CachePath>SFX/FS Boss A 108 BPM D Min Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="56732673" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage2 Freeze 2.wav</ShortName>
+					<CachePath>SFX/Stage2 Freeze 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="60606429" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossProjectileHit\BossProjectileHit2.wav</ShortName>
+					<CachePath>SFX/BossProjectileHit/BossProjectileHit2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="65626146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Boss Low Drums.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Boss Low Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="68443618" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerAttackRoar\FireTigerAttackRoar3.wav</ShortName>
+					<CachePath>SFX/FireTigerAttackRoar/FireTigerAttackRoar3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="69949331" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Main Strings.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Main Strings_56CEF360.wem</CachePath>
+				</File>
+				<File Id="71070298" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Wood 6.wav</ShortName>
+					<CachePath>SFX/Player Footstep Wood 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="73710910" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 9.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 9_818F3B66.wem</CachePath>
+				</File>
+				<File Id="73870710" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Drums.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="98795594" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Checkpoint\Checkpoint3.wav</ShortName>
+					<CachePath>SFX/Checkpoint/Checkpoint3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="109832646" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 6.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="110612529" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Grass\Player Grass Jump 3.wav</ShortName>
+					<CachePath>SFX/Player Jump Grass/Player Grass Jump 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="114955881" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire Tiger Footsteps\TigerFootstep3.wav</ShortName>
+					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="142101349" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Grass\Player Grass Jump 6.wav</ShortName>
+					<CachePath>SFX/Player Jump Grass/Player Grass Jump 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="144202649" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 3.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="149146617" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Hit Cry\Enemy Hit Cry 3.wav</ShortName>
+					<CachePath>SFX/Enemy Hit Cry/Enemy Hit Cry 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="161743249" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Die Vox\Player Die Vox 2.wav</ShortName>
+					<CachePath>SFX/Player Die Vox/Player Die Vox 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="162041064" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerIdleRoar\FireTigerIdleRoar1.wav</ShortName>
+					<CachePath>SFX/FireTigerIdleRoar/FireTigerIdleRoar1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="162210314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 5.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="175734955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Landing Wood\Player Landing Wood 1.wav</ShortName>
+					<CachePath>SFX/Player Landing Wood/Player Landing Wood 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="175933057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Main Strings.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Main Strings_56CEF360.wem</CachePath>
+				</File>
+				<File Id="180038728" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage2 Freeze 5.wav</ShortName>
+					<CachePath>SFX/Stage2 Freeze 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="188945968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Grass\Player Grass Jump 1.wav</ShortName>
+					<CachePath>SFX/Player Jump Grass/Player Grass Jump 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="200945963" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Attack Vox\Player Attack Vox 1.wav</ShortName>
+					<CachePath>SFX/Player Attack Vox/Player Attack Vox 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="207567192" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Hit Cry\Enemy Hit Cry 2.wav</ShortName>
+					<CachePath>SFX/Enemy Hit Cry/Enemy Hit Cry 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="208003721" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Combat Low Drums.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Combat Low Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="213610856" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 2.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="218026665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Hit\Small Sword Hit 4.wav</ShortName>
+					<CachePath>SFX/Small Sword Hit/Small Sword Hit 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="219878111" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerHurtRoar\FireTigerHurtRoar2.wav</ShortName>
+					<CachePath>SFX/FireTigerHurtRoar/FireTigerHurtRoar2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="225017769" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Die Vox\Player Die Vox 3.wav</ShortName>
+					<CachePath>SFX/Player Die Vox/Player Die Vox 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="242368131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerHurtRoar\FireTigerHurtRoar3.wav</ShortName>
+					<CachePath>SFX/FireTigerHurtRoar/FireTigerHurtRoar3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="261529864" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Vox\Player Jump Vox 1.wav</ShortName>
+					<CachePath>SFX/Player Jump Vox/Player Jump Vox 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="265858973" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PL_MPOOT_Crash_17_Wet.wav</ShortName>
+					<CachePath>SFX/PL_MPOOT_Crash_17_Wet_56CEF360.wem</CachePath>
+				</File>
+				<File Id="267208046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 2.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="272617512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 1.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="273089857" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 8.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="277930616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Wood 7.wav</ShortName>
+					<CachePath>SFX/Player Footstep Wood 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="278480891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss A 108 BPM D Min Pulse Synth.wav</ShortName>
+					<CachePath>SFX/FS Boss A 108 BPM D Min Pulse Synth_56CEF360.wem</CachePath>
+				</File>
+				<File Id="281365612" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Die Vox\Player Die Vox 1.wav</ShortName>
+					<CachePath>SFX/Player Die Vox/Player Die Vox 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="283216146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Checkpoint\Checkpoint1.wav</ShortName>
+					<CachePath>SFX/Checkpoint/Checkpoint1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="284865630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Duduk.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Duduk_56CEF360.wem</CachePath>
+				</File>
+				<File Id="288932570" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Vox\Player Jump Vox 2.wav</ShortName>
+					<CachePath>SFX/Player Jump Vox/Player Jump Vox 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="293986289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BigSwordDrag\BigSwordDrag1.wav</ShortName>
+					<CachePath>SFX/BigSwordDrag/BigSwordDrag1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="307015036" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PlayerSwordGrow\PlayerSwordGrow1.wav</ShortName>
+					<CachePath>SFX/PlayerSwordGrow/PlayerSwordGrow1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="315423522" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerIdleRoar\FireTigerIdleRoar3.wav</ShortName>
+					<CachePath>SFX/FireTigerIdleRoar/FireTigerIdleRoar3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="317698384" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Horns.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Horns_56CEF360.wem</CachePath>
+				</File>
+				<File Id="326181241" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Wood 1.wav</ShortName>
+					<CachePath>SFX/Player Footstep Wood 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="328085107" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Choir 2.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Choir 2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="334951232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 5.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="344061253" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossTigerRoar\BossTigerRoar4.wav</ShortName>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="367288393" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Treasure Chest Open 2.wav</ShortName>
+					<CachePath>SFX/Treasure Chest Open 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="367773994" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Vox\Player Jump Vox 3.wav</ShortName>
+					<CachePath>SFX/Player Jump Vox/Player Jump Vox 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="375136088" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire Tiger Footsteps\TigerFootstep2.wav</ShortName>
+					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="378257163" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAuraFreeze\IceAuraFreeze1.wav</ShortName>
+					<CachePath>SFX/IceAuraFreeze/IceAuraFreeze1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="393883426" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossProjectile\BossProjectile3.wav</ShortName>
+					<CachePath>SFX/BossProjectile/BossProjectile3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="403266752" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Hit\Small Sword Hit 1.wav</ShortName>
+					<CachePath>SFX/Small Sword Hit/Small Sword Hit 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="404893591" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Cello_Viola.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Cello_Viola_56CEF360.wem</CachePath>
+				</File>
+				<File Id="411637370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAura\IceAura1.wav</ShortName>
+					<CachePath>SFX/IceAura/IceAura1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="412748431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossProjectile\BossProjectile1.wav</ShortName>
+					<CachePath>SFX/BossProjectile/BossProjectile1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="419881153" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 1.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="420841659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 4.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="421469209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Effects.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Effects_56CEF360.wem</CachePath>
+				</File>
+				<File Id="422891380" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Checkpoint\Checkpoint2.wav</ShortName>
+					<CachePath>SFX/Checkpoint/Checkpoint2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="426116371" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Hit Vox\Player Hit Vox 1.wav</ShortName>
+					<CachePath>SFX/Player Hit Vox/Player Hit Vox 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="426484487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Cello_Viola.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Cello_Viola_56CEF360.wem</CachePath>
+				</File>
+				<File Id="427368398" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAuraFreeze\IceAuraFreeze3.wav</ShortName>
+					<CachePath>SFX/IceAuraFreeze/IceAuraFreeze3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="430761378" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire Tiger Footsteps\TigerFootstep5.wav</ShortName>
+					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="444449598" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss A 108 BPM D Min Effects.wav</ShortName>
+					<CachePath>SFX/FS Boss A 108 BPM D Min Effects_56CEF360.wem</CachePath>
+				</File>
+				<File Id="449362265" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Hit Vox\Player Hit Vox 3.wav</ShortName>
+					<CachePath>SFX/Player Hit Vox/Player Hit Vox 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="449978247" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Landing Stone\Player Landing Stone 1.wav</ShortName>
+					<CachePath>SFX/Player Landing Stone/Player Landing Stone 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="452389057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 2.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="455040897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Hit\Small Sword Hit 2.wav</ShortName>
+					<CachePath>SFX/Small Sword Hit/Small Sword Hit 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="455279483" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Swing\Small Sword Swing 5.wav</ShortName>
+					<CachePath>SFX/Small Sword Swing/Small Sword Swing 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="459193274" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 1.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="462749684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 2.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="463474804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 5.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="466609693" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 7.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="471745059" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Swing\Small Sword Swing 1.wav</ShortName>
+					<CachePath>SFX/Small Sword Swing/Small Sword Swing 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="474492847" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Reese Bass.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Reese Bass_56CEF360.wem</CachePath>
+				</File>
+				<File Id="477780906" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Lo Cello.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Lo Cello_56CEF360.wem</CachePath>
+				</File>
+				<File Id="479534242" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 6.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="483494116" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Drums.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="486447528" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Wood 2.wav</ShortName>
+					<CachePath>SFX/Player Footstep Wood 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="507075720" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Cello_Viola.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Cello_Viola_56CEF360.wem</CachePath>
+				</File>
+				<File Id="508309590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footsteps Grass\Player Grass Footstep 1.wav</ShortName>
+					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="513697433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAura\IceAura3.wav</ShortName>
+					<CachePath>SFX/IceAura/IceAura3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="518620271" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footsteps Grass\Player Grass Footstep 3.wav</ShortName>
+					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="520486769" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Swing\Small Sword Swing 4.wav</ShortName>
+					<CachePath>SFX/Small Sword Swing/Small Sword Swing 4_C2C2E2B8.wem</CachePath>
+				</File>
+				<File Id="522666870" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Attack Vox\Player Attack Vox 3.wav</ShortName>
+					<CachePath>SFX/Player Attack Vox/Player Attack Vox 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="523751745" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 3.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="535559193" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 2.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="535940570" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Combat Low Drums.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Combat Low Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="551157486" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossProjectile\BossProjectile2.wav</ShortName>
+					<CachePath>SFX/BossProjectile/BossProjectile2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="552150952" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 8.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="556479194" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Landing Stone\Player Landing Stone 2.wav</ShortName>
+					<CachePath>SFX/Player Landing Stone/Player Landing Stone 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="558053087" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 5.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="569748511" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 7.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="571009881" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Idle Cry\Enemy Idle Cry 4.wav</ShortName>
+					<CachePath>SFX/Enemy Idle Cry/Enemy Idle Cry 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="594433068" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss A 108 BPM D Min Cello_Viola.wav</ShortName>
+					<CachePath>SFX/FS Boss A 108 BPM D Min Cello_Viola_56CEF360.wem</CachePath>
+				</File>
+				<File Id="607597750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footsteps Grass\Player Grass Footstep 6.wav</ShortName>
+					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="608132479" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerAttackRoar\FireTigerAttackRoar2.wav</ShortName>
+					<CachePath>SFX/FireTigerAttackRoar/FireTigerAttackRoar2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="616942778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Grass\Player Grass Jump 4.wav</ShortName>
+					<CachePath>SFX/Player Jump Grass/Player Grass Jump 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="646853427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 4.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="648736804" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Swing\Small Sword Swing 2.wav</ShortName>
+					<CachePath>SFX/Small Sword Swing/Small Sword Swing 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="649130964" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footsteps Grass\Player Grass Footstep 8.wav</ShortName>
+					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="662037905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Landing Wood\Player Landing Wood 2.wav</ShortName>
+					<CachePath>SFX/Player Landing Wood/Player Landing Wood 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="664231106" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Idle Cry\Enemy Idle Cry 1.wav</ShortName>
+					<CachePath>SFX/Enemy Idle Cry/Enemy Idle Cry 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="667174208" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerHurtRoar\FireTigerHurtRoar1.wav</ShortName>
+					<CachePath>SFX/FireTigerHurtRoar/FireTigerHurtRoar1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="672855308" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Idle Cry\Enemy Idle Cry 2.wav</ShortName>
+					<CachePath>SFX/Enemy Idle Cry/Enemy Idle Cry 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="675386381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience.wav</ShortName>
+					<CachePath>SFX/Ambience_56CEF360.wem</CachePath>
+				</File>
+				<File Id="676947343" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Swing\Big Sword Swing 4.wav</ShortName>
+					<CachePath>SFX/Big Sword Swing/Big Sword Swing 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="679510927" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossTigerRoar\BossTigerRoar2.wav</ShortName>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="688309035" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossProjectileHit\BossProjectileHit1.wav</ShortName>
+					<CachePath>SFX/BossProjectileHit/BossProjectileHit1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="689606237" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Eneny Attack Cry 4.wav</ShortName>
+					<CachePath>SFX/Eneny Attack Cry 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="698082691" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire Tiger Footsteps\TigerFootstep1.wav</ShortName>
+					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="707218333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossProjectileHit\BossProjectileHit3.wav</ShortName>
+					<CachePath>SFX/BossProjectileHit/BossProjectileHit3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="715331708" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Attack Vox\Player Attack Vox 2.wav</ShortName>
+					<CachePath>SFX/Player Attack Vox/Player Attack Vox 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="719290641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Swing\Small Sword Swing 3.wav</ShortName>
+					<CachePath>SFX/Small Sword Swing/Small Sword Swing 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="719502143" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 7.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="722289223" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Attack Cry\Eneny Attack Cry 3.wav</ShortName>
+					<CachePath>SFX/Enemy Attack Cry/Eneny Attack Cry 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="723628959" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerBite\FireTigerBite2.wav</ShortName>
+					<CachePath>SFX/FireTigerBite/FireTigerBite2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="742003138" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire Tiger Footsteps\TigerFootstep6.wav</ShortName>
+					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="743268809" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAuraFreeze\IceAuraFreeze2.wav</ShortName>
+					<CachePath>SFX/IceAuraFreeze/IceAuraFreeze2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="748213289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Hit Vox\Player Hit Vox 2.wav</ShortName>
+					<CachePath>SFX/Player Hit Vox/Player Hit Vox 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="759232015" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 6.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="771193010" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PlayerSwordGrow\PlayerSwordGrow2.wav</ShortName>
+					<CachePath>SFX/PlayerSwordGrow/PlayerSwordGrow2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="774593596" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossBite\BossBite2.wav</ShortName>
+					<CachePath>SFX/BossBite/BossBite2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="781062339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Hit\Small Sword Hit 6.wav</ShortName>
+					<CachePath>SFX/Small Sword Hit/Small Sword Hit 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="782362849" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BigSwordDrag\BigSwordDrag2.wav</ShortName>
+					<CachePath>SFX/BigSwordDrag/BigSwordDrag2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="784192610" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 3.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="786131092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 5.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="788906199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Reese Bass.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Reese Bass_56CEF360.wem</CachePath>
+				</File>
+				<File Id="805506079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Hit Cry\Enemy Hit Cry 1.wav</ShortName>
+					<CachePath>SFX/Enemy Hit Cry/Enemy Hit Cry 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="807892841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossTigerRoar\BossTigerRoar3.wav</ShortName>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="809058575" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footsteps Grass\Player Grass Footstep 2.wav</ShortName>
+					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="817014791" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossTigerRoar\BossTigerRoar1.wav</ShortName>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="824661036" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Grass\Player Grass Jump 5.wav</ShortName>
+					<CachePath>SFX/Player Jump Grass/Player Grass Jump 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="827858905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerBite\FireTigerBite3.wav</ShortName>
+					<CachePath>SFX/FireTigerBite/FireTigerBite3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="829542582" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Pluck String.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Pluck String_56CEF360.wem</CachePath>
+				</File>
+				<File Id="830380090" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Drums.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="848510040" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Main Strings.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Main Strings_56CEF360.wem</CachePath>
+				</File>
+				<File Id="852452083" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Wood 3.wav</ShortName>
+					<CachePath>SFX/Player Footstep Wood 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="857486679" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerBite\FireTigerBite1.wav</ShortName>
+					<CachePath>SFX/FireTigerBite/FireTigerBite1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="858371458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fire Tiger Footsteps\TigerFootstep4.wav</ShortName>
+					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="863672567" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Jump Grass\Player Grass Jump 2.wav</ShortName>
+					<CachePath>SFX/Player Jump Grass/Player Grass Jump 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="864051029" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Effects.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Effects_56CEF360.wem</CachePath>
+				</File>
+				<File Id="868413544" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Effects.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Effects_56CEF360.wem</CachePath>
+				</File>
+				<File Id="870750204" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Hit Cry\Enemy Hit Cry 4.wav</ShortName>
+					<CachePath>SFX/Enemy Hit Cry/Enemy Hit Cry 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="871286167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Duduk.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Duduk_56CEF360.wem</CachePath>
+				</File>
+				<File Id="876765623" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Choir.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Choir_56CEF360.wem</CachePath>
+				</File>
+				<File Id="878614276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Hit\Small Sword Hit 5.wav</ShortName>
+					<CachePath>SFX/Small Sword Hit/Small Sword Hit 5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="882794633" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Combat Low Drums.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Combat Low Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="887845915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Small Sword Swing\Small Sword Swing 6.wav</ShortName>
+					<CachePath>SFX/Small Sword Swing/Small Sword Swing 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="891838401" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAuraFreeze\IceAuraFreeze5.wav</ShortName>
+					<CachePath>SFX/IceAuraFreeze/IceAuraFreeze5_818F3B66.wem</CachePath>
+				</File>
+				<File Id="907882452" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 7.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="909567507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 8.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="920203563" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 4.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="924944296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Drums.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Drums_56CEF360.wem</CachePath>
+				</File>
+				<File Id="929560008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Wood 8.wav</ShortName>
+					<CachePath>SFX/Player Footstep Wood 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="930203950" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footsteps Grass\Player Grass Footstep 7.wav</ShortName>
+					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="932715677" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Big Sword Hit\Big Sword Hit 3.wav</ShortName>
+					<CachePath>SFX/Big Sword Hit/Big Sword Hit 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="936744918" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 7.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 7_818F3B66.wem</CachePath>
+				</File>
+				<File Id="951161838" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Grass Landing\Grass Landing 1.wav</ShortName>
+					<CachePath>SFX/Grass Landing/Grass Landing 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="951623727" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Effects.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Effects_56CEF360.wem</CachePath>
+				</File>
+				<File Id="952850772" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Attack Cry\Eneny Attack Cry 1.wav</ShortName>
+					<CachePath>SFX/Enemy Attack Cry/Eneny Attack Cry 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="963571692" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat B\FS Combat B 108 BPM D Min Lo Cello.wav</ShortName>
+					<CachePath>SFX/Combat B/FS Combat B 108 BPM D Min Lo Cello_56CEF360.wem</CachePath>
+				</File>
+				<File Id="966080510" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PlayerSwordGrow\PlayerSwordGrow3.wav</ShortName>
+					<CachePath>SFX/PlayerSwordGrow/PlayerSwordGrow3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="969147882" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 6.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 6_818F3B66.wem</CachePath>
+				</File>
+				<File Id="977303819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Idle Cry\Enemy Idle Cry 3.wav</ShortName>
+					<CachePath>SFX/Enemy Idle Cry/Enemy Idle Cry 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="980928945" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IceAura\IceAura2.wav</ShortName>
+					<CachePath>SFX/IceAura/IceAura2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="982952417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss A 108 BPM D Min Choir.wav</ShortName>
+					<CachePath>SFX/FS Boss A 108 BPM D Min Choir_56CEF360.wem</CachePath>
+				</File>
+				<File Id="998733818" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerIdleRoar\FireTigerIdleRoar2.wav</ShortName>
+					<CachePath>SFX/FireTigerIdleRoar/FireTigerIdleRoar2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1000328923" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossBite\BossBite1.wav</ShortName>
+					<CachePath>SFX/BossBite/BossBite1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1006412281" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min B Stringa.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min B Stringa_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1015689245" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player Footstep Stone 1.wav</ShortName>
+					<CachePath>SFX/Player Footstep Stone 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1024175034" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Attack Cry\Eneny Attack Cry 2.wav</ShortName>
+					<CachePath>SFX/Enemy Attack Cry/Eneny Attack Cry 2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1025892079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Reese Bass.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Reese Bass_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1029216462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss B 108 BPM D Min Cello_Viola.wav</ShortName>
+					<CachePath>SFX/FS Boss B 108 BPM D Min Cello_Viola_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1029466873" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage2 Freeze 3.wav</ShortName>
+					<CachePath>SFX/Stage2 Freeze 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1036104300" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Enemy Fireball\Enemy Fireball 1.wav</ShortName>
+					<CachePath>SFX/Enemy Fireball/Enemy Fireball 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1039641798" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage1 Freeze 3.wav</ShortName>
+					<CachePath>SFX/Stage1 Freeze 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1048609498" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Treasure Chest Open 1.wav</ShortName>
+					<CachePath>SFX/Treasure Chest Open 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1061427790" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Duduk.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Duduk_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1062488087" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat C\FS Combat C 108 BPM D Min Horns.wav</ShortName>
+					<CachePath>SFX/Combat C/FS Combat C 108 BPM D Min Horns_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1065731597" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FireTigerAttackRoar\FireTigerAttackRoar1.wav</ShortName>
+					<CachePath>SFX/FireTigerAttackRoar/FireTigerAttackRoar1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1068939381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossBite\BossBite3.wav</ShortName>
+					<CachePath>SFX/BossBite/BossBite3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1070433179" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Combat A\FS Combat A 108 BPM D Min Lo Cello.wav</ShortName>
+					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Lo Cello_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1071832758" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stage2 Freeze 1.wav</ShortName>
+					<CachePath>SFX/Stage2 Freeze 1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1072075349" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS Boss A 108 BPM D Min Main Strings.wav</ShortName>
+					<CachePath>SFX/FS Boss A 108 BPM D Min Main Strings_56CEF360.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="881116499" Name="Peak Limiter (Custom)" LibName="Wwise Peak Limiter" LibId="7208963"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="278617630" Name="Play_Ambience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="675386381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="516602709" Name="Play_BigSwordDrag" DurationType="OneShot" DurationMin="1.3941809" DurationMax="1.8494033">
+					<MediaRefs>
+						<MediaRef Id="293986289"/>
+						<MediaRef Id="782362849"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3959107170" Name="Play_BigSwordHit" DurationType="OneShot" DurationMin="0.53126353" DurationMax="1.0022962">
+					<MediaRefs>
+						<MediaRef Id="28355198"/>
+						<MediaRef Id="109832646"/>
+						<MediaRef Id="267208046"/>
+						<MediaRef Id="419881153"/>
+						<MediaRef Id="719502143"/>
+						<MediaRef Id="786131092"/>
+						<MediaRef Id="932715677"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1761942167" Name="Play_BigSwordSwing" DurationType="OneShot" DurationMin="0.6027424" DurationMax="0.9322614">
+					<MediaRefs>
+						<MediaRef Id="45434428"/>
+						<MediaRef Id="272617512"/>
+						<MediaRef Id="334951232"/>
+						<MediaRef Id="462749684"/>
+						<MediaRef Id="523751745"/>
+						<MediaRef Id="569748511"/>
+						<MediaRef Id="676947343"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="153638151" Name="Play_BossBattle" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="8421383"/>
+						<MediaRef Id="54151302"/>
+						<MediaRef Id="65626146"/>
+						<MediaRef Id="175933057"/>
+						<MediaRef Id="278480891"/>
+						<MediaRef Id="444449598"/>
+						<MediaRef Id="594433068"/>
+						<MediaRef Id="924944296"/>
+						<MediaRef Id="951623727"/>
+						<MediaRef Id="982952417"/>
+						<MediaRef Id="1006412281"/>
+						<MediaRef Id="1025892079"/>
+						<MediaRef Id="1029216462"/>
+						<MediaRef Id="1072075349"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2729937127" Name="Play_BossBite" DurationType="OneShot" DurationMin="0.7047594" DurationMax="1.016886">
+					<MediaRefs>
+						<MediaRef Id="774593596"/>
+						<MediaRef Id="1000328923"/>
+						<MediaRef Id="1068939381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2050525748" Name="Play_BossProjectile" DurationType="OneShot" DurationMin="1.1930964" DurationMax="1.6549697">
+					<MediaRefs>
+						<MediaRef Id="393883426"/>
+						<MediaRef Id="412748431"/>
+						<MediaRef Id="551157486"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="42433307" Name="Play_BossProjectileHit" DurationType="OneShot" DurationMin="0.59871125" DurationMax="1.223702">
+					<MediaRefs>
+						<MediaRef Id="60606429"/>
+						<MediaRef Id="688309035"/>
+						<MediaRef Id="707218333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3232321306" Name="Play_BossTigerRoar" DurationType="OneShot" DurationMin="1.7584181" DurationMax="2.5833464">
+					<MediaRefs>
+						<MediaRef Id="344061253"/>
+						<MediaRef Id="679510927"/>
+						<MediaRef Id="807892841"/>
+						<MediaRef Id="817014791"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2962822744" Name="Play_Checkpoint" DurationType="OneShot" DurationMin="1.3169405" DurationMax="1.8356524">
+					<MediaRefs>
+						<MediaRef Id="98795594"/>
+						<MediaRef Id="283216146"/>
+						<MediaRef Id="422891380"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="513571230" Name="Play_Combat" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="33099968"/>
+						<MediaRef Id="36183097"/>
+						<MediaRef Id="69949331"/>
+						<MediaRef Id="73870710"/>
+						<MediaRef Id="208003721"/>
+						<MediaRef Id="265858973"/>
+						<MediaRef Id="284865630"/>
+						<MediaRef Id="317698384"/>
+						<MediaRef Id="328085107"/>
+						<MediaRef Id="404893591"/>
+						<MediaRef Id="421469209"/>
+						<MediaRef Id="426484487"/>
+						<MediaRef Id="474492847"/>
+						<MediaRef Id="477780906"/>
+						<MediaRef Id="483494116"/>
+						<MediaRef Id="507075720"/>
+						<MediaRef Id="535940570"/>
+						<MediaRef Id="788906199"/>
+						<MediaRef Id="829542582"/>
+						<MediaRef Id="830380090"/>
+						<MediaRef Id="848510040"/>
+						<MediaRef Id="864051029"/>
+						<MediaRef Id="868413544"/>
+						<MediaRef Id="871286167"/>
+						<MediaRef Id="876765623"/>
+						<MediaRef Id="882794633"/>
+						<MediaRef Id="963571692"/>
+						<MediaRef Id="1061427790"/>
+						<MediaRef Id="1062488087"/>
+						<MediaRef Id="1070433179"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="881116499"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="923355438" Name="Play_EnemyAttackCry" DurationType="OneShot" DurationMin="0.7361629" DurationMax="0.9050243">
+					<MediaRefs>
+						<MediaRef Id="689606237"/>
+						<MediaRef Id="722289223"/>
+						<MediaRef Id="952850772"/>
+						<MediaRef Id="1024175034"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="162522213" Name="Play_EnemyFireball" MaxAttenuation="50" DurationType="OneShot" DurationMin="1.10099" DurationMax="1.6983194">
+					<MediaRefs>
+						<MediaRef Id="213610856"/>
+						<MediaRef Id="463474804"/>
+						<MediaRef Id="479534242"/>
+						<MediaRef Id="646853427"/>
+						<MediaRef Id="784192610"/>
+						<MediaRef Id="907882452"/>
+						<MediaRef Id="909567507"/>
+						<MediaRef Id="1036104300"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3101974183" Name="Play_EnemyHitCry" DurationType="OneShot" DurationMin="0.39577827" DurationMax="0.72524667">
+					<MediaRefs>
+						<MediaRef Id="149146617"/>
+						<MediaRef Id="207567192"/>
+						<MediaRef Id="805506079"/>
+						<MediaRef Id="870750204"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1710694676" Name="Play_EnemyIdleCry" DurationType="OneShot" DurationMin="0.4837159" DurationMax="0.75160086">
+					<MediaRefs>
+						<MediaRef Id="571009881"/>
+						<MediaRef Id="664231106"/>
+						<MediaRef Id="672855308"/>
+						<MediaRef Id="977303819"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1310873743" Name="Play_FireTigerAttackRoar" DurationType="OneShot" DurationMin="0.9088329" DurationMax="1.5759956">
+					<MediaRefs>
+						<MediaRef Id="68443618"/>
+						<MediaRef Id="608132479"/>
+						<MediaRef Id="1065731597"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="978409677" Name="Play_FireTigerBite" DurationType="OneShot" DurationMin="0.527901" DurationMax="0.71699166">
+					<MediaRefs>
+						<MediaRef Id="723628959"/>
+						<MediaRef Id="827858905"/>
+						<MediaRef Id="857486679"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1980244072" Name="Play_FireTigerFootsteps" MaxAttenuation="20" DurationType="OneShot" DurationMin="0.29037896" DurationMax="0.65337974">
+					<MediaRefs>
+						<MediaRef Id="114955881"/>
+						<MediaRef Id="375136088"/>
+						<MediaRef Id="430761378"/>
+						<MediaRef Id="698082691"/>
+						<MediaRef Id="742003138"/>
+						<MediaRef Id="858371458"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="201807964" Name="Play_FireTigerHurtRoar" DurationType="OneShot" DurationMin="0.8915482" DurationMax="1.4336522">
+					<MediaRefs>
+						<MediaRef Id="219878111"/>
+						<MediaRef Id="242368131"/>
+						<MediaRef Id="667174208"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3798153045" Name="Play_FireTigerIdleRoar" DurationType="OneShot" DurationMin="1.7586343" DurationMax="2.4545774">
+					<MediaRefs>
+						<MediaRef Id="162041064"/>
+						<MediaRef Id="315423522"/>
+						<MediaRef Id="998733818"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3765695918" Name="Play_Heartbeat" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="268692114" Name="Play_IceAura" DurationType="OneShot" DurationMin="0.9711483" DurationMax="1.3426267">
+					<MediaRefs>
+						<MediaRef Id="411637370"/>
+						<MediaRef Id="513697433"/>
+						<MediaRef Id="980928945"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1516146351" Name="Play_IceAuraFreeze" DurationType="OneShot" DurationMin="1.0021389" DurationMax="1.2254678">
+					<MediaRefs>
+						<MediaRef Id="23606703"/>
+						<MediaRef Id="378257163"/>
+						<MediaRef Id="427368398"/>
+						<MediaRef Id="743268809"/>
+						<MediaRef Id="891838401"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="606945166" Name="Play_Player_Attack_Vox" DurationType="OneShot" DurationMin="0.32152683" DurationMax="0.40736356">
+					<MediaRefs>
+						<MediaRef Id="200945963"/>
+						<MediaRef Id="522666870"/>
+						<MediaRef Id="715331708"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2344515640" Name="Play_Player_Die_Vox" DurationType="OneShot" DurationMin="0.6846234" DurationMax="1.1539761">
+					<MediaRefs>
+						<MediaRef Id="161743249"/>
+						<MediaRef Id="225017769"/>
+						<MediaRef Id="281365612"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1388893229" Name="Play_Player_Hit_Vox" DurationType="OneShot" DurationMin="0.3216055" DurationMax="0.38255447">
+					<MediaRefs>
+						<MediaRef Id="426116371"/>
+						<MediaRef Id="449362265"/>
+						<MediaRef Id="748213289"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1177496478" Name="Play_Player_Jump_Vox" DurationType="OneShot" DurationMin="0.16559093" DurationMax="0.21820527">
+					<MediaRefs>
+						<MediaRef Id="261529864"/>
+						<MediaRef Id="288932570"/>
+						<MediaRef Id="367773994"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1592819191" Name="Play_PlayerFootstep" DurationType="OneShot" DurationMin="0.10266598" DurationMax="0.41698703">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3542290436" Id="4248645337"/>
+							<MediaRefs>
+								<MediaRef Id="508309590"/>
+								<MediaRef Id="518620271"/>
+								<MediaRef Id="607597750"/>
+								<MediaRef Id="649130964"/>
+								<MediaRef Id="809058575"/>
+								<MediaRef Id="930203950"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3542290436" Id="1216965916" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="32730288"/>
+								<MediaRef Id="73710910"/>
+								<MediaRef Id="144202649"/>
+								<MediaRef Id="273089857"/>
+								<MediaRef Id="420841659"/>
+								<MediaRef Id="466609693"/>
+								<MediaRef Id="535559193"/>
+								<MediaRef Id="558053087"/>
+								<MediaRef Id="759232015"/>
+								<MediaRef Id="1015689245"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3542290436" Id="2058049674"/>
+							<MediaRefs>
+								<MediaRef Id="71070298"/>
+								<MediaRef Id="277930616"/>
+								<MediaRef Id="326181241"/>
+								<MediaRef Id="486447528"/>
+								<MediaRef Id="852452083"/>
+								<MediaRef Id="929560008"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3817990921" Name="Play_PlayerJump" DurationType="OneShot" DurationMin="0.27610287" DurationMax="0.42846456">
+					<MediaRefs>
+						<MediaRef Id="110612529"/>
+						<MediaRef Id="142101349"/>
+						<MediaRef Id="188945968"/>
+						<MediaRef Id="616942778"/>
+						<MediaRef Id="824661036"/>
+						<MediaRef Id="863672567"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2872645466" Name="Play_PlayerLanding" DurationType="OneShot" DurationMin="0.20603989" DurationMax="0.34549534">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="214305155" Id="1216965916" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="31955929"/>
+								<MediaRef Id="449978247"/>
+								<MediaRef Id="556479194"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="214305155" Id="4248645337"/>
+							<MediaRefs>
+								<MediaRef Id="951161838"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="214305155" Id="2058049674"/>
+							<MediaRefs>
+								<MediaRef Id="175734955"/>
+								<MediaRef Id="662037905"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="93248917" Name="Play_PlayerSwordGrow" DurationType="OneShot" DurationMin="0.7204317" DurationMax="0.9135883">
+					<MediaRefs>
+						<MediaRef Id="307015036"/>
+						<MediaRef Id="771193010"/>
+						<MediaRef Id="966080510"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4187859053" Name="Play_SmallSwordHit" DurationType="OneShot" DurationMin="0.15947542" DurationMax="0.32437232">
+					<MediaRefs>
+						<MediaRef Id="33950063"/>
+						<MediaRef Id="218026665"/>
+						<MediaRef Id="403266752"/>
+						<MediaRef Id="455040897"/>
+						<MediaRef Id="781062339"/>
+						<MediaRef Id="878614276"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1238801504" Name="Play_SmallSwordSwing" DurationType="OneShot" DurationMin="0.38358656" DurationMax="0.58213085">
+					<MediaRefs>
+						<MediaRef Id="455279483"/>
+						<MediaRef Id="471745059"/>
+						<MediaRef Id="520486769"/>
+						<MediaRef Id="648736804"/>
+						<MediaRef Id="719290641"/>
+						<MediaRef Id="887845915"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="524979589" Name="Play_Stage1_Freeze" DurationType="OneShot" DurationMin="0.6927447" DurationMax="1.304155">
+					<MediaRefs>
+						<MediaRef Id="162210314"/>
+						<MediaRef Id="452389057"/>
+						<MediaRef Id="459193274"/>
+						<MediaRef Id="552150952"/>
+						<MediaRef Id="920203563"/>
+						<MediaRef Id="936744918"/>
+						<MediaRef Id="969147882"/>
+						<MediaRef Id="1039641798"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2534398180" Name="Play_Stage2_Freeze" DurationType="OneShot" DurationMin="1.3050241" DurationMax="1.7200162">
+					<MediaRefs>
+						<MediaRef Id="50690553"/>
+						<MediaRef Id="56732673"/>
+						<MediaRef Id="180038728"/>
+						<MediaRef Id="1029466873"/>
+						<MediaRef Id="1071832758"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3939144723" Name="Play_Treasure_Chest" DurationType="OneShot" DurationMin="0.92885095" DurationMax="1.0751343">
+					<MediaRefs>
+						<MediaRef Id="53341151"/>
+						<MediaRef Id="367288393"/>
+						<MediaRef Id="1048609498"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2707922347" Name="Stop_BigSwordDrag" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="913896232" Name="Stop_Combat" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="214305155" Name="PlayerLanding">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3542290436" Name="PlayerFootstep">
+					<Switches>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{2FA5AE2B-278A-5907-C05E-1F77143167DC}</FileHash>
+</SoundBanksInfo>

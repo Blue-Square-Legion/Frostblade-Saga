@@ -101,6 +101,7 @@ public class MeleeEnemy : GenericEnemy //Inherits from GenericEnemy
 
         if (hit.collider.gameObject.TryGetComponent(out Health playerHealth))
             playerHealth.TakeDamage(1);
+        AkSoundEngine.PostEvent("Play_FireTigerBite", gameObject);
     }
 
     private void OnDrawGizmos()

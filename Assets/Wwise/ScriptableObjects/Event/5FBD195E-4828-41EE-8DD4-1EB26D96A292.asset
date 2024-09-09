@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223852e222a424ff7b2ec9eb0b54605f, type: 3}
+  m_Name: 5FBD195E-4828-41EE-8DD4-1EB26D96A292
+  m_EditorClassIdentifier: 
+  objectName: Stop_Combat
+  id: 913896232
+  guid: 5FBD195E-4828-41EE-8DD4-1EB26D96A292

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Frostblade-Saga_WwiseProject" GUID="{911DBDF1-1873-4844-AF2C-ADDD8F4C6D29}" Generator="2023.1.6.8555"/>
+	<CacheRoot>../../../../Frostblade-Saga_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{625506A4-F3B1-4568-A581-FC1A02EAE843}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../Frostblade-Saga_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Web" GUID="{5CAF34A6-B4BC-4041-BA1A-D34FD6482989}" BasePlatform="Web" BasePlatformGUID="{639AD233-23F2-4C0F-9127-79F44C15E1DA}" Path="../../../../Frostblade-Saga_WwiseProject/GeneratedSoundBanks/Web"/>
+		<Platform Name="Windows" GUID="{ED45ED44-CC02-4014-B131-C17EEDEE6F7F}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Frostblade-Saga_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{B8C0EDC4-A21F-491A-9E16-CE74B2600E47}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{A930E0C3-7BE0-9C5F-2B6A-4A816F9DA5F0}</FileHash>
+</ProjectInfo>

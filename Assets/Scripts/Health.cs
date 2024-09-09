@@ -43,7 +43,9 @@ public class Health : MonoBehaviour
                 }
                 animator.SetBool("Running", false);
                 dead = true;
+                AkSoundEngine.PostEvent("Play_Player_Die_Vox", gameObject);
                 UIManager.Instance.GameOver();
+
             }
 
         }

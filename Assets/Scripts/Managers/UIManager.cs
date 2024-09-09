@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject creditsScreen;
     [SerializeField] GameObject startScreen;
+    [SerializeField] GameObject victoryScreen;
 
     private void Start()
     {
@@ -36,6 +37,8 @@ public class UIManager : MonoBehaviour
             gameOverScreen.SetActive(false);
         if (pauseScreen != null)
             pauseScreen.SetActive(false);
+        if (victoryScreen != null)
+            victoryScreen.SetActive(false);
     }
 
     public void GameOver()
@@ -50,7 +53,6 @@ public class UIManager : MonoBehaviour
 
     public void Restart()
     {
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
@@ -58,7 +60,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeInHierarchy && !victoryScreen.activeInHierarchy)
         {
             if (pauseScreen.activeInHierarchy)
             {
@@ -116,6 +118,12 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(2);
+    }
+
+    public void VictoryScreen()
+    {
+        Time.timeScale = 0;
+        victoryScreen.SetActive(true);
     }
 
 }

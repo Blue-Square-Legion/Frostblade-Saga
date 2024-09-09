@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A7A74489-F588-4614-ADBA-491506713BA1}" SchemaVersion="119">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{A7A74489-F588-4614-ADBA-491506713BA1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GameplaySwitch" ID="{7AE7A792-51B9-41F6-8A30-0B44210538E6}">
+					<ChildrenList>
+						<Switch Name="Combat" ID="{78733130-EE0A-4317-9FD6-6281F9E12DF0}"/>
+						<Switch Name="Boss" ID="{06320E37-E5F2-4829-9D26-3F2B43422D69}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerFootstep" ID="{0E014B1A-B915-4978-AB4A-667BF5DEB702}">
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{0A48D145-C115-4FB3-B6E1-1575ADCE62BF}"/>
+						<Switch Name="Grass" ID="{E07E4753-4B4A-48BA-92A5-4547EC23CCBC}"/>
+						<Switch Name="Stone" ID="{71684757-A8E4-47AF-ABAF-8CBDA44095F4}"/>
+						<Switch Name="Wood" ID="{756627B7-705F-45F0-8B18-5582F399D1DA}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerLanding" ID="{3E6F34E8-024F-4117-AC3A-CB22F7FA4157}">
+					<ChildrenList>
+						<Switch Name="Grass" ID="{D6C2044D-A101-4D96-BBBB-319FC6D68263}"/>
+						<Switch Name="Stone" ID="{36186B3E-0CA4-41FE-931A-E5BE2378D7E3}"/>
+						<Switch Name="Dirt" ID="{1C1B2593-23FF-47A4-A167-98CABD6AE17D}"/>
+						<Switch Name="Wood" ID="{AB7BEA67-D029-413B-8ABA-76FF4B378BC2}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

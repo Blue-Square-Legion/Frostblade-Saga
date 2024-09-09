@@ -257,6 +257,9 @@ GameObject:
   - component: {fileID: 1313036425394677583}
   - component: {fileID: 8891661659710613002}
   - component: {fileID: 3950739141701285851}
+  - component: {fileID: 7498567666367375236}
+  - component: {fileID: 5727452251596459898}
+  - component: {fileID: 6200831769641777254}
   m_Layer: 8
   m_Name: MeleeEnemy
   m_TagString: Untagged
@@ -370,7 +373,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.79, y: 0.36}
+    oldSize: {x: 0.89, y: 0.38}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -438,6 +441,54 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7498567666367375236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368107326184094747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c131f4ee9eb4441a83aa5065f2f4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TigerAttackRoar:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: be3bc63115d9e41a3857712991d82ab1, type: 2}
+--- !u!114 &5727452251596459898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368107326184094747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d74dd1b24734ab2bcaa4f0dc985702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TigerFootsteps:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2ad845dde1b8641d7a3eb639e4961fc6, type: 2}
+--- !u!114 &6200831769641777254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368107326184094747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d476de87e7740d7b166a913194cb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TigerHurtVox:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fcfbdc21a22b44587b7de0ebc9f30a69, type: 2}
 --- !u!1 &8565069869689066799
 GameObject:
   m_ObjectHideFlags: 0

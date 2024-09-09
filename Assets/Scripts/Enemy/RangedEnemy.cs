@@ -46,6 +46,7 @@ public class RangedEnemy : GenericEnemy //Inherits from GenericEnemy
                 cooldownTimer = 0;
                 StartRangedAttack();
                 //RangedAttack(); called in animator
+                AkSoundEngine.PostEvent("Play_EnemyFireball", gameObject);
             }
 
         }

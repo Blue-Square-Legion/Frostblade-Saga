@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F4DCFA97-E9CB-4AE8-9715-A573230B78F5}" SchemaVersion="119">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{F4DCFA97-E9CB-4AE8-9715-A573230B78F5}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Frostblade Saga SC" ID="{BE1A0EA3-A2C4-4FFF-9BAC-875F46264FEF}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_BigSwordSwing" ID="{B3786117-0E4B-4A04-A27E-31741B28A893}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SmallSwordSwing" ID="{37829F90-2734-46D0-9522-FA186CBD8639}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Ambience" ID="{706396DE-8D59-4326-9CD5-4404F77A8F97}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_BigSwordHit" ID="{88F19600-62CB-46F3-B031-33B2F1CD7AC4}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SmallSwordHit" ID="{DBD53961-9965-4DBB-A833-D442AB28C45A}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_PlayerJump" ID="{A72A4558-71B3-4CD2-BC7F-4FBE05A6BD85}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_EnemyAttackCry" ID="{19F4D101-EB29-4022-B233-00AB3B6EEFC2}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_EnemyIdleCry" ID="{6A3911E0-498E-4F4F-A02D-1DCDAA2D466B}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_EnemyHitCry" ID="{74D24CC5-2932-45FC-8BCE-10652CA4EF4E}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_EnemyFireball" ID="{D114B1ED-7FA2-4195-BBF9-6472E5AD1AB7}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{018E6C07-314E-43EB-98DE-5648F67790B6}"/>
+						<CurrentStateRef Name="Combat" ID="{52442D59-DBA6-41B7-85BB-C395F85E3141}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Dirt" ID="{1C1B2593-23FF-47A4-A167-98CABD6AE17D}"/>
+						<CurrentSwitchRef Name="Boss" ID="{06320E37-E5F2-4829-9D26-3F2B43422D69}"/>
+						<CurrentSwitchRef Name="Dirt" ID="{0A48D145-C115-4FB3-B6E1-1575ADCE62BF}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

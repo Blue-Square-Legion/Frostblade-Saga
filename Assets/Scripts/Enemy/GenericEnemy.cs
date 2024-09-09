@@ -27,6 +27,8 @@ public abstract class GenericEnemy : MonoBehaviour
     {
         // extra logics after enemy dies (e.g., play animation, drop items)
         gameObject.SetActive(false);
+        if (gameObject.CompareTag("Boss"))
+            UIManager.Instance.VictoryScreen();
     }
 
     public virtual void Respawn()
