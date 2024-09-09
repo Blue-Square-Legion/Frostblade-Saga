@@ -74,6 +74,7 @@ public class EnemyProjectile : ContactDamage
             hit = true;
             base.OnTriggerEnter2D(collision);
             boxCollider.enabled = false;
+            boxCollider.isTrigger = true;
             animator.SetTrigger("collide");
             spriteRenderer.color = Color.white;
             //Deactivate(), call in animator
