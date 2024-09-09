@@ -25,6 +25,9 @@ public class Boss : GenericEnemy
     [SerializeField] Transform firepoint;
     [SerializeField] GameObject fireball;
 
+    [SerializeField] Transform leftEdge;
+    [SerializeField] Transform rightEdge;
+
     private Vector3 initScale;
 
     private bool charging = false;
@@ -41,13 +44,27 @@ public class Boss : GenericEnemy
     {
         cooldownTimer += Time.deltaTime;
 
+        if (transform.position.x < leftEdge.position.x)
+        {
+            charging = false;
+            cooldownTimer = 0;
+            transform.position = new Vector3(transform.position.x+1,transform.position.y,transform.position.z);
+            animator.SetTrigger("stopRun");
+        } else if (transform.position.x > rightEdge.position.x)
+        {
+            charging = false;
+            cooldownTimer = 0;
+            transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+            animator.SetTrigger("stopRun");
+        }
+
         if (charging)
         {
             transform.position += speed * Time.deltaTime * transform.right * Mathf.Sign(transform.localScale.x);
         }
 
         if (cooldownTimer < attackCooldown) return;
-
+            charging = false;
         //look in player direction
         if (player.position.x > transform.position.x)
             transform.localScale = new Vector3(Mathf.Abs(initScale.x) * 1, initScale.y, initScale.z);
@@ -55,7 +72,8 @@ public class Boss : GenericEnemy
             transform.localScale = new Vector3(Mathf.Abs(initScale.x) * -1, initScale.y, initScale.z);
 
         if (UnityEngine.Random.Range(0f, 1f) > 0.7f &&
-            Mathf.Abs(player.position.x - transform.position.x) > 8)
+            Mathf.Abs(player.position.x - transform.position.x) > 8 &&
+            !(transform.position.x < leftEdge.position.x || transform.position.x > rightEdge.position.x))
         {
             StartChargeAttack();
         }
@@ -141,6 +159,13 @@ public class Boss : GenericEnemy
             }
         cooldownTimer = 0;
         animator.ResetTrigger("ranged");
+    }
+    public void DeactivateFireballs()
+    {
+        for (int i = 0; i < fireballs.Length; i++)
+        {
+            fireballs[i].SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
