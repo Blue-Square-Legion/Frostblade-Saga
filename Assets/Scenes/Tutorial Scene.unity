@@ -806,6 +806,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4086664397274887392, guid: 6638e710d1e96a247b985715dd9893a3, type: 3}
+      propertyPath: rangedHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086664397274887392, guid: 6638e710d1e96a247b985715dd9893a3, type: 3}
       propertyPath: colliderDistance
       value: 0.25
       objectReference: {fileID: 0}
@@ -11060,6 +11064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a536d9e2ebd3643b1889b1f34e37c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BossTrigger: {fileID: 0}
 --- !u!95 &1733937905
 Animator:
   serializedVersion: 5
