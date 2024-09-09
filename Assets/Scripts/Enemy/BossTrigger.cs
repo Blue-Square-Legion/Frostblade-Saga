@@ -25,10 +25,11 @@ public class BossTrigger : MonoBehaviour
 
     public void ResetBoss()
     {
-        gameObject.SetActive(true);
-        bossDoor.SetActive(false);
         boss.transform.position = bossInitPos;
-        boss.GetComponent<Boss>().DeactivateFireballs();
+        boss.GetComponentInChildren<Boss>().DeactivateFireballs();
+        boss.GetComponentInChildren<Boss>().BossRespawn();
         boss.SetActive(false);
+        bossDoor.SetActive(false);
+        gameObject.SetActive(true);
     }
 }

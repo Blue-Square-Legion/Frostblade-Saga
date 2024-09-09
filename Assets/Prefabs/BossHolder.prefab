@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 2838921538931767649}
   m_Layer: 8
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 4028636299786148241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5598755, y: -1.6976528, z: 0.008036785}
+  m_LocalPosition: {x: 7.5598755, y: -1.92, z: 0.008036785}
   m_LocalScale: {x: -4.5073, y: 4.5073, z: 4.5073}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -251,7 +251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4085881354676692678
 Transform:
   m_ObjectHideFlags: 0

@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c620820aa2ff8284a946ff49e674893e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 5056114787096578927}
+  boss: {fileID: 1366062105}
   bossDoor: {fileID: 1594493959}
 --- !u!1 &38368666
 GameObject:
@@ -48912,6 +48912,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6638e710d1e96a247b985715dd9893a3, type: 3}
+--- !u!1 &1366062105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5330500587296807411, guid: 9b51fe6f83438504589cfb501b2f229e, type: 3}
+  m_PrefabInstance: {fileID: 2171676479824468970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1367109155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57284,10 +57289,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 5330500587296807411, guid: 9b51fe6f83438504589cfb501b2f229e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6423851118115796003, guid: 9b51fe6f83438504589cfb501b2f229e, type: 3}
       propertyPath: player
       value: 
@@ -57554,11 +57555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142440981438802311, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132.92
+      value: -6.71
       objectReference: {fileID: 0}
     - target: {fileID: 1142440981438802311, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.46
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 1142440981438802311, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57595,17 +57596,12 @@ PrefabInstance:
     - target: {fileID: 1420422713572911299, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
       propertyPath: BossTrigger
       value: 
-      objectReference: {fileID: 28798051}
+      objectReference: {fileID: 28798048}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78c89ba09bfb13b4a91bd320862237fb, type: 3}
---- !u!1 &5056114787096578927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4028636299786148241, guid: 9b51fe6f83438504589cfb501b2f229e, type: 3}
-  m_PrefabInstance: {fileID: 2171676479824468970}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5495168634604827760
 PrefabInstance:
   m_ObjectHideFlags: 0
