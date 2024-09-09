@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeInHierarchy && !victoryScreen.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeInHierarchy && (victoryScreen == null || !victoryScreen.activeInHierarchy))
         {
             if (pauseScreen.activeInHierarchy)
             {
