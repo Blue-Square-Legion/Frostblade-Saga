@@ -18,6 +18,19 @@ GameObject:
   - component: {fileID: 8564655250073116889}
   - component: {fileID: 1420422713572911299}
   - component: {fileID: 89885251037836030}
+  - component: {fileID: 8793856301561058788}
+  - component: {fileID: 5040540060873562081}
+  - component: {fileID: 1599721684466414322}
+  - component: {fileID: 3455743072635981699}
+  - component: {fileID: 7750837326075180377}
+  - component: {fileID: 8744921302199642920}
+  - component: {fileID: 1274490936315920336}
+  - component: {fileID: 1209486834710449796}
+  - component: {fileID: 6456753695466562970}
+  - component: {fileID: 272710556262755229}
+  - component: {fileID: 6225328208790222118}
+  - component: {fileID: 739556403762309879}
+  - component: {fileID: 8174808646769413099}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -161,9 +174,9 @@ MonoBehaviour:
   primaryAttackStage1Cooldown: 1
   primaryAttackStage2Cooldown: 3
   secondaryAttackStage1Cooldown: 1
-  secondaryAttackStage2Cooldown: 2
+  secondaryAttackStage2Cooldown: 3
   playerProjectile: {fileID: 8432999479794766973, guid: 556230d7cbf9dc6448f22ce6337fee53, type: 3}
-  secondaryAttackStage2Size: 3
+  secondaryAttackStage2Size: 2
   rightLaunchOffset: {fileID: 7540429820959936966}
   leftLaunchOffset: {fileID: 3638539121566669580}
   rightAttackTransform: {fileID: 7802423608769962475}
@@ -178,7 +191,7 @@ MonoBehaviour:
   primaryAttackStage1Cost: 10
   primaryAttackStage2Cost: 30
   secondaryAttackStage1Cost: 20
-  secondaryAttackStage2Cost: 50
+  secondaryAttackStage2Cost: 75
 --- !u!114 &4721760356557680725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a536d9e2ebd3643b1889b1f34e37c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BossTrigger: {fileID: 0}
 --- !u!61 &89885251037836030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -314,6 +328,214 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73523855, y: 1.2578824}
   m_EdgeRadius: 0
+--- !u!114 &8793856301561058788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f68207659584a4f86605edc2bd68a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigSwordDrag:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5f3e609a137584e0eb80c9a4b02b6ef1, type: 2}
+--- !u!114 &5040540060873562081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51dad65640e1f417c80e7cc3439df432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigSwordSwing:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ecb7a7f2a8c6d4be38c8e05a765c4f4c, type: 2}
+--- !u!114 &1599721684466414322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794f8d668f9be492c99e62b7f30b7e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerJump:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9f133b7bbd8f24c7ab05b4838d7d48d3, type: 2}
+--- !u!114 &3455743072635981699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdbd99d25aaf443faa24ac15a66b39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceAura:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8631de7d4f784a27ad560954d4b3520, type: 2}
+--- !u!114 &7750837326075180377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec45b8768cc7e463eabce1b38b3cb147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHitVox:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 24e77d2901ad2447993eee165467e1bc, type: 2}
+--- !u!114 &8744921302199642920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a856835554d4d489ea2de4187579d510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmallSwordSwing:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 94c20315dcdc34647a49d61566c63c2b, type: 2}
+--- !u!114 &1274490936315920336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875aa53b6f6214c52afa6582cd2e1e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerLanding:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 81b2de250141f4bb3b7f60154089790d, type: 2}
+--- !u!114 &1209486834710449796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c41eaed9a5df4b15a38f35107d5e81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stage1Freeze:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 60cf98701477944a1beadccb32d395fe, type: 2}
+--- !u!114 &6456753695466562970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6e87e5056e5422c990a5ebbd738e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerJumpVox:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b34f0b8cc02c44ae3925d12f34a01b90, type: 2}
+--- !u!114 &272710556262755229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb4e0d917a664ac2a32e840f6f1a6b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerFootstep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 67d8df8b64a8b48c3a68eba4d795d493, type: 2}
+--- !u!114 &6225328208790222118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9850dd0f75e4f339c5f5ec06323d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerAttackVox:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d9434a132fc2b4812a1c4b0372157480, type: 2}
+--- !u!114 &739556403762309879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756a07b59b0af4d77aed7040000fa139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwordGrow:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 15ff6c878dafe4489a566f35e888d467, type: 2}
+--- !u!114 &8174808646769413099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981953159880648307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e08e448d379464da754592a06ea3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BigSwordDrag:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 19b7e0da4921b4aa3bbae4efe8ce3c4f, type: 2}
 --- !u!1 &3578961823996288676
 GameObject:
   m_ObjectHideFlags: 0
