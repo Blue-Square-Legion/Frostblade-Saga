@@ -58659,7 +58659,7 @@ PrefabInstance:
       objectReference: {fileID: 1344223521}
     - target: {fileID: 6423851118115796003, guid: 9b51fe6f83438504589cfb501b2f229e, type: 3}
       propertyPath: bossHealth
-      value: 1
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7539041500269231215, guid: 9b51fe6f83438504589cfb501b2f229e, type: 3}
       propertyPath: m_Controller
