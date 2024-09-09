@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
 {
     private Transform currentCheckpoint;
     private Health playerHealth;
+    [SerializeField] BossTrigger BossTrigger;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class Checkpoint : MonoBehaviour
         {
             transform.position = currentCheckpoint.position + new Vector3(0,1,0);
             GameManager.Instance.RespawnEnemies();
+            BossTrigger.ResetBoss();
             playerHealth.Respawn();
         }
         else
