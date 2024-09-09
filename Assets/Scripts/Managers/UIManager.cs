@@ -112,4 +112,10 @@ public class UIManager : MonoBehaviour
         Pause(false);
     }
 
+    public void SkipTutorial()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(2);
+    }
+
 }
