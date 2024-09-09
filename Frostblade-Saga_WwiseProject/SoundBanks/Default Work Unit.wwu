@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1F865D14-D34F-4882-8E16-AA76179064E9}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{1F865D14-D34F-4882-8E16-AA76179064E9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{19475D31-A285-467F-82E2-58669B2301A2}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>100000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_FireTigerIdleRoar" ID="{B2EB9D82-8267-400E-8E33-288F6E6575B3}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyAttackCry" ID="{19F4D101-EB29-4022-B233-00AB3B6EEFC2}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FireTigerBite" ID="{3F0B07ED-6366-4067-9939-9941FBAE5575}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyFireball" ID="{D114B1ED-7FA2-4195-BBF9-6472E5AD1AB7}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BossProjectileHit" ID="{26B21D17-A49E-419E-9DC2-25DD6E6720F0}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Stage1_Freeze" ID="{A67D881C-3D82-41BD-BAF7-52E48B5FCF10}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Combat" ID="{5FBD195E-4828-41EE-8DD4-1EB26D96A292}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BossTigerRoar" ID="{D5333F6A-93DC-42BF-ABF4-EBF72CC54125}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience" ID="{706396DE-8D59-4326-9CD5-4404F77A8F97}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BigSwordDrag" ID="{FF89CBED-A855-436D-9E6A-06ADC08FD69D}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BossBite" ID="{D18D3656-0E27-4434-9D83-68784B077BD9}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BossBattle" ID="{0A11E686-8127-44E0-A173-FD1F9A115493}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PlayerLanding" ID="{249B8CD8-382C-45F9-BCBB-EA77F8E21AAC}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyHitCry" ID="{74D24CC5-2932-45FC-8BCE-10652CA4EF4E}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_IceAuraFreeze" ID="{134C48FA-FF6A-4660-81FB-0CA4867C0ABF}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Heartbeat" ID="{CD597690-8018-4663-99D3-A99E0CEFE8B2}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SmallSwordSwing" ID="{37829F90-2734-46D0-9522-FA186CBD8639}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FireTigerAttackRoar" ID="{10CED3B5-F801-46E1-9999-CC81C6594498}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BigSwordHit" ID="{88F19600-62CB-46F3-B031-33B2F1CD7AC4}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Checkpoint" ID="{806C9584-F26B-4703-8D75-1E152CE675BA}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Treasure_Chest" ID="{100F7946-A65F-4807-A1A4-28AF9E702072}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Player_Hit_Vox" ID="{C28507FA-FAFC-48A0-AC1D-7D90FED3271A}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FireTigerFootsteps" ID="{147E2FFF-2C82-48AF-B89B-3A6FE7C0FADF}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Stage2_Freeze" ID="{5B73775F-D785-48F1-A5B1-83DEF2A11C4E}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BigSwordSwing" ID="{B3786117-0E4B-4A04-A27E-31741B28A893}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_IceAura" ID="{630D3109-1587-4A0A-8B1D-DCBE064D1C5E}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BossProjectile" ID="{0FFE43B0-58C2-4A71-BB56-528658FE9BB4}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Player_Attack_Vox" ID="{419B1248-CA49-4AB6-9CE0-210CC9CAE4DE}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Player_Jump_Vox" ID="{007F6CF2-474A-4AE4-8CFD-DAC85D4E96F7}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PlayerJump" ID="{A72A4558-71B3-4CD2-BC7F-4FBE05A6BD85}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FireTigerHurtRoar" ID="{ABB28D02-2FDA-4D0E-8142-B4175CEC3E19}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SmallSwordHit" ID="{DBD53961-9965-4DBB-A833-D442AB28C45A}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PlayerFootstep" ID="{6D02A8E7-15AB-4E2C-97AE-E0FE9B48FF7B}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PlayerSwordGrow" ID="{C4654A62-3B10-4E57-9F31-B73BCE273ED6}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BigSwordDrag" ID="{C6F1F2EF-0C3B-4E9E-9FF0-DB98FDBBC843}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Combat" ID="{78AA7B2D-D865-4EBA-8235-68ABBD08F85B}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Player_Die_Vox" ID="{0EBBB2BB-46B7-4EFE-BDA4-85B8D77E0DD1}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_EnemyIdleCry" ID="{6A3911E0-498E-4F4F-A02D-1DCDAA2D466B}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

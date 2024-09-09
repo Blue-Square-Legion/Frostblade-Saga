@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9031471483068436969}
   - component: {fileID: -163702076933261704}
   - component: {fileID: 7569181224523499402}
+  - component: {fileID: 5733593963714498669}
   - component: {fileID: -4946205757176789079}
   m_Layer: 6
   m_Name: Chest
@@ -91,7 +92,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.625}
+    oldSize: {x: 1, y: 0.8333333}
     newSize: {x: 0.75, y: 0.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -179,6 +180,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5733593963714498669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071064089427414883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23934086ef4924fe880bc4cd57510ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChestOpen:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c7b41f71c1d094d849ccf03eaee5681d, type: 2}
 --- !u!95 &-4946205757176789079
 Animator:
   serializedVersion: 5

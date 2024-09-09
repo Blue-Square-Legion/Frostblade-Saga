@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Projectile
   - Checkpoint
+  - PlayerProjectile
+  - RangedEnemy
   layers:
   - Default
   - TransparentFX

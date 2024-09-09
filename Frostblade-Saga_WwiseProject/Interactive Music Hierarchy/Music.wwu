@@ -1,0 +1,3604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8E40F267-2530-4F66-8077-806EF72362A5}" SchemaVersion="119">
+	<InteractiveMusic>
+		<WorkUnit Name="Music" ID="{8E40F267-2530-4F66-8077-806EF72362A5}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="CombatMusic" ID="{896F3824-3A16-4E6E-8F45-81920E925FBC}" ShortID="112330013">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Tempo" Type="Real64" Value="108"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{B2F0EE20-1417-408F-8648-374D0A98BDC7}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{A6A8CA6F-458A-4827-BD3E-420D653BFAF5}">
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{56B5237F-9884-46BB-BBC0-2DDFF55984B6}">
+											<PropertyList>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{607C8519-F951-4CA8-9B04-0C6A594F1B35}">
+											<PropertyList>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{F2FF86AC-2FCA-4794-B216-57FCF9963649}">
+											<PropertyList>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{FE0DADA3-4917-4860-A04B-392C6AC52C17}">
+											<PropertyList>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{9BD68A3B-CB84-4635-9208-EA4C8F460B09}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Boss A" ID="{68BDA7B7-7C99-4C95-B22C-078895305FAD}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{C1C073CD-4879-4315-A218-C169304155AF}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Boss B" ID="{8AEEA6DD-24F5-40A4-947A-4863771CDDE2}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Boss A" ID="{68BDA7B7-7C99-4C95-B22C-078895305FAD}" ShortID="233114128">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{B7F1942F-8BDD-439F-9F5F-DF2938F55FC1}" ShortID="81050619">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{BAA2867C-7C77-4667-B82C-0E490888C1A7}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{EF3EACFB-FFC5-422E-867D-4ED39440F4B4}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Boss B" ID="{8AEEA6DD-24F5-40A4-947A-4863771CDDE2}" ShortID="972125473">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{E4134AFE-D552-4B9E-B84B-B6BAD465E77B}" ShortID="350807538">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{72735653-447B-44FD-B912-1D286BB0E71F}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{81FC878D-A485-40E2-8B56-32B8936BE0D6}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<Reference>
+								<ObjectRef Name="CombatState" ID="{494EF4F9-8105-4410-B95F-C34FF77A654B}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="MusicState" ID="{14F367AA-42B5-493A-A9FD-D367428412CD}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="GameplaySwitch" ID="{7AE7A792-51B9-41F6-8A30-0B44210538E6}" WorkUnitID="{A7A74489-F588-4614-ADBA-491506713BA1}"/>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{D7DC522D-97D3-4189-913B-333D1E5E4CE5}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss A" ID="{68BDA7B7-7C99-4C95-B22C-078895305FAD}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="BossPhase1" ID="{CA816A53-CC02-42E1-8ED3-65BF2B52A6FA}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Boss" ID="{9825D77F-9B41-44C4-8110-0E09DBDB4EF3}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Boss" ID="{06320E37-E5F2-4829-9D26-3F2B43422D69}" WorkUnitID="{A7A74489-F588-4614-ADBA-491506713BA1}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{B05DBDB0-86F4-4F82-B2E7-F5B0C68B0BDB}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Boss B" ID="{8AEEA6DD-24F5-40A4-947A-4863771CDDE2}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="BossPhase2" ID="{EEE38958-9746-4410-80E3-0C0D6DACBF14}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Boss" ID="{9825D77F-9B41-44C4-8110-0E09DBDB4EF3}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Boss" ID="{06320E37-E5F2-4829-9D26-3F2B43422D69}" WorkUnitID="{A7A74489-F588-4614-ADBA-491506713BA1}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{16FC8F7D-2496-433D-AD64-FD2CAF473DC1}">
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Combat" ID="{D80ABEE2-6259-400D-8718-FED48E382087}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{52442D59-DBA6-41B7-85BB-C395F85E3141}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="Combat" ID="{78733130-EE0A-4317-9FD6-6281F9E12DF0}" WorkUnitID="{A7A74489-F588-4614-ADBA-491506713BA1}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{BAE59BE8-49C6-4FCA-A2BB-94496F8F9C0B}">
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="CombatState" ID="{494EF4F9-8105-4410-B95F-C34FF77A654B}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="MusicState" ID="{14F367AA-42B5-493A-A9FD-D367428412CD}" WorkUnitID="{7CAFB3DB-CBE6-4C56-9487-E865C61E1F55}"/>
+												</Reference>
+												<Reference>
+													<ObjectRef Name="GameplaySwitch" ID="{7AE7A792-51B9-41F6-8A30-0B44210538E6}" WorkUnitID="{A7A74489-F588-4614-ADBA-491506713BA1}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSwitchContainer>
+				<MusicPlaylistContainer Name="Combat" ID="{F2075AA2-4B75-4944-8945-2E2323A0C31B}" ShortID="927186300">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="108"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{FF7B5F07-3F15-4234-96A3-1EC36B753760}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{DC521FEF-7CBD-4364-9CCD-A5F671E15F76}" ShortID="717031731">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{367C58C0-2A00-4619-8CB7-1D1A5D660876}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{8F7C8CB8-F2AF-462E-8965-58CE678D62B0}" ShortID="16345365">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="2"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>85</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="Combat A" ID="{9A44C960-1BCE-4744-BC2C-1DE0D6306A1F}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{C4D409B0-27BA-4305-BF50-6A2648759498}" ShortID="860392121">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="Combat B" ID="{12DF3A70-A0F6-4F6A-99E2-A8043FEF3768}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{DADBE4E5-0F2E-4D0A-BA1A-4A9783E84000}" ShortID="274431254">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="Combat C" ID="{F742C27E-BC3C-45E4-83C5-B9BBF55BFDB9}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{956C5395-B34E-4EBC-9CB1-74E9758BD1E7}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{B9271CB9-3855-4D2C-8D94-28B61421F686}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Combat A" ID="{9A44C960-1BCE-4744-BC2C-1DE0D6306A1F}" ShortID="1002206823">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="35555.5625"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Combat Low Drums" ID="{805825BB-FF46-4C91-985D-90DF02E34FBF}" ShortID="138555556">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{EEBB1F0D-B31A-40E5-B784-78CE5C089ECE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Combat Low Drums" ID="{B2DA6460-5F8B-46A9-BE21-2AC6F444A958}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Combat Low Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="535940570"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{59B716C5-6DDD-41EA-8895-BA1DB5BA00DE}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Combat Low Drums" ID="{99AA5D83-FB7C-44CF-868C-6F5C3C05AE6A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Combat Low Drums" ID="{B2DA6460-5F8B-46A9-BE21-2AC6F444A958}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Drums" ID="{D4385D26-A3F1-4858-8CE0-E18B9A178EE3}" ShortID="708139265">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{9C71F47F-431C-4A14-BA71-A1164515F0BC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Drums" ID="{9F1B9C53-66AC-4140-A514-E128D7C421E1}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="73870710"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D3D528FA-83FF-48A3-830F-74EDA3DB548B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Drums" ID="{BDDA9F8E-CACB-44F6-B41A-A4A25FAB4278}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Drums" ID="{9F1B9C53-66AC-4140-A514-E128D7C421E1}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5688C72A-49C5-4D4D-BBC6-6049895B4F8A}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Duduk" ID="{2458BBBB-CFB0-466C-AF84-3364C5A2F864}" ShortID="738551383">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{7420470F-EC98-4137-80A5-B8658F6CA450}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Duduk" ID="{D398511A-F904-43B4-9C1E-9FEC20252E03}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Duduk.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1061427790"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A0E53C7B-7DB4-48B7-A788-A0D101D03919}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Duduk" ID="{06A56556-A196-4A5E-98A1-B8626A7E76CC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Duduk" ID="{D398511A-F904-43B4-9C1E-9FEC20252E03}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{7A25B074-3AB1-439A-A8E7-645650AF2D8F}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Effects" ID="{66B44F6E-F787-40F2-AE9E-ED13E5601282}" ShortID="146697963">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{56C64CF6-D9A4-4FE4-8EDA-392B4818A1B0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Effects" ID="{FD809306-6A15-4D36-9D0D-C4B8FF8CAC27}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Effects.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="864051029"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{DD5E7B2E-BC0F-4D04-97CB-60300D613FF6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Effects" ID="{5A81E0E8-7FF1-4A9A-AFEA-D21C4A855C6D}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="6111.11111111111"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="141.613312755153"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Effects" ID="{FD809306-6A15-4D36-9D0D-C4B8FF8CAC27}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{2579D5D7-8A7E-4A8D-AD0C-5FD885A44CD8}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>6.11111</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>35.5555625</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{5EA62135-C895-4C3D-A723-8969FAC9AC86}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>6.11111</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>35.5555625</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{9C3A9DF8-965A-45DC-A919-F8371B03E61B}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>6.11111</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>28.77671</XPos>
+																								<YPos>0</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>31.5569</XPos>
+																								<YPos>-4.63482</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>35.5555625</XPos>
+																								<YPos>-4.7975</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Horns" ID="{82C9D03C-A7DF-4E2C-8918-147058F6974A}" ShortID="771804568">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{CC43F527-3ED0-4D6D-8B4A-CE3587AF645C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Horns" ID="{67AF051B-B69F-4864-9433-54339FC471EF}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Horns.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="317698384"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{33A98A10-DF9E-438F-BD47-7CB3AB9136C2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Horns" ID="{499E67E3-DBBE-410C-8248-E19642FDD1F5}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Horns" ID="{67AF051B-B69F-4864-9433-54339FC471EF}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{CE374974-6911-4518-9B40-7CDF2E150E35}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Main Strings" ID="{EF9846D5-FFEE-4B42-9AF9-E07D5F61EE1C}" ShortID="401827544">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{3A5C955F-4A43-40C2-82C5-EC48ABFED913}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Lo Cello" ID="{F5C84D20-39AF-43AF-8A04-1993036AEBE9}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Lo Cello.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1070433179"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Cello_Viola" ID="{CCEC2127-5473-4E46-A272-EED803482BA9}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Cello_Viola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="426484487"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{FB121534-81C5-470D-AF0C-F94E579DD44B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Lo Cello" ID="{E6BD6AAA-89FB-4332-866C-148D5EEE2860}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Lo Cello" ID="{F5C84D20-39AF-43AF-8A04-1993036AEBE9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{ED9C2972-F75C-4EE1-82D6-73C9A5F956DF}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Cello_Viola" ID="{F2A3AB71-DDBF-4499-ACC3-BD5899D7F1EF}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Cello_Viola" ID="{CCEC2127-5473-4E46-A272-EED803482BA9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{17B2A498-0DCC-43CD-B720-7C0753BC27F6}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat A 108 BPM D Min Pluck String" ID="{7B2A3030-947E-4057-AECE-A9041A4F7230}" ShortID="537424575">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{FC2CE911-6016-4F35-BD51-E2E11D5C782E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Pluck String" ID="{67C94409-22D6-4F0B-9189-9083E1826680}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Pluck String.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="36183097"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{794AEB79-200D-41BB-9101-55C0B931A87F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Pluck String" ID="{8AD006AD-0303-4976-92E5-52ED00C233A7}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Pluck String" ID="{67C94409-22D6-4F0B-9189-9083E1826680}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C8CD341A-6E6A-47D4-8480-4352D555DDA2}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Crash" ID="{6685A8B4-07D2-44D5-9F22-AB4A88C22A4F}" ShortID="2296008">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{7E4225F1-5FF6-4965-9CB0-B8AFDBBAC67F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PL_MPOOT_Crash_17_Wet" ID="{4DF87349-5893-4CB6-B645-F32BF9BEF544}">
+											<Language>SFX</Language>
+											<AudioFile>PL_MPOOT_Crash_17_Wet.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265858973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C84E80FF-7605-4CC2-BFD3-B110F0EF3FEC}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="PL_MPOOT_Crash_17_Wet" ID="{C3115B70-01A7-4B4C-B910-62078A6C8126}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="4444.44444444445"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="318.629953699094"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="PL_MPOOT_Crash_17_Wet" ID="{4DF87349-5893-4CB6-B645-F32BF9BEF544}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{585C7DC0-E2E6-47F8-BAA5-96D6B152F49F}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{86D758E3-6AD3-46D0-BE14-0384F1C7CDDE}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-43.5276</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>-39.17487</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{72FA1C01-083B-4956-8B24-5D316630B035}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-20.28228</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>-15.24031</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{11CCC5B2-DF9C-4E25-85DA-E7CBCE30EC0E}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Strings Main" ID="{54A0C88B-B2A8-44D7-BEA7-4C7CA4F4D02A}" ShortID="620959332">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{96D4E293-F21E-49DF-967A-6D41F34DC2DF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Main Strings" ID="{81EEB30A-D73D-4D70-BCC2-560F82E2E7FE}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Main Strings.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="848510040"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{BE275B18-51A5-4BD7-B83A-9198CE01154C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Main Strings" ID="{5B29BB53-5C7E-402D-A30B-21C4F88ACA68}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Main Strings" ID="{81EEB30A-D73D-4D70-BCC2-560F82E2E7FE}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{7553648E-B54C-4FA0-9D89-504B151A6C3B}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{3175A0B9-38E6-4A3E-8242-00371C66A869}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="35555.5625"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Combat B" ID="{12DF3A70-A0F6-4F6A-99E2-A8043FEF3768}" ShortID="1060656481">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="53333.3402777778"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="108"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Choir 2" ID="{7636BBF5-E75B-41E2-8B31-BB4CA4ACA7C1}" ShortID="598700091">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{9A7CC569-2213-47D5-B089-7745D8936367}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Choir 2" ID="{C0A026F8-4CA0-4E7A-8A5F-AF9AD3539570}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Choir 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="328085107"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{322D639A-6545-4738-B55F-39198DDF6474}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Choir 2" ID="{D889F645-6369-437A-88C1-5B599F6E34AD}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="51.8340128012042"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Choir 2" ID="{C0A026F8-4CA0-4E7A-8A5F-AF9AD3539570}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{94B2028A-9A0D-42E5-BC9C-B5315B24EE02}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Choir" ID="{36EF3356-D0AB-48E9-B979-3495CBA945B2}" ShortID="88481344">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{B3028553-A346-453F-9A5F-B735A5AACBDA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Choir" ID="{6DB084B7-70EB-40F3-853C-5BC2D9E455A6}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Choir.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="876765623"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F16E5C78-8DB6-4AE2-9E39-10C158C4E792}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Choir" ID="{27056AD4-6D1C-4FBB-959C-38E1CD79858F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Choir" ID="{6DB084B7-70EB-40F3-853C-5BC2D9E455A6}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{78336517-E3FF-4FA4-A5B6-AB15FE3B7D97}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Combat Low Drums" ID="{976BCB4F-D113-47C0-BC30-04C71F555BFB}" ShortID="375570585">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{BBF8AC48-4FD6-421D-B603-31060E4E90B7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Combat Low Drums" ID="{93EA4FEB-8DFC-46D2-8349-CCC2D424F8A5}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Combat Low Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="882794633"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{DD4C02A6-FC37-4191-BDC2-E81E4E1B8545}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Combat Low Drums" ID="{06204BF9-BDC6-49F9-BF0B-754B301C3C1E}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="30792.2056164176"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Combat Low Drums" ID="{93EA4FEB-8DFC-46D2-8349-CCC2D424F8A5}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{F00039AF-A919-4EBA-99BB-DC7D254E854A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>30.79221</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{1823A2EE-AAC5-4956-8726-F5F0207E537A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>30.79221</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{A296A3D3-C17B-44E8-A3F4-614C129B9944}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>30.79221</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Drums" ID="{436542C8-D127-48A4-AD1C-D34DEEA7388F}" ShortID="1014861954">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{23A25C87-1113-449D-87D9-5CFB811F01CD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Drums" ID="{59C771BE-D171-44F5-8AA3-ECBD04B3BD57}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="830380090"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{A992408A-4994-455C-B7B9-A6B76D7632D0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Drums" ID="{970F521D-73BA-4D05-A7D4-F08B25A4293D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="30555.5555555555"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Drums" ID="{59C771BE-D171-44F5-8AA3-ECBD04B3BD57}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{A86C9982-6894-42F1-B4E8-77E9159DDC4D}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>30.55556</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{85CBF8DC-41F9-4564-9067-B164B5EC6A17}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>30.55556</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{24CA7479-A3AB-4395-AA16-8386A79E03EA}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>30.55556</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{1B48AE76-45D0-4978-A583-C8A27B1980D6}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Duduk" ID="{5229B78D-D9D7-46E8-893B-7B45B17CD58A}" ShortID="214214400">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{91973683-2317-4498-BD52-81830F94EE19}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Duduk" ID="{569C0CD6-E719-455D-B38A-0B323EE49D0B}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Duduk.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="871286167"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5BD8E257-435C-4E22-BC63-16431803D32E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Duduk" ID="{FB865FB6-07A5-43EA-B323-E7DD1D5A0C49}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Duduk" ID="{569C0CD6-E719-455D-B38A-0B323EE49D0B}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D3CD731D-8363-44DC-ABBA-672AC9754197}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Effects" ID="{6F874FBA-8547-415C-B3C3-2D7777A0D846}" ShortID="256949577">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{474FC579-684F-42F2-9776-DB4726BBC6BA}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Effects" ID="{F495356D-1EA6-459B-9AE0-A5C87D8964D9}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Effects.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="421469209"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{929148B5-F98A-474C-B133-B1D525D5D67D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Effects" ID="{A6F9481A-B06A-4133-96BF-385551C96657}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Effects" ID="{F495356D-1EA6-459B-9AE0-A5C87D8964D9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Main Strings" ID="{C98C86B3-C00E-4D38-AF3C-F8CDAD108FA5}" ShortID="868151065">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{F24B31AD-F224-43E7-AAA9-A308F7F8F5D2}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Lo Cello" ID="{994C7F29-115D-4949-8D35-D0DBE956A16C}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Lo Cello.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="963571692"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Cello_Viola" ID="{8BCDE8FE-0F4A-40F1-8228-17AC1702E922}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Cello_Viola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="404893591"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0967C54A-572D-4DFA-B1B9-7BC3F31A875A}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8EC1DCC2-0F3C-4F62-9099-D089ACAAA2EF}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Lo Cello" ID="{8A403772-5BFD-4D36-8EA6-8E425606E6AB}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Lo Cello" ID="{994C7F29-115D-4949-8D35-D0DBE956A16C}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{AE30C428-8BE8-4F81-8DFC-49E7DE3067B5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Cello_Viola" ID="{F398C17D-475C-440F-AFEB-CF293B0E868B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Cello_Viola" ID="{8BCDE8FE-0F4A-40F1-8228-17AC1702E922}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat B 108 BPM D Min Reese Bass" ID="{EA42BFF2-CD09-42F1-92F8-59F56559DAA6}" ShortID="72588463">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{5A4901AF-C16D-4748-8ED1-673D81C765AE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat B 108 BPM D Min Reese Bass" ID="{BFA7F2BE-6DB1-4E7A-AB7F-C2FAA7E473FB}">
+											<Language>SFX</Language>
+											<AudioFile>Combat B\FS Combat B 108 BPM D Min Reese Bass.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="474492847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5AB37C93-B9C3-4600-913C-1083F2A4FE90}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat B 108 BPM D Min Reese Bass" ID="{7AF2EA03-B7A3-4F7A-8F36-EC83B210739F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat B 108 BPM D Min Reese Bass" ID="{BFA7F2BE-6DB1-4E7A-AB7F-C2FAA7E473FB}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D4F91BFB-C913-43EA-87F7-A0B52A1CFFFD}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Main Strings" ID="{36DBF0C0-E5F2-4F4A-82BF-68B1BD0BCADB}" ShortID="991265030">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{186673FB-16EF-4325-9725-FCB183B8B6BC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat A 108 BPM D Min Main Strings" ID="{078F9C82-A002-440A-B7F1-64147EF729E5}">
+											<Language>SFX</Language>
+											<AudioFile>Combat A\FS Combat A 108 BPM D Min Main Strings.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="848510040"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{78242B9B-E10C-4124-BFFE-04B843EB954E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat A 108 BPM D Min Main Strings" ID="{C89F3A29-441F-4D7A-A3A6-1CEC16D9052D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat A 108 BPM D Min Main Strings" ID="{078F9C82-A002-440A-B7F1-64147EF729E5}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{7BF496EF-6092-46E0-8E93-69A7FBDD4DB4}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{1DBD81CD-6935-4718-AA5D-D194A45D67AB}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="35555.5555555556"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{158DFC72-DB23-4F58-B779-8AE8FEA7E4AC}" ShortID="727096625">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Peak Limiter (Custom)" ID="{C7882620-12E1-48AA-853C-187975D80F35}" ShortID="881116499" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3"/>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Combat C" ID="{F742C27E-BC3C-45E4-83C5-B9BBF55BFDB9}" ShortID="528412812">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="38333.3402777778"/>
+								<Property Name="Tempo" Type="Real64" Value="108"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Cello_Viola" ID="{1D902E6C-F229-4298-ABA6-A3245002668E}" ShortID="88269873">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{D60CF87A-2842-44FD-9448-ACD0D36EA50B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Cello_Viola" ID="{895300BE-3378-4C0C-BB2B-F67C72CD1DBF}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Cello_Viola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="507075720"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Lo Cello" ID="{5D49091D-EB08-4BFB-8CC5-983CD111E6B9}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Lo Cello.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="477780906"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Main Strings" ID="{350A624B-CE97-426B-9D20-0722C5616A0B}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Main Strings.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="69949331"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{349CB962-9985-4950-BD99-C9D56536368C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Main Strings" ID="{C351855E-A264-4B4D-9BD1-CA123DBF9017}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Main Strings" ID="{350A624B-CE97-426B-9D20-0722C5616A0B}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{25941BAD-85C5-4A73-BAEA-3A3908BE0F81}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Lo Cello" ID="{0EE7F2D5-F2AD-4D3E-BBD2-F0DBF4494CE4}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Lo Cello" ID="{5D49091D-EB08-4BFB-8CC5-983CD111E6B9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2E669260-734B-4186-899D-4E00FC469ED0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Cello_Viola" ID="{143B2D81-E123-4C80-9E40-573F43770CD6}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Cello_Viola" ID="{895300BE-3378-4C0C-BB2B-F67C72CD1DBF}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{3BA65AE1-97BE-4FCD-B157-0266CE5D3E44}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Choir 2" ID="{7DF778C2-7C42-48DD-B5AE-D31910A89B8A}" ShortID="70830408">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{D1E06A5C-F8C9-4924-B45C-9DB266CB1A6F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Choir 2" ID="{0EC0969E-833F-48E4-9D8B-1ED2C891A8BA}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Choir 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="33099968"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="PL_MPOOT_Crash_17_Wet" ID="{F15F6D7E-11FF-4936-BF38-F354D22CF06F}">
+											<Language>SFX</Language>
+											<AudioFile>PL_MPOOT_Crash_17_Wet.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265858973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{175B9128-484D-4461-AF11-650126B099C8}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Choir 2" ID="{F055F788-3BAA-4949-ADFB-DF391876CDE3}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Choir 2" ID="{0EC0969E-833F-48E4-9D8B-1ED2C891A8BA}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{723E49D3-F093-4687-95B7-AFAB8E0366A9}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="PL_MPOOT_Crash_17_Wet" ID="{C526A5F4-F35C-48D6-A47B-F884DD3225AD}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="4444.44444444445"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="318.629953699094"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="PL_MPOOT_Crash_17_Wet" ID="{F15F6D7E-11FF-4936-BF38-F354D22CF06F}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{F99DF995-F212-4E41-A4D6-BF83452F2965}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{D7EA3D0A-2F53-4587-9B29-F0BF22D9E813}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-43.5276</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>-39.17487</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{0200EC6B-F7DE-4167-BA72-AEC49541980C}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-20.28228</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>-15.24031</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Combat Low Drums" ID="{2D4E0876-C324-49B2-9FC2-0479770BE1AE}" ShortID="530954609">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{6458CCB1-4E7F-4DC1-863A-33E6057E49CE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Combat Low Drums" ID="{5A91703E-B0DA-4E3E-A9FC-A7BB59792506}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Combat Low Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="208003721"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C7CB739D-2CAA-48E1-B975-F43C828DD413}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Combat Low Drums" ID="{D5EC8287-09C5-4AAB-92DB-483934C25C67}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Combat Low Drums" ID="{5A91703E-B0DA-4E3E-A9FC-A7BB59792506}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Drums" ID="{77E31C8B-0504-4E69-98F4-B0557CBDF5AD}" ShortID="894740253">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{86DFAFD5-52AD-4650-90A1-1D4A5A60D706}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Drums" ID="{C9FB60C4-01D7-45E6-B88B-17D7210F65EA}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="483494116"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4D3B239F-C838-4C3F-AF0C-5C35AFFAAB0E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Drums" ID="{1FE2889D-F137-4267-B888-F287E20812BE}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Drums" ID="{C9FB60C4-01D7-45E6-B88B-17D7210F65EA}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Duduk" ID="{8E5C72E8-FDAA-4A13-97CA-AF8228AFDCD3}" ShortID="618275640">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{1B18AAD0-1DD3-44BA-9ACA-6E69482E8FE6}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Duduk" ID="{D1A4417A-ED5B-49F0-B6C4-16627738620E}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Duduk.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="284865630"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4891F4B7-0DA0-4D6E-BCC6-9BCE66ACA3E9}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Duduk" ID="{DE3CA9EC-3386-4865-A1A6-604AB03882E9}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="13.099231429852"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Duduk" ID="{D1A4417A-ED5B-49F0-B6C4-16627738620E}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{50DB297E-DF59-4CE0-A99F-9B69D36667D6}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Effects" ID="{C7472C5E-27D5-4129-B36E-48B31ACB9FAE}" ShortID="370662325">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{AB217537-4F41-45C7-A240-74C0881ADEE6}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Effects" ID="{2112BBD0-61FA-403A-A735-02D3715A1E96}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Effects.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="868413544"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{3B8DC156-74B6-4CED-932E-8746386BA83F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Effects" ID="{84F33FC5-8D4B-468A-A5C8-1664E3939947}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="7222.22222222222"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="177.016640943942"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="212.419969132727"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Effects" ID="{2112BBD0-61FA-403A-A735-02D3715A1E96}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{9DC5A084-7FBA-4EB5-9502-34EE3C5ADFB4}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>7.22222</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>35.5555625</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{8D9E94F4-7B56-4CE1-A056-9FE244D6B8B5}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>7.22222</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>35.5555625</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{252F2209-A534-41E6-B25A-E0794E4AB40A}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>7.22222</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>21.40161</XPos>
+																								<YPos>0</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>22.98662</XPos>
+																								<YPos>-6.88819</YPos>
+																								<Flags>0</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>35.5555625</XPos>
+																								<YPos>-4.96328</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Horns" ID="{DF1424A6-4054-44C3-93B0-A58E537D7037}" ShortID="244421335">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{61A28582-9694-4018-8B8C-9D86BB084A0F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Horns" ID="{BD794F24-F0AB-47B1-A248-75DB9BFB4800}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Horns.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1062488087"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{065C21F4-8849-4398-B7F5-EA45D56B3F50}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Horns" ID="{2DC05E10-F847-4F8B-A80E-8F7421D92057}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Horns" ID="{BD794F24-F0AB-47B1-A248-75DB9BFB4800}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{2EFC7DE6-601D-4CBC-8715-A288AF298036}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Pluck String" ID="{FC474F0E-DD59-4F20-90DC-B46C9AE30868}" ShortID="304680169">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{B513EB13-49C3-442C-8D58-81D0605A0D79}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Pluck String" ID="{C1FD51F8-E07C-4EED-A5AB-28B6D720A9E1}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Pluck String.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="829542582"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C7F8AE52-7B78-464A-A695-98FB10B82494}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Pluck String" ID="{C9715035-8B6D-469F-BB4B-F618E26E6804}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="247.823297321518"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="212.41996913273"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Pluck String" ID="{C1FD51F8-E07C-4EED-A5AB-28B6D720A9E1}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{277D17A9-BCB0-4F7D-AEBC-1D176C62AD7E}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Combat C 108 BPM D Min Reese Bass" ID="{F4FA6992-8D7E-44DF-BE83-A2BF221CF654}" ShortID="621932324">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{DE2AB53E-47ED-4FAF-8765-2D0D70576395}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Combat C 108 BPM D Min Reese Bass" ID="{BC3FC767-7794-4631-954B-9E1951741A40}">
+											<Language>SFX</Language>
+											<AudioFile>Combat C\FS Combat C 108 BPM D Min Reese Bass.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="788906199"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{BDAD6323-5F1C-48EE-9E4F-BD9795E84B31}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Combat C 108 BPM D Min Reese Bass" ID="{C0FF31D8-F87E-4CD5-A73F-DF820EDCFEEB}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="5.66453251020658"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="55.9372585382806"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Combat C 108 BPM D Min Reese Bass" ID="{BC3FC767-7794-4631-954B-9E1951741A40}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{EC4B2179-1BFA-483C-973F-CF9B24C57201}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Crash" ID="{7BD10338-52B8-4A60-A1D7-2DBDF35411B3}" ShortID="1014003015">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{658F4D53-A028-488A-B2C9-7B73C7A98580}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PL_MPOOT_Crash_17_Wet" ID="{6CE94F24-43BA-42F6-883A-7BD35B98E442}">
+											<Language>SFX</Language>
+											<AudioFile>PL_MPOOT_Crash_17_Wet.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265858973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{EBCB09B3-9287-4859-A477-0E11CC12564E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="PL_MPOOT_Crash_17_Wet" ID="{1791F6CE-2286-401D-B1C6-B39669C9CFC0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="4444.44444444445"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="318.629953699094"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="PL_MPOOT_Crash_17_Wet" ID="{6CE94F24-43BA-42F6-883A-7BD35B98E442}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{BE82FCDB-154E-441A-A033-32290F1283FD}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{6999850B-DBA4-4D38-841A-E2F57C348EC8}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-43.5276</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>-39.17487</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{2D83EECB-5C62-4814-806E-FF04566F183B}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-20.28228</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>4.44444</XPos>
+																								<YPos>-15.24031</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{599A3C52-76D1-4809-8225-CA0BCA83C014}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{8756F8AB-B7AC-4FA0-869C-A19C6087E452}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{BC112F82-81FD-4FC4-AB29-48FE31E654CA}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="35555.5555555556"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="BossBattle" ID="{ED8489E4-C542-42E4-8534-8ADFC8B2FA3A}" ShortID="616672832">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="108"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="SFX" ID="{FF7B5F07-3F15-4234-96A3-1EC36B753760}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{5B8A821E-8331-43AC-B488-9137F2854D87}" ShortID="983664803">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C9A58FC2-1CCE-418E-B487-380C8CE88F23}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{CC616636-95CD-493D-B93C-C088356E611A}" ShortID="157991258">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="Boss A" ID="{72A56AA4-FABC-4F4D-A7B9-6F99D62F4C58}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{721033A2-22BB-46AE-B8B4-148C9255813E}" ShortID="852957755">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="Boss B" ID="{711F2FC7-47D3-40E6-BFB8-14DE05A53DDB}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{19FE77B2-CFE2-43DD-AC35-3CD4F6D51A4D}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{23936B1F-41B7-48E4-8D36-E6D732F6305C}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Boss A" ID="{72A56AA4-FABC-4F4D-A7B9-6F99D62F4C58}" ShortID="646397075">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="38333.3333333333"/>
+								<Property Name="Tempo" Type="Real64" Value="108"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="FS Boss A 108 BPM D Min Cello_Viola" ID="{9D3AB2D7-A45F-4E1C-9555-899E08B8A110}" ShortID="65303709">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{616E6273-F4EE-4665-A995-6DFFA638DE83}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss A 108 BPM D Min Cello_Viola" ID="{CC774F6A-2074-4444-BCD9-80BE304ADA95}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss A 108 BPM D Min Cello_Viola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="594433068"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{23905781-955F-43BB-BAEE-99EC485F0290}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss A 108 BPM D Min Cello_Viola" ID="{AC9C1A4C-31B7-40F3-B40A-A0D9075FE910}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss A 108 BPM D Min Cello_Viola" ID="{CC774F6A-2074-4444-BCD9-80BE304ADA95}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{79ABD969-CB35-4F6B-B937-54CF142A2293}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss A 108 BPM D Min Choir" ID="{5BE1B509-DE66-48E2-8F2F-E53877E43FB4}" ShortID="1019357065">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{7D806445-6C84-4F1E-B260-D4813502FEF9}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss A 108 BPM D Min Choir" ID="{2E62CF11-58F3-4AF0-BB58-F483BB49EC1F}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss A 108 BPM D Min Choir.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="982952417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{56B5C78D-7CF9-4921-A1B3-1F885566D621}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss A 108 BPM D Min Choir" ID="{41DE87FA-9B5B-4879-AEA6-3CD6E60B2C6A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss A 108 BPM D Min Choir" ID="{2E62CF11-58F3-4AF0-BB58-F483BB49EC1F}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss A 108 BPM D Min Drums" ID="{5872308D-D836-4522-8E3E-41A60AFF16B5}" ShortID="865443416">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{A39290C5-A4B8-4940-B137-2C2E5236C486}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss A 108 BPM D Min Drums" ID="{42DCAEC9-B44C-44EB-BC39-75CFDF7CA637}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss A 108 BPM D Min Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="54151302"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E0E998FB-C8C2-4F68-B8F5-58795741B31A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss A 108 BPM D Min Drums" ID="{0ECB3224-9C3D-4A00-AA13-7742D68C8B6B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss A 108 BPM D Min Drums" ID="{42DCAEC9-B44C-44EB-BC39-75CFDF7CA637}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4FE25848-0849-4E84-9EAD-5DA493B286B8}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss A 108 BPM D Min Effects" ID="{BBB440DF-0A90-4B8F-A74C-CD37DAB63BB4}" ShortID="833510705">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{E58859A2-FC20-445F-8DEB-38D4DA6F38A6}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss A 108 BPM D Min Effects" ID="{B9CCAF24-3137-4C8F-8434-CAE45F129A0E}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss A 108 BPM D Min Effects.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="444449598"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{7A678AFE-E9FE-4F38-92AD-3969ED32B7CF}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss A 108 BPM D Min Effects" ID="{01E6E751-43CC-479A-9275-E982B1CBBF3F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss A 108 BPM D Min Effects" ID="{B9CCAF24-3137-4C8F-8434-CAE45F129A0E}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss A 108 BPM D Min Main Strings" ID="{73C14EA2-7973-4063-85FA-9F5D53839718}" ShortID="546053320">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{3337AD8C-18A4-45EB-BC00-C471389E15C4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss A 108 BPM D Min Main Strings" ID="{2E9F8BF3-010B-4471-8138-0138DD6F0A68}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss A 108 BPM D Min Main Strings.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1072075349"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{476751D7-2EF8-4E25-BEE3-D1CD35B3DBE7}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss A 108 BPM D Min Main Strings" ID="{6CDC0CC7-E73C-49B1-BA89-EE3FD6A010C0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss A 108 BPM D Min Main Strings" ID="{2E9F8BF3-010B-4471-8138-0138DD6F0A68}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{5028B2F4-0E06-4919-86B5-9DCAB4A6B112}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss A 108 BPM D Min Pulse Synth" ID="{CAAC1425-B979-4B06-B134-82F8E72CAED8}" ShortID="181842998">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{243E221C-C16B-424F-A048-12C1D98C4430}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss A 108 BPM D Min Pulse Synth" ID="{B663DA2D-C6B4-43CB-ACC0-84DD819107DE}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss A 108 BPM D Min Pulse Synth.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="278480891"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C99B4FF8-DC5A-43D9-92C5-9F47BD28B3AE}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss A 108 BPM D Min Pulse Synth" ID="{C178FB25-AB7D-4582-9E9E-240188FB35B3}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss A 108 BPM D Min Pulse Synth" ID="{B663DA2D-C6B4-43CB-ACC0-84DD819107DE}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D55ECD48-A6CC-4420-AEE9-276826A63697}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{683EC118-C642-4435-8C33-5ADE6D69AD7B}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{8D2D9F15-54C7-490B-867F-84B00D92B7BD}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="35555.5555555556"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Boss B" ID="{711F2FC7-47D3-40E6-BFB8-14DE05A53DDB}" ShortID="714062944">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="45000"/>
+								<Property Name="Tempo" Type="Real64" Value="108"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="FS Boss B 108 BPM D Min B Stringa" ID="{1D2F09C4-344A-43A4-BD5D-B27D11937AC1}" ShortID="360722720">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{12A8B01A-A7AD-4964-8DFD-AF2CE0755938}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min B Stringa" ID="{E9B7982E-8D41-440B-9E4A-50CE11768AD4}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min B Stringa.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1006412281"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{57B83FEC-E30A-4CED-A6AB-447E1C8046A5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min B Stringa" ID="{0DA014DE-2F9F-471C-AC46-60B4AEA2F0A1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min B Stringa" ID="{E9B7982E-8D41-440B-9E4A-50CE11768AD4}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D6E06F13-6FF0-4846-9E35-C8D102ADC44E}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Boss Low Drums" ID="{BD2EA64C-7230-4F4D-AD55-C4085E7C59B5}" ShortID="883122310">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{E78960AC-9F04-40F7-B629-E2A0A92623C3}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Boss Low Drums" ID="{689C33A6-D78A-4319-B592-FCD0238F895C}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Boss Low Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="65626146"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F8113F76-023E-4854-A73B-9D732458D30C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Boss Low Drums" ID="{70C105CA-7C09-476D-8B79-C39E54A92D56}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Boss Low Drums" ID="{689C33A6-D78A-4319-B592-FCD0238F895C}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Cello_Viola" ID="{1D4FF378-36A5-45DA-A5F5-79459839F0F8}" ShortID="252502858">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{D1174B16-24BD-49B1-A674-B6654A2AABB0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Cello_Viola" ID="{EF3564A0-D3D4-4E28-8586-53FEAAB7DDD3}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Cello_Viola.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1029216462"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{0A67023A-E349-411A-8AA2-515D3EAF249C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Cello_Viola" ID="{265C3644-4590-4242-8697-ADAFF883CB3A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Cello_Viola" ID="{EF3564A0-D3D4-4E28-8586-53FEAAB7DDD3}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8E2DE1DD-DC6E-46DF-8626-9A118363AB07}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Choir" ID="{BB872319-0E1A-4F82-9DA1-84EA17B15656}" ShortID="610688804">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{8F12F236-51FC-4D15-BC5A-84EE14591933}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Choir" ID="{55E1C290-F036-4F11-9643-3DAEA022A16B}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Choir.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="8421383"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{ECE62006-7E75-4FDD-B5CF-2E82AC0EAA9D}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Choir" ID="{12210289-CD99-4262-AE5B-C3BA80A1BCA6}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Choir" ID="{55E1C290-F036-4F11-9643-3DAEA022A16B}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{3BDCA05D-D6D8-4714-8486-C08D3759AC65}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Drums" ID="{B602D6B7-C524-4522-AAFD-4F28D17AD19D}" ShortID="671591019">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{6E0AE8EB-AAD3-4B80-9BD2-B723CC022E3D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Drums" ID="{2899D59C-5DC2-4EB0-B668-39077420C3EC}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="924944296"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{4288B412-B972-4400-9270-272F89F8DE48}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Drums" ID="{2CDB2A25-62EC-4BD2-809A-FF08C1938509}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Drums" ID="{2899D59C-5DC2-4EB0-B668-39077420C3EC}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{149EA553-19E1-47DD-988C-92218999E856}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Effects" ID="{DC60BB8F-DDEC-4DAB-8166-3D023DB15447}" ShortID="850196962">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{1AC37712-63E0-4E8E-959F-0160A82AF401}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Effects" ID="{5B9B6A8D-564E-4A00-9104-222074789A74}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Effects.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="951623727"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{25F50F4F-D6E3-484D-946A-16A4F4E4B13F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Effects" ID="{F3F0BCBB-E6D0-4792-81D7-107CE1B52816}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Effects" ID="{5B9B6A8D-564E-4A00-9104-222074789A74}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Main Strings" ID="{4643D3E6-A6CA-4824-AC85-FBD5A272D45C}" ShortID="427838985">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{4EF5A7CB-CD55-4C85-BDBE-64140CB37704}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Main Strings" ID="{C14E2B43-1C9B-41FC-9616-FE3E484A6DA1}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Main Strings.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="175933057"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8ED9D56F-7AC9-4946-8CB6-AB4D68B3DAB2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Main Strings" ID="{AB8E34FB-6E74-4E3F-8DD3-1526F87B66A6}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Main Strings" ID="{C14E2B43-1C9B-41FC-9616-FE3E484A6DA1}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{C652A083-837D-4DEA-8481-426D7C41CE65}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="FS Boss B 108 BPM D Min Reese Bass" ID="{8625899F-544B-47F3-BD0E-BF4A2AFBEA0E}" ShortID="221424143">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{5329AA9A-D902-4B34-B1DA-FAF62A693ECB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FS Boss B 108 BPM D Min Reese Bass" ID="{A2C21A19-8EEC-4B01-8082-591E13151D76}">
+											<Language>SFX</Language>
+											<AudioFile>FS Boss B 108 BPM D Min Reese Bass.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1025892079"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{290688D9-9A7C-432F-87F9-E55D4939EAC3}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="FS Boss B 108 BPM D Min Reese Bass" ID="{10B4F2E7-97FD-4E5C-A6C5-47C197103BE1}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="35555.5625"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="FS Boss B 108 BPM D Min Reese Bass" ID="{A2C21A19-8EEC-4B01-8082-591E13151D76}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{8EB509D7-7A15-4A73-B7E9-18B9FBD3B155}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{1248415C-9155-441D-84B9-2139C48977E7}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{CF22F582-6EAE-4BE3-8B7D-5F3BA5E2BF1F}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="35555.5555555556"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

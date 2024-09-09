@@ -426,6 +426,7 @@ public class PlayerController : MonoBehaviour
             {
                 enemy.TakeDamage(1);
                 print("ENEMY HIT");
+                AkSoundEngine.PostEvent("Play_SmallSwordHit", gameObject);
             }
         }
     }
@@ -452,6 +453,7 @@ public class PlayerController : MonoBehaviour
             {
                 enemy.TakeDamage(3);
                 print("ENEMY HIT");
+                AkSoundEngine.PostEvent("Play_BigSwordHit", gameObject);
             }
         }
     }
