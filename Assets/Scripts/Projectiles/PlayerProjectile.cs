@@ -41,6 +41,11 @@ public class PlayerProjectile : MonoBehaviour
             }
         }
 
+        if (collision.gameObject.TryGetComponent(out GenericEnemy enemy))
+        {
+            enemy.TakeDamage(1);
+        }
+
         //Destroy self when it collides with anything
         animator.SetTrigger("collision");
         //Deactivate(), call in animator

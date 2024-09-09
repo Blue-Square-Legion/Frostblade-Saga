@@ -8,6 +8,7 @@ TagManager:
   - Checkpoint
   - PlayerProjectile
   - RangedEnemy
+  - Boss
   layers:
   - Default
   - TransparentFX

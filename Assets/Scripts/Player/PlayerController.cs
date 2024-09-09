@@ -500,17 +500,18 @@ public class PlayerController : MonoBehaviour
 
                     for (int i = 0; i < enemyHits.Length; i++)
                     {
+                        if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
+                        {
+                            EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
+                            if (projectile != null)
+                            {
+                                projectile.FreezeProjectile();
+                            }
+                        }
                         if (enemyHits[i].collider.gameObject.TryGetComponent(out GenericEnemy enemy))
                         {
-                            if (enemyHits[i].collider.gameObject.CompareTag("Projectile"))
-                            {
-                                EnemyProjectile projectile = enemyHits[i].collider.gameObject.GetComponent<EnemyProjectile>();
-                                if (projectile != null)
-                                {
-                                    projectile.FreezeProjectile();
-                                    print("FREEZE PROJECTILE");
-                                }
-                            }
+                            enemy.TakeDamage(2);
+                            print("ENEMY HIT");
                         }
                     }
                     animator.SetTrigger("Aura");
@@ -533,14 +534,14 @@ public class PlayerController : MonoBehaviour
     private void Stage_Change_Started(InputAction.CallbackContext obj)
     {
         //If value is less than 1, go to stage 1
-        if (stageChangeAction.ReadValue<float>() < 1)
+        if (stageChangeAction.ReadValue<float>() < 0)
         {
             print("CHANGED TO STAGE 1");
             animator.SetTrigger("Stage_1");
             weaponStage = WeaponStage.Stage1;
         }
         //If value is greater than one, go to stage 2
-        else if (stageChangeAction.ReadValue<float>() > 1)
+        else if (stageChangeAction.ReadValue<float>() >= 0)
         {
             print("CHANGED TO STAGE 2");
             animator.SetTrigger("Stage_2");

@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
 
         foreach (var enemy in enemies)
         {
-            enemy.GetComponent<GenericEnemy>().Respawn();
+            if (!enemy.GameObject().CompareTag("Boss"))
+                enemy.GetComponent<GenericEnemy>().Respawn();
         }
     }
 }

@@ -4,13 +4,14 @@ public class EnemyProjectile : ContactDamage
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
+
     private float lifeTime;
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
     private bool hit;
-    private bool isFrozen; 
+    private bool isFrozen;
     private Animator animator;
 
     private void Start()
@@ -23,7 +24,15 @@ public class EnemyProjectile : ContactDamage
 
     public void ActivateProjectile()
     {
-        
+        //reset to default fireball
+        if (isFrozen)
+        {
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
+            spriteRenderer.color = Color.white;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            boxCollider.isTrigger = true;
+        }
+
         lifeTime = 0;
         gameObject.SetActive(true);
         if(boxCollider != null )
@@ -57,6 +66,7 @@ public class EnemyProjectile : ContactDamage
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Projectile") && (!isFrozen && !collision.GetComponent<EnemyProjectile>().isFrozen)) return;
         if (collision.gameObject.CompareTag("PlayerProjectile"))
             FreezeProjectile();
         else
@@ -64,6 +74,7 @@ public class EnemyProjectile : ContactDamage
             hit = true;
             base.OnTriggerEnter2D(collision);
             boxCollider.enabled = false;
+            boxCollider.isTrigger = true;
             animator.SetTrigger("collide");
             spriteRenderer.color = Color.white;
             //Deactivate(), call in animator
@@ -83,7 +94,6 @@ public class EnemyProjectile : ContactDamage
         boxCollider.enabled = true;
         gameObject.layer = LayerMask.NameToLayer("Ground");
     }
-
     public void Deactivate()
     {
         gameObject.SetActive(false);
