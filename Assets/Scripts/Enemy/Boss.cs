@@ -65,11 +65,8 @@ public class Boss : GenericEnemy
         }
         else
         {
-            if (!hasActiveFireball())
-            {
-                StartWaveAttack();
-    }
-}
+            StartWaveAttack();
+        }
     }
 
     void StartClawAttack()
@@ -148,6 +145,7 @@ public class Boss : GenericEnemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("PlayerProjectile")) return;
         //stop charging
         if (charging)
         {
