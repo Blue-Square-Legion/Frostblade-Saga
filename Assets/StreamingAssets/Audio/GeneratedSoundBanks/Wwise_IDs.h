@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_FIRETIGERFOOTSTEPS = 1980244072U;
         static const AkUniqueID PLAY_FIRETIGERHURTROAR = 201807964U;
         static const AkUniqueID PLAY_FIRETIGERIDLEROAR = 3798153045U;
+        static const AkUniqueID PLAY_HEALTHPICKUP = 2856985320U;
         static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
         static const AkUniqueID PLAY_ICEAURA = 268692114U;
         static const AkUniqueID PLAY_ICEAURAFREEZE = 1516146351U;

@@ -345,7 +345,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 145d861f4fd382488e16aa76179064e9
     GuidInternal: 
-    m_lastTime: -8584757389571708112
+    m_lastTime: -8584756670443436568
     List:
     - name: Main
       guid: 315d471985a27f4682e258669b2301a2
@@ -373,7 +373,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 2947366f0beba540aa88b6287125121a
     GuidInternal: 
-    m_lastTime: -8584756773241414170
+    m_lastTime: -8584756671420278904
     List:
     - name: Play_Ambience
       guid: de966370598d26439cd54404f77a8f97
@@ -715,6 +715,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.4545774
       minDuration: 1.7586343
+    - name: Play_HealthPickUp
+      guid: aae3346e65bb7e4bad4575db807f92ba
+      id: 2856985320
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2947366f0beba540aa88b6287125121a
+      - ElementName: Play_HealthPickUp
+        ObjectType: 3
+        guid: aae3346e65bb7e4bad4575db807f92ba
+      Path: Events/Default Work Unit/Play_HealthPickUp
+      maxAttenuation: 0
+      maxDuration: 0.6729578
+      minDuration: 0.44478106
     - name: Play_Heartbeat
       guid: 907659cd1880634699d3a99e0cefe8b2
       id: 3765695918
@@ -781,8 +798,8 @@ MonoBehaviour:
         guid: 8edca0b801ea7949b63512188bbfe127
       Path: Events/Default Work Unit/Play_NPCVox
       maxAttenuation: 0
-      maxDuration: 2.0852883
-      minDuration: 1.1489899
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Player_Attack_Vox
       guid: 48129b4149cab64a9ce0210cc9cae4de
       id: 606945166

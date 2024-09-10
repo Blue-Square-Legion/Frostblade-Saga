@@ -13,6 +13,7 @@ public class HealthPickup : MonoBehaviour
         {
             // Restore health
             health.Heal(healAmount);
+            AkSoundEngine.PostEvent("Play_HealthPickUp", gameObject);
 
             Destroy(gameObject);
         }

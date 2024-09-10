@@ -41,6 +41,7 @@
 						<ObjectRef Name="Play_BossProjectile" ID="{0FFE43B0-58C2-4A71-BB56-528658FE9BB4}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Player_Attack_Vox" ID="{419B1248-CA49-4AB6-9CE0-210CC9CAE4DE}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Player_Jump_Vox" ID="{007F6CF2-474A-4AE4-8CFD-DAC85D4E96F7}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_HealthPickUp" ID="{6E34E3AA-BB65-4B7E-AD45-75DB807F92BA}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PlayerJump" ID="{A72A4558-71B3-4CD2-BC7F-4FBE05A6BD85}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FireTigerHurtRoar" ID="{ABB28D02-2FDA-4D0E-8142-B4175CEC3E19}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SmallSwordHit" ID="{DBD53961-9965-4DBB-A833-D442AB28C45A}" WorkUnitID="{6F364729-EB0B-40A5-AA88-B6287125121A}" Origin="Manual" Filter="7"/>

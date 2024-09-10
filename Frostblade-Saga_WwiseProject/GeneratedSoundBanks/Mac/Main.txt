@@ -26,6 +26,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2344515640	Play_Player_Die_Vox			\Default Work Unit\Play_Player_Die_Vox	
 	2707922347	Stop_BigSwordDrag			\Default Work Unit\Stop_BigSwordDrag	
 	2729937127	Play_BossBite			\Default Work Unit\Play_BossBite	
+	2856985320	Play_HealthPickUp			\Default Work Unit\Play_HealthPickUp	
 	2872645466	Play_PlayerLanding			\Default Work Unit\Play_PlayerLanding	
 	2962822744	Play_Checkpoint			\Default Work Unit\Play_Checkpoint	
 	3101974183	Play_EnemyHitCry			\Default Work Unit\Play_EnemyHitCry	
@@ -179,6 +180,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	679510927	BossTigerRoar2	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\BossTigerRoar\BossTigerRoar2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\BossTigerRoar\BossTigerRoar2		194224
 	688309035	BossProjectileHit1	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\BossProjectileHit\BossProjectileHit1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\BossProjectileHit\BossProjectileHit1		100968
 	689606237	Eneny Attack Cry 4	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Eneny Attack Cry 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyAttackCry\Eneny Attack Cry 4		80372
+	696527280	HealthPickup1	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\HealthPickUp\HealthPickup1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\HealthPickUp\HealthPickup1		61074
 	698082691	TigerFootstep1	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Fire Tiger Footsteps\TigerFootstep1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\FireTigerFootsteps\TigerFootstep1		45168
 	707218333	BossProjectileHit3	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\BossProjectileHit\BossProjectileHit3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\BossProjectileHit\BossProjectileHit3		110978
 	715331708	Player Attack Vox 2	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Player Attack Vox\Player Attack Vox 2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player Attack Vox\Player Attack Vox 2		32798
@@ -224,6 +226,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	920203563	Stage1 Freeze 4	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Stage1 Freeze 4_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stage1 Freeze\Stage1 Freeze 4		103062
 	924944296	FS Boss B 108 BPM D Min Drums	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\FS Boss B 108 BPM D Min Drums_56CEF360.wem		\Interactive Music Hierarchy\Music\BossBattle\Boss B\FS Boss B 108 BPM D Min Drums		532143
 	929560008	Player Footstep Wood 8	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Player Footstep Wood 8_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFootstep\PlayerFootstepWood\PlayerFootstepWoodR\Player Footstep Wood 8		10538
+	929690440	HealthPickup3	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\HealthPickUp\HealthPickup3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\HealthPickUp\HealthPickup3		45334
 	930203950	Player Grass Footstep 7	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Player Footsteps Grass\Player Grass Footstep 7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerFootstep\PlayerFootstepsGrass\PlayerFootstepGrassR\Player Grass Footstep 7		37880
 	932715677	Big Sword Hit 3	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Big Sword Hit\Big Sword Hit 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\BigSwordHit\Big Sword Hit 3		84476
 	936744918	Stage1 Freeze 7	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Stage1 Freeze 7_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stage1 Freeze\Stage1 Freeze 7		118268
@@ -245,6 +248,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1029216462	FS Boss B 108 BPM D Min Cello_Viola	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\FS Boss B 108 BPM D Min Cello_Viola_56CEF360.wem		\Interactive Music Hierarchy\Music\BossBattle\Boss B\FS Boss B 108 BPM D Min Cello_Viola		496959
 	1036104300	Enemy Fireball 1	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Enemy Fireball\Enemy Fireball 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyFireball\Enemy Fireball 1		128258
 	1039641798	Stage1 Freeze 3	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Stage1 Freeze 3_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stage1 Freeze\Stage1 Freeze 3		70554
+	1046932169	HealthPickup2	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\HealthPickUp\HealthPickup2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\HealthPickUp\HealthPickup2		57496
 	1048609498	Treasure Chest Open 1	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Treasure Chest Open 1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Treasure Chest\Treasure Chest Open 1		94626
 	1061427790	FS Combat A 108 BPM D Min Duduk	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Combat A\FS Combat A 108 BPM D Min Duduk_56CEF360.wem		\Interactive Music Hierarchy\Music\Combat\Combat A\FS Combat A 108 BPM D Min Duduk		592118
 	1062488087	FS Combat C 108 BPM D Min Horns	Y:\Documents\GitHub\Frostblade-Saga\Frostblade-Saga_WwiseProject\.cache\Mac\SFX\Combat C\FS Combat C 108 BPM D Min Horns_56CEF360.wem		\Interactive Music Hierarchy\Music\Combat\Combat C\FS Combat C 108 BPM D Min Horns		489106

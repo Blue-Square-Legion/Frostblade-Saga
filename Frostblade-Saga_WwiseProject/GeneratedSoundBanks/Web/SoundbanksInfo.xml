@@ -201,7 +201,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{63B1FCFD-618A-70BF-DF23-4EE540C72490}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{71B16330-3256-3B81-7993-430C72F46802}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -701,6 +701,10 @@
 					<ShortName>Eneny Attack Cry 4.wav</ShortName>
 					<CachePath>SFX/Eneny Attack Cry 4_818F3B66.wem</CachePath>
 				</File>
+				<File Id="696527280" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HealthPickUp\HealthPickup1.wav</ShortName>
+					<CachePath>SFX/HealthPickUp/HealthPickup1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="698082691" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fire Tiger Footsteps\TigerFootstep1.wav</ShortName>
 					<CachePath>SFX/Fire Tiger Footsteps/TigerFootstep1_818F3B66.wem</CachePath>
@@ -881,6 +885,10 @@
 					<ShortName>Player Footstep Wood 8.wav</ShortName>
 					<CachePath>SFX/Player Footstep Wood 8_818F3B66.wem</CachePath>
 				</File>
+				<File Id="929690440" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HealthPickUp\HealthPickup3.wav</ShortName>
+					<CachePath>SFX/HealthPickUp/HealthPickup3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="930203950" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Footsteps Grass\Player Grass Footstep 7.wav</ShortName>
 					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 7_818F3B66.wem</CachePath>
@@ -964,6 +972,10 @@
 				<File Id="1039641798" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stage1 Freeze 3.wav</ShortName>
 					<CachePath>SFX/Stage1 Freeze 3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1046932169" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HealthPickUp\HealthPickup2.wav</ShortName>
+					<CachePath>SFX/HealthPickUp/HealthPickup2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1048609498" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Treasure Chest Open 1.wav</ShortName>
@@ -1202,6 +1214,13 @@
 						<MediaRef Id="998733818"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2856985320" Name="Play_HealthPickUp" DurationType="OneShot" DurationMin="0.44478106" DurationMax="0.6729578">
+					<MediaRefs>
+						<MediaRef Id="696527280"/>
+						<MediaRef Id="929690440"/>
+						<MediaRef Id="1046932169"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3765695918" Name="Play_Heartbeat" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="268692114" Name="Play_IceAura" DurationType="OneShot" DurationMin="0.9711483" DurationMax="1.3426267">
 					<MediaRefs>
@@ -1392,5 +1411,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{15373760-0FCB-8DAA-0A46-FC79E88C1357}</FileHash>
+	<FileHash>{1BAC50A4-D7E3-E357-903F-33F6D57FBD8F}</FileHash>
 </SoundBanksInfo>
