@@ -47,6 +47,12 @@ GameObject:
   - component: {fileID: 6033878810651532673}
   - component: {fileID: 6423851118115796003}
   - component: {fileID: 2838921538931767649}
+  - component: {fileID: 3980288643743805624}
+  - component: {fileID: 4566100249189123951}
+  - component: {fileID: 5821891623553790468}
+  - component: {fileID: 3598384642217699434}
+  - component: {fileID: 5818825849510001033}
+  - component: {fileID: 7500898382735963655}
   m_Layer: 8
   m_Name: Boss
   m_TagString: Boss
@@ -236,6 +242,102 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3980288643743805624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028636299786148241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b0c0f96bc684625a33d11c06c1a3c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossRoar:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7969b86f7743d4875a4bd25a0cf0b5d1, type: 2}
+--- !u!114 &4566100249189123951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028636299786148241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dbb6a731c02b4ffc90577f31c78be31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossProjectile:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: daacbcf20afe34b12ae5d77aadc421ab, type: 2}
+--- !u!114 &5821891623553790468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028636299786148241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e62b079157bb45168385d263bc05029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossFootstep:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2ad845dde1b8641d7a3eb639e4961fc6, type: 2}
+--- !u!114 &3598384642217699434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028636299786148241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4416fac4e644c41279f2aa461a6347ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossBite:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2be63a5aae378453c8cf82491d56dfce, type: 2}
+--- !u!114 &5818825849510001033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028636299786148241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d476de87e7740d7b166a913194cb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TigerHurtVox:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fcfbdc21a22b44587b7de0ebc9f30a69, type: 2}
+--- !u!114 &7500898382735963655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028636299786148241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e8917b4e7d1466d8e55ba9bf516bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BossChargeRoar:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: feea0aa61a5754927b3bfeeea8498dfb, type: 2}
 --- !u!1 &5330500587296807411
 GameObject:
   m_ObjectHideFlags: 0

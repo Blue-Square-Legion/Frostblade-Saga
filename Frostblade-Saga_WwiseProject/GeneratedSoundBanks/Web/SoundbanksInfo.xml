@@ -201,7 +201,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2B6321BD-66AF-EBBC-B860-96F4125E81BA}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{63B1FCFD-618A-70BF-DF23-4EE540C72490}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -241,10 +241,6 @@
 					<ShortName>Big Sword Swing\Big Sword Swing 6.wav</ShortName>
 					<CachePath>SFX/Big Sword Swing/Big Sword Swing 6_818F3B66.wem</CachePath>
 				</File>
-				<File Id="50690553" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stage2 Freeze 4.wav</ShortName>
-					<CachePath>SFX/Stage2 Freeze 4_818F3B66.wem</CachePath>
-				</File>
 				<File Id="53341151" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Treasure Chest Open 3.wav</ShortName>
 					<CachePath>SFX/Treasure Chest Open 3_818F3B66.wem</CachePath>
@@ -252,10 +248,6 @@
 				<File Id="54151302" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS Boss A 108 BPM D Min Drums.wav</ShortName>
 					<CachePath>SFX/FS Boss A 108 BPM D Min Drums_56CEF360.wem</CachePath>
-				</File>
-				<File Id="56732673" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stage2 Freeze 2.wav</ShortName>
-					<CachePath>SFX/Stage2 Freeze 2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="60606429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BossProjectileHit\BossProjectileHit2.wav</ShortName>
@@ -332,10 +324,6 @@
 				<File Id="175933057" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS Boss B 108 BPM D Min Main Strings.wav</ShortName>
 					<CachePath>SFX/FS Boss B 108 BPM D Min Main Strings_56CEF360.wem</CachePath>
-				</File>
-				<File Id="180038728" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stage2 Freeze 5.wav</ShortName>
-					<CachePath>SFX/Stage2 Freeze 5_818F3B66.wem</CachePath>
 				</File>
 				<File Id="188945968" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Jump Grass\Player Grass Jump 1.wav</ShortName>
@@ -447,7 +435,7 @@
 				</File>
 				<File Id="344061253" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BossTigerRoar\BossTigerRoar4.wav</ShortName>
-					<CachePath>SFX/BossTigerRoar/BossTigerRoar4_818F3B66.wem</CachePath>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar4_F0AF091A.wem</CachePath>
 				</File>
 				<File Id="367288393" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Treasure Chest Open 2.wav</ShortName>
@@ -593,6 +581,10 @@
 					<ShortName>IceAura\IceAura3.wav</ShortName>
 					<CachePath>SFX/IceAura/IceAura3_818F3B66.wem</CachePath>
 				</File>
+				<File Id="515792893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossTigerRoar\BossTigerRoar4.wav</ShortName>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar4_1EFB8AF9.wem</CachePath>
+				</File>
 				<File Id="518620271" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Footsteps Grass\Player Grass Footstep 3.wav</ShortName>
 					<CachePath>SFX/Player Footsteps Grass/Player Grass Footstep 3_818F3B66.wem</CachePath>
@@ -624,6 +616,10 @@
 				<File Id="552150952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stage1 Freeze 8.wav</ShortName>
 					<CachePath>SFX/Stage1 Freeze 8_818F3B66.wem</CachePath>
+				</File>
+				<File Id="553803067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BossTigerRoar\BossTigerRoar3.wav</ShortName>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar3_2F65657D.wem</CachePath>
 				</File>
 				<File Id="556479194" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Landing Stone\Player Landing Stone 2.wav</ShortName>
@@ -783,7 +779,7 @@
 				</File>
 				<File Id="807892841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BossTigerRoar\BossTigerRoar3.wav</ShortName>
-					<CachePath>SFX/BossTigerRoar/BossTigerRoar3_818F3B66.wem</CachePath>
+					<CachePath>SFX/BossTigerRoar/BossTigerRoar3_E301F7D4.wem</CachePath>
 				</File>
 				<File Id="809058575" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Footsteps Grass\Player Grass Footstep 2.wav</ShortName>
@@ -961,10 +957,6 @@
 					<ShortName>FS Boss B 108 BPM D Min Cello_Viola.wav</ShortName>
 					<CachePath>SFX/FS Boss B 108 BPM D Min Cello_Viola_56CEF360.wem</CachePath>
 				</File>
-				<File Id="1029466873" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stage2 Freeze 3.wav</ShortName>
-					<CachePath>SFX/Stage2 Freeze 3_818F3B66.wem</CachePath>
-				</File>
 				<File Id="1036104300" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Enemy Fireball\Enemy Fireball 1.wav</ShortName>
 					<CachePath>SFX/Enemy Fireball/Enemy Fireball 1_818F3B66.wem</CachePath>
@@ -996,10 +988,6 @@
 				<File Id="1070433179" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Combat A\FS Combat A 108 BPM D Min Lo Cello.wav</ShortName>
 					<CachePath>SFX/Combat A/FS Combat A 108 BPM D Min Lo Cello_56CEF360.wem</CachePath>
-				</File>
-				<File Id="1071832758" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Stage2 Freeze 1.wav</ShortName>
-					<CachePath>SFX/Stage2 Freeze 1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1072075349" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS Boss A 108 BPM D Min Main Strings.wav</ShortName>
@@ -1084,9 +1072,11 @@
 						<MediaRef Id="707218333"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3232321306" Name="Play_BossTigerRoar" DurationType="OneShot" DurationMin="1.7584181" DurationMax="2.5833464">
+				<Event Id="3232321306" Name="Play_BossTigerRoar" DurationType="OneShot" DurationMin="0.9009364" DurationMax="2.1424112">
 					<MediaRefs>
 						<MediaRef Id="344061253"/>
+						<MediaRef Id="515792893"/>
+						<MediaRef Id="553803067"/>
 						<MediaRef Id="679510927"/>
 						<MediaRef Id="807892841"/>
 						<MediaRef Id="817014791"/>
@@ -1372,15 +1362,6 @@
 						<MediaRef Id="1039641798"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2534398180" Name="Play_Stage2_Freeze" DurationType="OneShot" DurationMin="1.3050241" DurationMax="1.7200162">
-					<MediaRefs>
-						<MediaRef Id="50690553"/>
-						<MediaRef Id="56732673"/>
-						<MediaRef Id="180038728"/>
-						<MediaRef Id="1029466873"/>
-						<MediaRef Id="1071832758"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3939144723" Name="Play_Treasure_Chest" DurationType="OneShot" DurationMin="0.92885095" DurationMax="1.0751343">
 					<MediaRefs>
 						<MediaRef Id="53341151"/>
@@ -1411,5 +1392,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{44DDF9F4-41F6-ED3E-315D-B1FB0CA9FDF7}</FileHash>
+	<FileHash>{15373760-0FCB-8DAA-0A46-FC79E88C1357}</FileHash>
 </SoundBanksInfo>

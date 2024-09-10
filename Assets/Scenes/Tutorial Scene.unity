@@ -3632,6 +3632,7 @@ MonoBehaviour:
   pauseScreen: {fileID: 2030952164}
   creditsScreen: {fileID: 0}
   startScreen: {fileID: 0}
+  victoryScreen: {fileID: 0}
 --- !u!1 &866785372
 GameObject:
   m_ObjectHideFlags: 0

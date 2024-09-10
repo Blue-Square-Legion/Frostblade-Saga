@@ -47,7 +47,6 @@ namespace AK
         static const AkUniqueID PLAY_SMALLSWORDHIT = 4187859053U;
         static const AkUniqueID PLAY_SMALLSWORDSWING = 1238801504U;
         static const AkUniqueID PLAY_STAGE1_FREEZE = 524979589U;
-        static const AkUniqueID PLAY_STAGE2_FREEZE = 2534398180U;
         static const AkUniqueID PLAY_TREASURE_CHEST = 3939144723U;
         static const AkUniqueID STOP_BIGSWORDDRAG = 2707922347U;
         static const AkUniqueID STOP_COMBAT = 913896232U;

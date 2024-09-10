@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,12 +21,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 71660567e1b2ad4c9cba3010df05c4b3
-    ParentPath: Virtual Acoustics\Default Work Unit
+    ParentPath: Virtual Acoustics/Default Work Unit
     guid: 71660567e1b2ad4c9cba3010df05c4b3
     GuidInternal: 
-    m_lastTime: -8584756993400456983
+    m_lastTime: -8584757389571687832
     List: []
-  - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
+  - PhysicalPath: Virtual Acoustics/Factory Acoustic Textures.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -34,10 +34,10 @@ MonoBehaviour:
     - ElementName: Factory Acoustic Textures
       ObjectType: 12
       guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    ParentPath: Virtual Acoustics\Factory Acoustic Textures
+    ParentPath: Virtual Acoustics/Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8584756993400446977
+    m_lastTime: -8584757389571684606
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -55,7 +55,7 @@ MonoBehaviour:
       - ElementName: Acoustic_Banner
         ObjectType: 15
         guid: f2532d2fccda8e408b8898b1b52a26d6
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Acoustic_Banner
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Acoustic_Banner
     - name: Anechoic
       guid: 32c20a8be202de4ebeacfdd1a900e3ed
       id: 1873957695
@@ -72,7 +72,7 @@ MonoBehaviour:
       - ElementName: Anechoic
         ObjectType: 15
         guid: 32c20a8be202de4ebeacfdd1a900e3ed
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Anechoic
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Anechoic
     - name: Brick
       guid: a9a586b004f2534ca838bdb18b18f6d6
       id: 504532776
@@ -89,7 +89,7 @@ MonoBehaviour:
       - ElementName: Brick
         ObjectType: 15
         guid: a9a586b004f2534ca838bdb18b18f6d6
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Brick
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Brick
     - name: Carpet
       guid: 8975223456dc604296c4b9f4b669092b
       id: 2412606308
@@ -106,7 +106,7 @@ MonoBehaviour:
       - ElementName: Carpet
         ObjectType: 15
         guid: 8975223456dc604296c4b9f4b669092b
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Carpet
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Carpet
     - name: Concrete
       guid: 001cf85c9628e04aaf7c3080bdaba682
       id: 841620460
@@ -123,7 +123,7 @@ MonoBehaviour:
       - ElementName: Concrete
         ObjectType: 15
         guid: 001cf85c9628e04aaf7c3080bdaba682
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Concrete
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Concrete
     - name: Cork_Tiles
       guid: 19c9d2305f92434189063dbb3c4ae5e2
       id: 3195498748
@@ -140,7 +140,7 @@ MonoBehaviour:
       - ElementName: Cork_Tiles
         ObjectType: 15
         guid: 19c9d2305f92434189063dbb3c4ae5e2
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Cork_Tiles
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Cork_Tiles
     - name: Curtains
       guid: 339ee6f8975c6849b508a1535f2d66e8
       id: 2928161104
@@ -157,7 +157,7 @@ MonoBehaviour:
       - ElementName: Curtains
         ObjectType: 15
         guid: 339ee6f8975c6849b508a1535f2d66e8
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Curtains
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Curtains
     - name: Drywall
       guid: f4e3a4680b4c8746a8b8a84db93dbc8f
       id: 3670307564
@@ -174,7 +174,7 @@ MonoBehaviour:
       - ElementName: Drywall
         ObjectType: 15
         guid: f4e3a4680b4c8746a8b8a84db93dbc8f
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Drywall
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Drywall
     - name: Fabric
       guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
       id: 1970351858
@@ -191,7 +191,7 @@ MonoBehaviour:
       - ElementName: Fabric
         ObjectType: 15
         guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Fabric
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Fabric
     - name: Mountain
       guid: 313793c51a00b44a98dd9b033a8c8eab
       id: 513139656
@@ -208,7 +208,7 @@ MonoBehaviour:
       - ElementName: Mountain
         ObjectType: 15
         guid: 313793c51a00b44a98dd9b033a8c8eab
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Mountain
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Mountain
     - name: Textures
       guid: a3121e7828e3df4a8bba5fb89c74031d
       id: 1276632493
@@ -222,7 +222,7 @@ MonoBehaviour:
       - ElementName: Textures
         ObjectType: 4
         guid: a3121e7828e3df4a8bba5fb89c74031d
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures
     - name: Tile
       guid: c4da82a82a13b747ba9db9907ba29cc0
       id: 2637588553
@@ -239,7 +239,7 @@ MonoBehaviour:
       - ElementName: Tile
         ObjectType: 15
         guid: c4da82a82a13b747ba9db9907ba29cc0
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Tile
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Tile
     - name: Wood
       guid: 96bcff1fe76f9e48ba6c7c14a71391ae
       id: 2058049674
@@ -256,7 +256,7 @@ MonoBehaviour:
       - ElementName: Wood
         ObjectType: 15
         guid: 96bcff1fe76f9e48ba6c7c14a71391ae
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Wood
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood
     - name: Wood_Bright
       guid: e5d1857ba2c1634e9a13cec54b641adc
       id: 4262522749
@@ -273,7 +273,7 @@ MonoBehaviour:
       - ElementName: Wood_Bright
         ObjectType: 15
         guid: e5d1857ba2c1634e9a13cec54b641adc
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Wood_Bright
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood_Bright
     - name: Wood_Deep
       guid: 8e474652dac50c4ea0dec98d1479529a
       id: 1755085759
@@ -290,9 +290,9 @@ MonoBehaviour:
       - ElementName: Wood_Deep
         ObjectType: 15
         guid: 8e474652dac50c4ea0dec98d1479529a
-      Path: Virtual Acoustics\Factory Acoustic Textures\Textures\Wood_Deep
+      Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood_Deep
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -300,10 +300,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 1c5ecf9fe42331468bb259e1412cda15
-    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 1c5ecf9fe42331468bb259e1412cda15
     GuidInternal: 
-    m_lastTime: -8584756993585195988
+    m_lastTime: -8584757389690992767
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -318,7 +318,7 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
     - name: Reverb
       guid: ff33e3d581304e49876eea815bc80019
       id: 348963605
@@ -332,9 +332,9 @@ MonoBehaviour:
       - ElementName: Reverb
         ObjectType: 2
         guid: ff33e3d581304e49876eea815bc80019
-      Path: Master-Mixer Hierarchy\Default Work Unit\Reverb
+      Path: Master-Mixer Hierarchy/Default Work Unit/Reverb
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -342,10 +342,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 145d861f4fd382488e16aa76179064e9
-    ParentPath: SoundBanks\Default Work Unit
+    ParentPath: SoundBanks/Default Work Unit
     guid: 145d861f4fd382488e16aa76179064e9
     GuidInternal: 
-    m_lastTime: -8584756993400506966
+    m_lastTime: -8584757389571708112
     List:
     - name: Main
       guid: 315d471985a27f4682e258669b2301a2
@@ -360,9 +360,9 @@ MonoBehaviour:
       - ElementName: Main
         ObjectType: 7
         guid: 315d471985a27f4682e258669b2301a2
-      Path: SoundBanks\Default Work Unit\Main
+      Path: SoundBanks/Default Work Unit/Main
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -370,10 +370,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 2947366f0beba540aa88b6287125121a
-    ParentPath: Events\Default Work Unit
+    ParentPath: Events/Default Work Unit
     guid: 2947366f0beba540aa88b6287125121a
     GuidInternal: 
-    m_lastTime: -8584756993596865956
+    m_lastTime: -8584756773241414170
     List:
     - name: Play_Ambience
       guid: de966370598d26439cd54404f77a8f97
@@ -388,7 +388,7 @@ MonoBehaviour:
       - ElementName: Play_Ambience
         ObjectType: 3
         guid: de966370598d26439cd54404f77a8f97
-      Path: Events\Default Work Unit\Play_Ambience
+      Path: Events/Default Work Unit/Play_Ambience
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -405,7 +405,7 @@ MonoBehaviour:
       - ElementName: Play_BigSwordDrag
         ObjectType: 3
         guid: eff2f1c63b0c9e4e9ff0db98fdbbc843
-      Path: Events\Default Work Unit\Play_BigSwordDrag
+      Path: Events/Default Work Unit/Play_BigSwordDrag
       maxAttenuation: 0
       maxDuration: 1.8494033
       minDuration: 1.3941809
@@ -422,7 +422,7 @@ MonoBehaviour:
       - ElementName: Play_BigSwordHit
         ObjectType: 3
         guid: 0096f188cb62f346b03133b2f1cd7ac4
-      Path: Events\Default Work Unit\Play_BigSwordHit
+      Path: Events/Default Work Unit/Play_BigSwordHit
       maxAttenuation: 0
       maxDuration: 1.0022962
       minDuration: 0.53126353
@@ -439,7 +439,7 @@ MonoBehaviour:
       - ElementName: Play_BigSwordSwing
         ObjectType: 3
         guid: 176178b34b0e044aa27e31741b28a893
-      Path: Events\Default Work Unit\Play_BigSwordSwing
+      Path: Events/Default Work Unit/Play_BigSwordSwing
       maxAttenuation: 0
       maxDuration: 0.9322614
       minDuration: 0.6027424
@@ -456,7 +456,7 @@ MonoBehaviour:
       - ElementName: Play_BossBattle
         ObjectType: 3
         guid: 86e6110a2781e044a173fd1f9a115493
-      Path: Events\Default Work Unit\Play_BossBattle
+      Path: Events/Default Work Unit/Play_BossBattle
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -473,7 +473,7 @@ MonoBehaviour:
       - ElementName: Play_BossBite
         ObjectType: 3
         guid: 56368dd1270e34449d8368784b077bd9
-      Path: Events\Default Work Unit\Play_BossBite
+      Path: Events/Default Work Unit/Play_BossBite
       maxAttenuation: 0
       maxDuration: 1.016886
       minDuration: 0.7047594
@@ -490,7 +490,7 @@ MonoBehaviour:
       - ElementName: Play_BossProjectile
         ObjectType: 3
         guid: b043fe0fc258714abb56528658fe9bb4
-      Path: Events\Default Work Unit\Play_BossProjectile
+      Path: Events/Default Work Unit/Play_BossProjectile
       maxAttenuation: 0
       maxDuration: 1.6549697
       minDuration: 1.1930964
@@ -507,7 +507,7 @@ MonoBehaviour:
       - ElementName: Play_BossProjectileHit
         ObjectType: 3
         guid: 171db2269ea49e419dc225dd6e6720f0
-      Path: Events\Default Work Unit\Play_BossProjectileHit
+      Path: Events/Default Work Unit/Play_BossProjectileHit
       maxAttenuation: 0
       maxDuration: 1.223702
       minDuration: 0.59871125
@@ -524,10 +524,10 @@ MonoBehaviour:
       - ElementName: Play_BossTigerRoar
         ObjectType: 3
         guid: 6a3f33d5dc93bf42abf4ebf72cc54125
-      Path: Events\Default Work Unit\Play_BossTigerRoar
+      Path: Events/Default Work Unit/Play_BossTigerRoar
       maxAttenuation: 0
-      maxDuration: 2.5833464
-      minDuration: 1.7584181
+      maxDuration: 2.1424112
+      minDuration: 0.9009364
     - name: Play_Checkpoint
       guid: 84956c806bf203478d751e152ce675ba
       id: 2962822744
@@ -541,7 +541,7 @@ MonoBehaviour:
       - ElementName: Play_Checkpoint
         ObjectType: 3
         guid: 84956c806bf203478d751e152ce675ba
-      Path: Events\Default Work Unit\Play_Checkpoint
+      Path: Events/Default Work Unit/Play_Checkpoint
       maxAttenuation: 0
       maxDuration: 1.8356524
       minDuration: 1.3169405
@@ -558,7 +558,7 @@ MonoBehaviour:
       - ElementName: Play_Combat
         ObjectType: 3
         guid: 2d7baa7865d8ba4e823568abbd08f85b
-      Path: Events\Default Work Unit\Play_Combat
+      Path: Events/Default Work Unit/Play_Combat
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -575,7 +575,7 @@ MonoBehaviour:
       - ElementName: Play_EnemyAttackCry
         ObjectType: 3
         guid: 01d1f41929eb2240b23300ab3b6eefc2
-      Path: Events\Default Work Unit\Play_EnemyAttackCry
+      Path: Events/Default Work Unit/Play_EnemyAttackCry
       maxAttenuation: 0
       maxDuration: 0.9050243
       minDuration: 0.7361629
@@ -592,7 +592,7 @@ MonoBehaviour:
       - ElementName: Play_EnemyFireball
         ObjectType: 3
         guid: edb114d1a27f9541bbf96472e5ad1ab7
-      Path: Events\Default Work Unit\Play_EnemyFireball
+      Path: Events/Default Work Unit/Play_EnemyFireball
       maxAttenuation: 50
       maxDuration: 1.6983194
       minDuration: 1.10099
@@ -609,7 +609,7 @@ MonoBehaviour:
       - ElementName: Play_EnemyHitCry
         ObjectType: 3
         guid: c54cd2743229fc458bce10652ca4ef4e
-      Path: Events\Default Work Unit\Play_EnemyHitCry
+      Path: Events/Default Work Unit/Play_EnemyHitCry
       maxAttenuation: 0
       maxDuration: 0.72524667
       minDuration: 0.39577827
@@ -626,7 +626,7 @@ MonoBehaviour:
       - ElementName: Play_EnemyIdleCry
         ObjectType: 3
         guid: e011396a8e494f4fa02d1dcdaa2d466b
-      Path: Events\Default Work Unit\Play_EnemyIdleCry
+      Path: Events/Default Work Unit/Play_EnemyIdleCry
       maxAttenuation: 0
       maxDuration: 0.75160086
       minDuration: 0.4837159
@@ -643,7 +643,7 @@ MonoBehaviour:
       - ElementName: Play_FireTigerAttackRoar
         ObjectType: 3
         guid: b5d3ce1001f8e1469999cc81c6594498
-      Path: Events\Default Work Unit\Play_FireTigerAttackRoar
+      Path: Events/Default Work Unit/Play_FireTigerAttackRoar
       maxAttenuation: 0
       maxDuration: 1.5759956
       minDuration: 0.9088329
@@ -660,7 +660,7 @@ MonoBehaviour:
       - ElementName: Play_FireTigerBite
         ObjectType: 3
         guid: ed070b3f6663674099399941fbae5575
-      Path: Events\Default Work Unit\Play_FireTigerBite
+      Path: Events/Default Work Unit/Play_FireTigerBite
       maxAttenuation: 0
       maxDuration: 0.71699166
       minDuration: 0.527901
@@ -677,7 +677,7 @@ MonoBehaviour:
       - ElementName: Play_FireTigerFootsteps
         ObjectType: 3
         guid: ff2f7e14822caf48b89b3a6fe7c0fadf
-      Path: Events\Default Work Unit\Play_FireTigerFootsteps
+      Path: Events/Default Work Unit/Play_FireTigerFootsteps
       maxAttenuation: 20
       maxDuration: 0.65337974
       minDuration: 0.29037896
@@ -694,7 +694,7 @@ MonoBehaviour:
       - ElementName: Play_FireTigerHurtRoar
         ObjectType: 3
         guid: 028db2abda2f0e4d8142b4175cec3e19
-      Path: Events\Default Work Unit\Play_FireTigerHurtRoar
+      Path: Events/Default Work Unit/Play_FireTigerHurtRoar
       maxAttenuation: 0
       maxDuration: 1.4336522
       minDuration: 0.8915482
@@ -711,7 +711,7 @@ MonoBehaviour:
       - ElementName: Play_FireTigerIdleRoar
         ObjectType: 3
         guid: 829debb267820e408e33288f6e6575b3
-      Path: Events\Default Work Unit\Play_FireTigerIdleRoar
+      Path: Events/Default Work Unit/Play_FireTigerIdleRoar
       maxAttenuation: 0
       maxDuration: 2.4545774
       minDuration: 1.7586343
@@ -728,7 +728,7 @@ MonoBehaviour:
       - ElementName: Play_Heartbeat
         ObjectType: 3
         guid: 907659cd1880634699d3a99e0cefe8b2
-      Path: Events\Default Work Unit\Play_Heartbeat
+      Path: Events/Default Work Unit/Play_Heartbeat
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
       - ElementName: Play_IceAura
         ObjectType: 3
         guid: 09310d6387150a4a8b1ddcbe064d1c5e
-      Path: Events\Default Work Unit\Play_IceAura
+      Path: Events/Default Work Unit/Play_IceAura
       maxAttenuation: 0
       maxDuration: 1.3426267
       minDuration: 0.9711483
@@ -762,10 +762,27 @@ MonoBehaviour:
       - ElementName: Play_IceAuraFreeze
         ObjectType: 3
         guid: fa484c136aff604681fb0ca4867c0abf
-      Path: Events\Default Work Unit\Play_IceAuraFreeze
+      Path: Events/Default Work Unit/Play_IceAuraFreeze
       maxAttenuation: 0
       maxDuration: 1.2254678
       minDuration: 1.0021389
+    - name: Play_NPCVox
+      guid: 8edca0b801ea7949b63512188bbfe127
+      id: 3008798598
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2947366f0beba540aa88b6287125121a
+      - ElementName: Play_NPCVox
+        ObjectType: 3
+        guid: 8edca0b801ea7949b63512188bbfe127
+      Path: Events/Default Work Unit/Play_NPCVox
+      maxAttenuation: 0
+      maxDuration: 2.0852883
+      minDuration: 1.1489899
     - name: Play_Player_Attack_Vox
       guid: 48129b4149cab64a9ce0210cc9cae4de
       id: 606945166
@@ -779,7 +796,7 @@ MonoBehaviour:
       - ElementName: Play_Player_Attack_Vox
         ObjectType: 3
         guid: 48129b4149cab64a9ce0210cc9cae4de
-      Path: Events\Default Work Unit\Play_Player_Attack_Vox
+      Path: Events/Default Work Unit/Play_Player_Attack_Vox
       maxAttenuation: 0
       maxDuration: 0.40736356
       minDuration: 0.32152683
@@ -796,7 +813,7 @@ MonoBehaviour:
       - ElementName: Play_Player_Die_Vox
         ObjectType: 3
         guid: bbb2bb0eb746fe4ebda485b8d77e0dd1
-      Path: Events\Default Work Unit\Play_Player_Die_Vox
+      Path: Events/Default Work Unit/Play_Player_Die_Vox
       maxAttenuation: 0
       maxDuration: 1.1539761
       minDuration: 0.6846234
@@ -813,7 +830,7 @@ MonoBehaviour:
       - ElementName: Play_Player_Hit_Vox
         ObjectType: 3
         guid: fa0785c2fcfaa048ac1d7d90fed3271a
-      Path: Events\Default Work Unit\Play_Player_Hit_Vox
+      Path: Events/Default Work Unit/Play_Player_Hit_Vox
       maxAttenuation: 0
       maxDuration: 0.38255447
       minDuration: 0.3216055
@@ -830,7 +847,7 @@ MonoBehaviour:
       - ElementName: Play_Player_Jump_Vox
         ObjectType: 3
         guid: f26c7f004a47e44a8cfddac85d4e96f7
-      Path: Events\Default Work Unit\Play_Player_Jump_Vox
+      Path: Events/Default Work Unit/Play_Player_Jump_Vox
       maxAttenuation: 0
       maxDuration: 0.21820527
       minDuration: 0.16559093
@@ -847,7 +864,7 @@ MonoBehaviour:
       - ElementName: Play_PlayerFootstep
         ObjectType: 3
         guid: e7a8026dab152c4e97aee0fe9b48ff7b
-      Path: Events\Default Work Unit\Play_PlayerFootstep
+      Path: Events/Default Work Unit/Play_PlayerFootstep
       maxAttenuation: 0
       maxDuration: 0.41698703
       minDuration: 0.10266598
@@ -864,7 +881,7 @@ MonoBehaviour:
       - ElementName: Play_PlayerJump
         ObjectType: 3
         guid: 58452aa7b371d24cbc7f4fbe05a6bd85
-      Path: Events\Default Work Unit\Play_PlayerJump
+      Path: Events/Default Work Unit/Play_PlayerJump
       maxAttenuation: 0
       maxDuration: 0.42846456
       minDuration: 0.27610287
@@ -881,7 +898,7 @@ MonoBehaviour:
       - ElementName: Play_PlayerLanding
         ObjectType: 3
         guid: d88c9b242c38f945bcbbea77f8e21aac
-      Path: Events\Default Work Unit\Play_PlayerLanding
+      Path: Events/Default Work Unit/Play_PlayerLanding
       maxAttenuation: 0
       maxDuration: 0.34549534
       minDuration: 0.20603989
@@ -898,7 +915,7 @@ MonoBehaviour:
       - ElementName: Play_PlayerSwordGrow
         ObjectType: 3
         guid: 624a65c4103b574e9f31b73bce273ed6
-      Path: Events\Default Work Unit\Play_PlayerSwordGrow
+      Path: Events/Default Work Unit/Play_PlayerSwordGrow
       maxAttenuation: 0
       maxDuration: 0.9135883
       minDuration: 0.7204317
@@ -915,7 +932,7 @@ MonoBehaviour:
       - ElementName: Play_SmallSwordHit
         ObjectType: 3
         guid: 6139d5db6599bb4da833d442ab28c45a
-      Path: Events\Default Work Unit\Play_SmallSwordHit
+      Path: Events/Default Work Unit/Play_SmallSwordHit
       maxAttenuation: 0
       maxDuration: 0.32437232
       minDuration: 0.15947542
@@ -932,7 +949,7 @@ MonoBehaviour:
       - ElementName: Play_SmallSwordSwing
         ObjectType: 3
         guid: 909f82373427d0469522fa186cbd8639
-      Path: Events\Default Work Unit\Play_SmallSwordSwing
+      Path: Events/Default Work Unit/Play_SmallSwordSwing
       maxAttenuation: 0
       maxDuration: 0.58213085
       minDuration: 0.38358656
@@ -949,7 +966,7 @@ MonoBehaviour:
       - ElementName: Play_Stage1_Freeze
         ObjectType: 3
         guid: 1c887da6823dbd41baf752e48b5fcf10
-      Path: Events\Default Work Unit\Play_Stage1_Freeze
+      Path: Events/Default Work Unit/Play_Stage1_Freeze
       maxAttenuation: 0
       maxDuration: 1.304155
       minDuration: 0.6927447
@@ -966,10 +983,10 @@ MonoBehaviour:
       - ElementName: Play_Stage2_Freeze
         ObjectType: 3
         guid: 5f77735b85d7f148a5b183def2a11c4e
-      Path: Events\Default Work Unit\Play_Stage2_Freeze
+      Path: Events/Default Work Unit/Play_Stage2_Freeze
       maxAttenuation: 0
-      maxDuration: 1.7200162
-      minDuration: 1.3050241
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Treasure_Chest
       guid: 46790f105fa60748a1a428af9e702072
       id: 3939144723
@@ -983,7 +1000,7 @@ MonoBehaviour:
       - ElementName: Play_Treasure_Chest
         ObjectType: 3
         guid: 46790f105fa60748a1a428af9e702072
-      Path: Events\Default Work Unit\Play_Treasure_Chest
+      Path: Events/Default Work Unit/Play_Treasure_Chest
       maxAttenuation: 0
       maxDuration: 1.0751343
       minDuration: 0.92885095
@@ -1000,7 +1017,7 @@ MonoBehaviour:
       - ElementName: Stop_BigSwordDrag
         ObjectType: 3
         guid: edcb89ff55a86d439e6a06adc08fd69d
-      Path: Events\Default Work Unit\Stop_BigSwordDrag
+      Path: Events/Default Work Unit/Stop_BigSwordDrag
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1017,12 +1034,12 @@ MonoBehaviour:
       - ElementName: Stop_Combat
         ObjectType: 3
         guid: 5e19bd5f2848ee418dd41eb26d96a292
-      Path: Events\Default Work Unit\Stop_Combat
+      Path: Events/Default Work Unit/Stop_Combat
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -1030,13 +1047,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0a4e8a6b59f2fd4e8d51e6e26badf97a
-    ParentPath: Game Parameters\Default Work Unit
+    ParentPath: Game Parameters/Default Work Unit
     guid: 0a4e8a6b59f2fd4e8d51e6e26badf97a
     GuidInternal: 
-    m_lastTime: -8584756993596795952
+    m_lastTime: -8584757389696090158
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -1044,10 +1061,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: dbb3af7ce6cb564c9487e865c61e1f55
-    ParentPath: States\Default Work Unit
+    ParentPath: States/Default Work Unit
     guid: dbb3af7ce6cb564c9487e865c61e1f55
     GuidInternal: 
-    m_lastTime: -8584756993400476981
+    m_lastTime: -8584757389571700457
     List:
     - name: CombatState
       guid: f9f44e4905811044b95fc34ff77a654b
@@ -1062,7 +1079,7 @@ MonoBehaviour:
       - ElementName: CombatState
         ObjectType: 9
         guid: f9f44e4905811044b95fc34ff77a654b
-      Path: States\Default Work Unit\CombatState
+      Path: States/Default Work Unit/CombatState
       values:
       - name: BossPhase1
         guid: 536a81ca02cce1428ed365bf2b52a6fa
@@ -1144,7 +1161,7 @@ MonoBehaviour:
       - ElementName: MusicState
         ObjectType: 9
         guid: aa67f314b5423a49a9fdd367428412cd
-      Path: States\Default Work Unit\MusicState
+      Path: States/Default Work Unit/MusicState
       values:
       - name: Boss
         guid: 7fd72598419bc44481100e09dbdb4ef3
@@ -1198,7 +1215,7 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -1206,10 +1223,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 8944a7a788f51446adba491506713ba1
-    ParentPath: Switches\Default Work Unit
+    ParentPath: Switches/Default Work Unit
     guid: 8944a7a788f51446adba491506713ba1
     GuidInternal: 
-    m_lastTime: -8584756993400466983
+    m_lastTime: -8584757389571696841
     List:
     - name: GameplaySwitch
       guid: 92a7e77ab951f6418a300b44210538e6
@@ -1224,7 +1241,7 @@ MonoBehaviour:
       - ElementName: GameplaySwitch
         ObjectType: 11
         guid: 92a7e77ab951f6418a300b44210538e6
-      Path: Switches\Default Work Unit\GameplaySwitch
+      Path: Switches/Default Work Unit/GameplaySwitch
       values:
       - name: Boss
         guid: 370e3206f2e529489d263f2b43422d69
@@ -1274,7 +1291,7 @@ MonoBehaviour:
       - ElementName: PlayerFootstep
         ObjectType: 11
         guid: 1a4b010e15b97849ab4a667bf5deb702
-      Path: Switches\Default Work Unit\PlayerFootstep
+      Path: Switches/Default Work Unit/PlayerFootstep
       values:
       - name: Dirt
         guid: 45d1480a15c1b34fb6e11575adce62bf
@@ -1356,7 +1373,7 @@ MonoBehaviour:
       - ElementName: PlayerLanding
         ObjectType: 11
         guid: e8346f3e4f021741ac3acb22f7fa4157
-      Path: Switches\Default Work Unit\PlayerLanding
+      Path: Switches/Default Work Unit/PlayerLanding
       values:
       - name: Dirt
         guid: 93251b1cff23a447a16798cabd6ae17d
@@ -1426,7 +1443,7 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -1434,12 +1451,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: b55f4006b960df4f866ccff121c95c53
-    ParentPath: Triggers\Default Work Unit
+    ParentPath: Triggers/Default Work Unit
     guid: b55f4006b960df4f866ccff121c95c53
     GuidInternal: 
-    m_lastTime: -8584756993400456983
+    m_lastTime: -8584757389571693308
     List: []
-  ExpandedFileSystemItemIds: 020000000600000007000000080000000900000030000000310000003600000037000000390000004400000045000000
+  ExpandedFileSystemItemIds: 02000000030000000600000007000000080000000900000030000000310000003600000037000000390000004400000045000000
   ExpandedWaapiItemIds: 0200000003000000060000000700000008000000090000003000000031000000360000003700000039000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

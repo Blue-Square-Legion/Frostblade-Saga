@@ -3289,6 +3289,11 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Stage2 Freeze" ID="{BAA94058-96E0-4D11-B289-C5E48DA69AF8}" ShortID="253601003">
 					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="6"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -7604,7 +7609,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>2</Value>
+								<Value>3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -8831,10 +8836,15 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="BossTigerRoar3" ID="{9893D2DE-F56F-4C54-8949-A1FD12C3913A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.234887327981651"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.21638080561927"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>BossTigerRoar\BossTigerRoar3.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="807892841"/>
+										<MediaID ID="553803067"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -8881,6 +8891,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="BossTigerRoar4" ID="{0649959E-555E-4FDD-ADF7-5AAE552572ED}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0699521932339449"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.954508959288991"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>BossTigerRoar\BossTigerRoar4.wav</AudioFile>
 									<MediaIDList>
@@ -8890,6 +8905,119 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="BossTigerRoar4" ID="{0649959E-555E-4FDD-ADF7-5AAE552572ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BossTigerRoar3_01" ID="{6340AA5E-89DA-4C82-8EC6-A86E0820DAFA}" ShortID="1046013294">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{80B25309-592E-4C38-A0E4-C5405321B36A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B1277CA2-8AE7-4DA2-84FC-6337BD37D346}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BossTigerRoar3" ID="{3134AA86-2105-448F-8D13-EFE6D12DA05B}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0894808868501529"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0615181097094801"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.02623392106269"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BossTigerRoar\BossTigerRoar3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="807892841"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BossTigerRoar3" ID="{3134AA86-2105-448F-8D13-EFE6D12DA05B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BossTigerRoar4_01" ID="{CBE52CB0-845B-40EE-8460-286B3CF75BF6}" ShortID="15363594">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8BF88554-CA1D-43FA-8F72-4D243E45E5D8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FF474E81-1E4B-4AE6-939A-BC224A8315B7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BossTigerRoar4" ID="{E1BF804E-BCED-4541-A319-7C66FA80F043}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0609261037844037"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0699521932339449"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.762704558486239"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.89322226204128"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BossTigerRoar\BossTigerRoar4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="515792893"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BossTigerRoar4" ID="{E1BF804E-BCED-4541-A319-7C66FA80F043}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -10246,6 +10374,184 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="PlayerSwordGrow3" ID="{FBD6E123-5F62-4EDC-9EA1-18247AEF1D54}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="NPCVox" ID="{D5938428-E3E2-4F26-A13D-97A579F02871}" ShortID="130670844">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D23EFE69-7E84-4ED8-A77C-FA29E1F18A56}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_04" ID="{B2CA09C5-5A3E-4583-ACED-7625AF448E00}" ShortID="748403245">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3A4B2BA7-E386-483F-B141-2F4BBAA6CC74}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{ABE79875-4624-4A43-B071-2D87FB835794}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_04" ID="{77751CE8-B8AD-4D47-BB49-14AE834D574A}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1006719308"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_04" ID="{77751CE8-B8AD-4D47-BB49-14AE834D574A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_09" ID="{6C4046D9-5C28-4196-96AB-FE7EE099C72B}" ShortID="721329333">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3242D5AB-1AE4-4EE2-B4CC-BD409FAF66B4}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D1A6FF3A-7D86-49EB-B2A8-502A12FA2101}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_09" ID="{F55B7F9F-E97C-4FC7-BA89-27306E7E8EDD}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="705494195"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_09" ID="{F55B7F9F-E97C-4FC7-BA89-27306E7E8EDD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_06" ID="{5C46C23C-1AA7-487A-9FA7-DC36CCF2F720}" ShortID="452175687">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6C80EAEA-8469-43B1-A68D-5F34A4769397}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8E90B042-21AE-4539-9CC3-1152D63288C5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BF276C1E-FE19-4F01-A928-4BFC354A322B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9FCF5E1C-23E4-4631-8BB2-59E1412CDA15}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_06" ID="{A59F95BF-9FA3-4CA8-B010-478B165837EF}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="403576132"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_PG_cinematic_fx_creature_animal_mouse_squeak_grass_06" ID="{A59F95BF-9FA3-4CA8-B010-478B165837EF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

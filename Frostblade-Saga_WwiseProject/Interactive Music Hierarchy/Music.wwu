@@ -279,7 +279,7 @@
 						<Property Name="Tempo" Type="Real64" Value="108"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-11</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2649,6 +2649,11 @@
 				<MusicPlaylistContainer Name="BossBattle" ID="{ED8489E4-C542-42E4-8534-8ADFC8B2FA3A}" ShortID="616672832">
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="108"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">

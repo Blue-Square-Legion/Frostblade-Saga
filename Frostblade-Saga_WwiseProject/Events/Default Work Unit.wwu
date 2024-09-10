@@ -158,6 +158,9 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Stage2_Freeze" ID="{5B73775F-D785-48F1-A5B1-83DEF2A11C4E}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{4921D5BF-8F55-4262-A774-5854D04AF834}" ShortID="866347407">
 							<ReferenceList>
@@ -422,6 +425,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Combat" ID="{F2075AA2-4B75-4944-8945-2E2323A0C31B}" WorkUnitID="{8E40F267-2530-4F66-8077-806EF72362A5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NPCVox" ID="{B8A0DC8E-EA01-4979-B635-12188BBFE127}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{56814819-4AFD-48A9-B625-C3514234CD54}" ShortID="674692919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NPCVox" ID="{D5938428-E3E2-4F26-A13D-97A579F02871}" WorkUnitID="{89EA10EF-4235-4A0A-92D3-B354691BEF8A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

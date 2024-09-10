@@ -18,6 +18,7 @@ public abstract class GenericEnemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            AkSoundEngine.PostEvent("Play_EnemyHitCry", gameObject);
         } else
         {
             animator.SetTrigger("hurt");
